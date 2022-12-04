@@ -39,13 +39,13 @@ class User < ApplicationRecord
     def generate_unique_session_token
         while true do
             token = SecureRandom.urlsafe_base64
-            User.exists?(sesson_token: token) ? next : break 
+            User.exists?(session_token: token) ? next : break 
             #seems inefficient, what if there are a million users? is there a better way to do this?
         end
     end
 
     def ensure_session_token
-        self.session_token ||= generate_unique_session_token
+        self.session_token ||= reset_session_token!
     end
 
 end
