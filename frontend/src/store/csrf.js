@@ -7,7 +7,6 @@ export const restoreSession = async () => {
 };
 
 const csrfFetch = async (url, options = {}) => {
-  console.log("here");
   options.method ||= "GET";
   options.headers ||= {};
 
