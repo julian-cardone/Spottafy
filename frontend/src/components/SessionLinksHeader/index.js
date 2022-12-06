@@ -31,9 +31,12 @@ function SessionLinks() {
     //   <NavLink exact to="/" className="nav-title">
     //     <h1>Spottafy</h1>
     //   </NavLink>
+    <>
       <div className="session-links-header">
         {sessionLinks}
       </div>
+      <div className='background-dark-theme'></div>
+    </>
     // </header>
   );
 }
