@@ -16,12 +16,10 @@ function SessionLinks() {
   } else {
     sessionLinks = (
       <>
-      <div className='header-wrapper'>
       <header className="session-links">
         <NavLink to="/signup" className="signup-button">Sign up</NavLink>
         <LoginButton />
       </header>
-      </div>
       </>
     );
   }
@@ -33,7 +31,9 @@ function SessionLinks() {
     //   </NavLink>
     <>
       <div className="session-links-header">
-        {sessionLinks}
+        <div className='header-wrapper'>
+          {sessionLinks}
+        </div>
       </div>
       <div className='background-dark-theme'></div>
     </>
