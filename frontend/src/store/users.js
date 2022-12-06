@@ -1,5 +1,3 @@
-import csrfFetch from "./csrf.js";
-
 // ACTION TYPES
     const RECEIVE_USER = 'users/RECEIVE_USER';
     const REMOVE_USER = 'users/REMOVE_USER';
@@ -14,36 +12,6 @@ import csrfFetch from "./csrf.js";
         type: REMOVE_USER,
         userId // userId: userId
     });
-
-        // THUNK ACTION CREATORS
-        export const loginUser = user => async dispatch => {
-          let res = await csrfFetch('/api/session', {
-              method: 'POST',
-              body: JSON.stringify(user)
-          });
-          let data = await res.json();
-          sessionStorage.setItem('currentUser', JSON.stringify(data.user));
-          debugger
-          dispatch(receiveUser(data.user))
-      };
-  
-      export const logoutUser = userId => async dispatch => {
-          let res = await csrfFetch('/api/session', {
-              method: 'DELETE'
-          });
-          sessionStorage.setItem('currentUser', null)
-          dispatch(removeUser(userId));
-      }
-  
-      export const createUser = user => async dispatch => {
-          let res = await csrfFetch('/api/users', {
-              method: 'POST',
-              body: JSON.stringify(user)
-          });
-          let data = await res.json();
-          sessionStorage.setItem('currentUser', JSON.stringify(data.user));
-          dispatch(receiveUser(data.user));
-      }
 
     // REDUCER
     const userReducer = ( state = {}, action ) => {
