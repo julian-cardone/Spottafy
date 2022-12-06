@@ -3,18 +3,16 @@
     height: 64px;
     min-width: 0;
     /* pointer-events: none; */
-    z-index: 2;
     background-color: #121212;
     bottom: 0;
     left: 0;
     overflow: hidden;
-    pointer-events: none;
+    /* pointer-events: none; */
     position: static;
     right: 0;
     top: 0;
     -webkit-transition: background-color .25s;
     transition: background-color .25s;
-    z-index: -1;
     /* justify-content: center; */
 }
 
@@ -25,7 +23,7 @@
     align-items: center;
     /* display: -webkit-box; */
     display: flex;
-    gap: 16px;
+    gap: 6px;
     height: 64px;
     /* justify-content: space-between; */
     /* padding: 16px; */
@@ -33,7 +31,6 @@
 
     position: relative;
     width: 100%;
-    z-index: 10;
     justify-content: right;
     /* padding-right: 16px; */
 }
@@ -45,19 +42,14 @@
 }
 
 .signup-button{
-
-}
-
-.login-button{
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     font-size: 0.94rem;
     font-weight: 700;
-    /* font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif)); */
-    /* font-family: "Helvetica", "Arial", sans-serif; */
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+    background-color: transparent;
     border: 0px;
-    border-radius: 500px;
-    display: inline-block;
+    /* border-radius: 500px; */
     position: relative;
     text-align: center;
     text-decoration: none;
@@ -68,8 +60,50 @@
     user-select: none;
     vertical-align: middle;
     transform: translate3d(0px, 0px, 0px);
+    color: #A7A7A7;
+    min-inline-size: 0px;
+    padding-block: 8px;
+    min-block-size: 48px;
+    padding-inline: 32px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+
+.login-button{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 15.04px;
+    font-weight: 700;
+    /* font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif)); */
+    /* font-family: "Helvetica", "Arial", sans-serif; */
+    /* font-family: Arial, Helvetica, sans-serif; */
+    border: 0px;
+    border-radius: 500px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    /* touch-action: manipulation; */
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    /* transition-property: scale, transform; */
+    /* -webkit-transition: -webkit-transform 200ms linear; */
+    /* transition: all 0.3s linear; */
+    user-select: none;
+    vertical-align: middle;
+    /* transform: translate3d(0px, 0px, 0px); */
     padding: 0px;
     min-inline-size: 0px;
+
+}
+
+.login-button:hover{
+    transform: scale(1.04);
+    /* transform: translate3d(0px, 0px, 0px); */
 }
 
 .inner-login-button{
@@ -88,4 +122,9 @@
     justify-content: center;
     padding-block: 8px;
     padding-inline: 32px;
+}
+
+.signup-button:hover {
+    transform: scale(1.04);
+    color: #fff
 }

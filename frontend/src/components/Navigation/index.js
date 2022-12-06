@@ -18,7 +18,7 @@ function Navigation() {
       <>
       <div className='header-wrapper'>
       <header className="session-links">
-        <NavLink to="/signup" className="signup-button">Sign Up</NavLink>
+        <NavLink to="/signup" className="signup-button">Sign up</NavLink>
         <LoginButton />
       </header>
       </div>
