@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginButton from './LoginButton';
+import './Navigation.css';
 
 function Navigation() {
   const sessionUser = useSelector(state => state.session.user);
@@ -15,21 +16,25 @@ function Navigation() {
   } else {
     sessionLinks = (
       <>
+      <div className='header-wrapper'>
+      <header className="session-links">
+        <NavLink to="/signup" className="signup-button">Sign Up</NavLink>
         <LoginButton />
-        <NavLink to="/signup" className="button">Sign Up</NavLink>
+      </header>
+      </div>
       </>
     );
   }
 
   return (
-    <header className="site-header">
-      <NavLink exact to="/" className="nav-title">
-        <h1>Spottafy</h1>
-      </NavLink>
-      <div className="session-links">
+    // <header className="site-header">
+    //   <NavLink exact to="/" className="nav-title">
+    //     <h1>Spottafy</h1>
+    //   </NavLink>
+      <div className="session-links-header">
         {sessionLinks}
       </div>
-    </header>
+    // </header>
   );
 }
 

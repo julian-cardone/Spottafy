@@ -1,0 +1,91 @@
+.session-links-header{
+    grid-area: main-view;
+    height: 64px;
+    min-width: 0;
+    /* pointer-events: none; */
+    z-index: 2;
+    background-color: #121212;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: static;
+    right: 0;
+    top: 0;
+    -webkit-transition: background-color .25s;
+    transition: background-color .25s;
+    z-index: -1;
+    /* justify-content: center; */
+}
+
+.session-links{
+    /* -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    -webkit-padding-end: 16px; */
+    align-items: center;
+    /* display: -webkit-box; */
+    display: flex;
+    gap: 16px;
+    height: 64px;
+    /* justify-content: space-between; */
+    /* padding: 16px; */
+
+
+    position: relative;
+    width: 100%;
+    z-index: 10;
+    justify-content: right;
+    /* padding-right: 16px; */
+}
+
+.header-wrapper{
+    position: absolute;
+    right: 0px;
+    padding-inline-end: 32px;
+}
+
+.signup-button{
+
+}
+
+.login-button{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 0.94rem;
+    font-weight: 700;
+    /* font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif)); */
+    /* font-family: "Helvetica", "Arial", sans-serif; */
+    border: 0px;
+    border-radius: 500px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    user-select: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    padding: 0px;
+    min-inline-size: 0px;
+}
+
+.inner-login-button{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    background-color: var(--background-base,#ffffff);
+    color: var(--text-base,#000000);
+    display: flex;
+    border-radius: 500px;
+    font-size: inherit;
+    min-block-size: 48px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-block: 8px;
+    padding-inline: 32px;
+}
