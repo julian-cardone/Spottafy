@@ -36,7 +36,7 @@ function SessionLinks() {
         </div>
       </div>
       <div className='background-dark-theme'></div>
-    </>
+    </> 
     // </header>
   );
 }
