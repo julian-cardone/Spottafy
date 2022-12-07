@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Modal } from "../../context/modal";
 import SignupForm from "./SignupForm";
 import LoginForm from "./LoginForm";
+import "./SessionForm.css";
 
 export { SignupForm, LoginForm };
 

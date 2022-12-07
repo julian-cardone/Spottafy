@@ -36,7 +36,7 @@
 .signup-page{
     display: block;
     box-sizing: border-box;
-    max-width: 489px;
+    max-width: 490px;
     margin: 0px auto;
     padding-bottom: 130px;
     padding-left: 24px;
@@ -44,7 +44,7 @@
 }
 
 .header {
-    padding: 32px 0px 28px;
+    padding: 40px 0px 32px;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
@@ -52,27 +52,30 @@
 }
 
 .header-text{
+    /* position: relative; */
     display: block;
-    font-size: 28px;
+    font-size: 32px;
     letter-spacing: -0.04em;
-    margin-block-start: 0.83em;
+    /* margin-block-start: 0.83em;
     margin-block-end: 0.83em;
     margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-inline-end: 0px; */
     font-weight: bold;
     font-family: Helvetica, Arial, sans-serif;
     /* margin: auto; */
+    margin-top: 40px;
+    line-height: 1.13;
 }
 
 .logo-container{
     display: block;
-    height: 33px;
+    /* box-sizing: border-box; */
+    height: 44px;
     cursor: default;
 }
 
 .logo {
     height: 100%;
-
 }
 
 a {
@@ -89,14 +92,14 @@ a {
     position: relative;
     text-align: center;
     width: 85%;
-    border-top: 3px solid #7f7f7f;
+    border-top: 3px solid #bebebe;
     border-width: 1px;
 }
 
-.form{
+/* #form{
     display: block;
     margin-top: 0em;
-}
+} */
 
 .form-header-text{
     box-sizing: border-box;
