@@ -1,0 +1,71 @@
+.loginpage-theme-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.login-page-header{
+    border-bottom: 1px solid rgb(217, 218, 220);
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    padding: 25px 0px 10px;
+    margin-bottom: 30px;
+}
+
+.spottafy-logo{
+    padding: 0px 0px 12px;
+    height: 56px;
+}
+
+.login-form-container{
+    flex: 3 1 0%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.login-form{
+    max-width: 450px;
+    width: 100%;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.to-continue-p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: inherit;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+}
+
+.login-form-divider{
+    display: table;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 0px auto 1em;
+    position: relative;
+    text-align: center;
+    width: 85%;
+    border-top: 3px solid #bebebe;
+    border-width: 1px;
+}

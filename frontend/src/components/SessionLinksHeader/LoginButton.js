@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
-import { LoginModal } from '../SessionForm';
+import React from "react";
+import { useHistory } from "react-router-dom";
 
 function LoginButton() {
-  const [showModal, setShowModal] = useState(false);
+
+  const history = useHistory();
+
+  const routeChange = () =>{ 
+    let path = '/login'; 
+    history.push(path);
+  }
 
   return (
     <>
-      <button onClick={() => setShowModal(true)} className="login-button">
+      <button className="login-button"onClick={routeChange}>
         <span className='inner-login-button'>Log in</span>
       </button>
-      {showModal && <LoginModal onClose={() => setShowModal(false)}/>}
     </>
   );
 }
