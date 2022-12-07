@@ -24,8 +24,8 @@ function LoginFormPage() {
             <p className="to-continue-p">To continue, log in to Spotify.</p>
             <span className="login-form-divider"></span>
             <div className="form-info">
+              <LoginForm />
             </div>
-      {/* <LoginForm /> */}
           </div>
         </div>
       </div>
