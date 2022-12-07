@@ -33,6 +33,7 @@ function SignupForm({ onSuccess }) {
           value={email}
           onChange={onEmailChange}
           required
+          placeholder="Enter your email."
         ></input>
       </div>
 
@@ -47,6 +48,7 @@ function SignupForm({ onSuccess }) {
           value={confirmEmail}
           onChange={onConfirmEmailChange}
           required
+          placeholder="Enter your email again."
         ></input>
       </div>
 
@@ -61,6 +63,7 @@ function SignupForm({ onSuccess }) {
           value={password}
           onChange={onPasswordChange}
           required
+          placeholder="Create a Password."
         ></input>
       </div>
 
@@ -75,7 +78,9 @@ function SignupForm({ onSuccess }) {
           value={username}
           onChange={onUsernameChange}
           required
+          placeholder="Enter a profile name."
         ></input>
+        <div className="this-appears-profile">This appears on your profile.</div>
       </div>
 
       <div className="tos-and-signup">
