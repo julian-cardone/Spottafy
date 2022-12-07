@@ -6,13 +6,12 @@ import SessionLinks from "./components/SessionLinksHeader";
 function App() {
   return (
     <>
-    <SessionLinks />
       <Switch>
         <Route path="/signup">
           <SignupFormPage />
         </Route>
         <Route exact path="/">
-          {/* <BenchIndexPage /> */}
+          <SessionLinks />
         </Route>
       </Switch>
     </>
