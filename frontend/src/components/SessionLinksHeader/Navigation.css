@@ -56,7 +56,8 @@
     -webkit-tap-highlight-color: transparent;
     font-size: 0.96rem;
     font-weight: 700;
-    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
     background-color: transparent;
     border: 0px;
     cursor: default;
@@ -109,7 +110,8 @@
     /* transform: translate3d(0px, 0px, 0px); */
     padding: 0px;
     min-inline-size: 0px;
-
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
 }
 
 .login-button:hover{
