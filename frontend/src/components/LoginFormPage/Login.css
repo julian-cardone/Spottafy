@@ -65,7 +65,195 @@
     margin: 0px auto 1em;
     position: relative;
     text-align: center;
-    width: 85%;
-    border-top: 3px solid #bebebe;
+    width: 100%;
+    border-top: 3px solid rgb(217, 218, 220);
     border-width: 1px;
+} 
+
+.login-form-inputs{
+    display: block;
+}
+
+.email-or-user-container{
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    padding-bottom: 24px;
+}
+
+.user-label-container{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: none;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    font-weight: 700;
+    width: 100%;
+    padding-bottom: 8px;
+}
+
+.password-login-container{
+    padding-bottom: 16px;
+}
+
+.login-button-container{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: right;
+    -webkit-box-align: end;
+    align-items: end;
+    margin-top: 16px;
+}
+
+.login-button-li-page{
+    display: block;
+}
+
+.login-button-li-page{
+    box-sizing: border-box;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    background-color: transparent;
+    border: 0px;
+    border-radius: 500px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    user-select: none;
+    vertical-align: middle;
+    padding: 0px;
+    align-self: center;
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: 0.03em;;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: #1ed760;
+    margin: 0em;
+    /* padding: 1px 6px; */
+}
+
+.inner-login-li-page{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    /* background-color: #1db954; */
+    color: #000000;
+    display: flex;
+    border-radius: 500px;
+    font-size: inherit;
+    min-block-size: 48px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    /* padding-block: 8px; */
+    /* padding-inline: 32px; */
+    padding: 14px 37px;
+}
+
+.login-button-li-page:hover{
+    transform: scale(1.02);
+    cursor: default;
+    background-color: #2cdf6b;
+}
+
+.login-form-divider-2{
+    display: table;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 12px 0px 20px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    border-top: 3px solid rgb(217, 218, 220);
+    border-width: 1px;
+}
+
+.login-page-signup-container{
+    display: block;
+}
+
+.dont-have-an-account{
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: none;
+    letter-spacing: normal;
+    box-sizing: border-box;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    line-height: 1.25rem;
+    color: inherit;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.sign-up-for-spotify{
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-family: spotify-circular, Helvetica, Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    background-color: transparent;
+    border-radius: 500px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    user-select: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    padding: 13px 31px;
+    position: relative;
+    border: 1px solid #878787;
+    width: 100%;
+}
+
+.sign-up-for-text{
+    letter-spacing: 0.09em;
+    color: #6A6A6A;
+}
+
+.sign-up-for-spotify:hover{
+    cursor: default;
+    border: 1px solid black;
 }

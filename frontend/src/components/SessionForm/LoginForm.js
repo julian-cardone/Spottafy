@@ -20,35 +20,28 @@ function LoginForm({ onSuccess }) {
           <label className="user-label" for="username">
             Email address or username
           </label>
-          <input label="username"value={credential}onChange={onCredentialChange}placeholder="Email Address or username"required></input>
         </div>
+          <input label="username"value={credential}onChange={onCredentialChange}placeholder="Email Address or username"required></input>
       </div>
-
+ 
       <div className="password-login-container">
         <div className="password-label-container">
           <label className="password-login-label" for="password">
             Password
           </label>
-          <input label="password"value={password}onChange={onPasswordChange}placeholder="Password"required></input>
         </div>
+          <input label="password"value={password}onChange={onPasswordChange}placeholder="Password"required></input>
       </div>
 
-    <div className="remember-me-container">
-      <div className="remember-me">
-        <div className="remember-me-checkbox">
-          <input type="checkbox"id="login-remember"name="remember"className="remember-checkbox"></input>
-          <label for="login-remember">
-            <span className="indicator"></span>
-            <span className="text-label-checkbox">
-              <p className="remember-me-p">Remember me</p>
-            </span>
-          </label>
+    <div className="login-button-container">
+      <div className="login-button-li-page">
+      <button type="submit" className="login-button-li-page">
+        <div className="inner-login-li-page">
+          <p className="log-in-text-li-page">LOG IN</p>
         </div>
+      </button>
       </div>
     </div>
-      <button type="submit" className="button">
-        Log In
-      </button>
     </form>
   );
 }

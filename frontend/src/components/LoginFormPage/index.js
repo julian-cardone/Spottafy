@@ -23,15 +23,22 @@ function LoginFormPage() {
           <div className="login-container">
             <p className="to-continue-p">To continue, log in to Spotify.</p>
             <span className="login-form-divider"></span>
-            <div className="form-info">
               <LoginForm />
+            <span className="login-form-divider-2"></span>
+            <div className="login-page-signup-container">
+              <p className="dont-have-an-account">Don't have an account?</p>
+              <button className="sign-up-for-spotify">
+                <p className="sign-up-for-text">
+                  SIGN UP FOR SPOTIFY
+                </p>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+} 
 
 
 export default LoginFormPage;
