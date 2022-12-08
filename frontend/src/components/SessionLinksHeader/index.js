@@ -1,18 +1,21 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginButton from './LoginButton';
 import './Navigation.css';
 
 function SessionLinks() {
-  const sessionUser = useSelector(state => state.session.user);
+
+  const sessionUser = sessionStorage.getItem("currentUser");
+  console.log(sessionUser);
 
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
       <ProfileButton user={sessionUser} />
     );
+
   } else {
     sessionLinks = (
       <>

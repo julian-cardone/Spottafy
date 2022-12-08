@@ -323,3 +323,7 @@
     cursor: default;
     background-color: #2cdf6b;
 }
+
+.log-input{
+    cursor: text;
+}
