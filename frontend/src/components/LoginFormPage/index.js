@@ -1,11 +1,17 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import { LoginForm } from "../SessionForm";
 import './Login.css';
 
 function LoginFormPage() {
   const sessionUser = useSelector((state) => state.session.user);
+
+  const history = useHistory();
+
+  const signupRedirect = () => {
+    history.push("/signup");
+  }
 
   return sessionUser ? (
     <Redirect to="/" />
@@ -27,7 +33,7 @@ function LoginFormPage() {
             <span className="login-form-divider-2"></span>
             <div className="login-page-signup-container">
               <p className="dont-have-an-account">Don't have an account?</p>
-              <button className="sign-up-for-spotify">
+              <button className="sign-up-for-spotify"onClick={signupRedirect}>
                 <p className="sign-up-for-text">
                   SIGN UP FOR SPOTIFY
                 </p>

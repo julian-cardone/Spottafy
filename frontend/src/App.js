@@ -5,6 +5,7 @@ import SessionLinks from "./components/SessionLinksHeader";
 import LoginFormPage from "./components/LoginFormPage";
 
 function App() {
+
   return (
     <>
       <Switch>

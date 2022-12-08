@@ -10,4 +10,7 @@
 #  updated_at :datetime         not null
 #
 class Album < ApplicationRecord
+
+    has_one_attached :photo
+
 end

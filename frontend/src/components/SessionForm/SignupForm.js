@@ -2,6 +2,7 @@ import React from "react";
 import * as sessionActions from "../../store/session";
 import { useInput, useSubmit } from "../../hooks";
 import { FormErrors } from "../Forms";
+import { Link, NavLink } from "react-router-dom";
 
 function SignupForm({ onSuccess }) {
   const [email, onEmailChange] = useInput("");
@@ -106,7 +107,7 @@ function SignupForm({ onSuccess }) {
       <p className="account-link-p">
           <span className="account-link-span">
             Have an account?&nbsp;
-            <a href="https://en.wikipedia.org/wiki/Special:Random">Log in</a>
+          <Link to="/login">Log in</Link>
           </span>
       </p>
       </div>
