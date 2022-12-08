@@ -8,7 +8,6 @@ import './Navigation.css';
 function SessionLinks() {
 
   const sessionUser = sessionStorage.getItem("currentUser");
-  console.log(sessionUser);
 
   let sessionLinks;
   if (sessionUser) {

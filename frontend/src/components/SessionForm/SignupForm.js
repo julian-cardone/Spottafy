@@ -2,7 +2,7 @@ import React from "react";
 import * as sessionActions from "../../store/session";
 import { useInput, useSubmit } from "../../hooks";
 import { FormErrors } from "../Forms";
-import { Link, NavLink } from "react-router-dom";
+import { Link, Redirect, useHistory } from "react-router-dom";
 
 function SignupForm({ onSuccess }) {
   const [email, onEmailChange] = useInput("");
@@ -13,19 +13,27 @@ function SignupForm({ onSuccess }) {
     onSuccess,
     action: sessionActions.signup({ email, username, password }),
     validate: () => {
-      if (confirmEmail !== onConfirmEmailChange) {
+      if (confirmEmail !== email) {
         return ["The emails do not match."];
       }
     },
   });
 
-  return (
+  const sessionUser = sessionStorage.getItem("currentUser");
+
+  // const history = useHistory();
+
+  // const redirectHome = () =>{
+  //   history.replace("/");
+  // }
+
+  return sessionUser ? ( <Redirect to="/" /> ) : (
     <form onSubmit={onSubmit} className="form">
       <FormErrors errors={errors} />
 
       <div className="email-container">
         <div className="email-label-container">
-          <label className="email-label" for="email">
+          <label className="email-label" htmlFor="email">
             What's your email?
           </label>
         </div>
@@ -40,7 +48,7 @@ function SignupForm({ onSuccess }) {
 
       <div className="confirm-email-container">
         <div className="confirm-email-label-container">
-          <label className="confirm-email-label" for="confirm-email">
+          <label className="confirm-email-label" htmlFor="confirm-email">
             Confirm your email
           </label>
         </div>
@@ -55,7 +63,7 @@ function SignupForm({ onSuccess }) {
 
       <div className="password-container">
         <div className="password-label-container">
-          <label className="password-label" for="password">
+          <label className="password-label" htmlFor="password">
             What's your password?
           </label>
         </div>
@@ -63,6 +71,7 @@ function SignupForm({ onSuccess }) {
           label="password"
           value={password}
           onChange={onPasswordChange}
+          type="password"
           required
           placeholder="Create a Password."
         ></input>
@@ -70,7 +79,7 @@ function SignupForm({ onSuccess }) {
 
       <div className="username-container">
         <div className="username-label-container">
-          <label className="username-label" for="username">
+          <label className="username-label" htmlFor="username">
             What should we call you?
           </label>
         </div>
@@ -101,7 +110,8 @@ function SignupForm({ onSuccess }) {
 
       <div className="signup-button-container">
       <button type="submit" className="signup-form-button">
-        <div className="inner-button">Sign up</div>
+        <div className="inner-button">Sign up
+        </div>
       </button>
       </div>
       <p className="account-link-p">
