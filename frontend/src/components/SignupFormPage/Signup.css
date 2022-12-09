@@ -2,7 +2,6 @@
     position: relative;
     height: 100%;
     width: 100%;
-    /* z-index: -1; */
     --background-base: #fff;
     --background-highlight: #f6f6f6;
     --background-press: #b7b7b7;

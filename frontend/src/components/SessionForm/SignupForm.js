@@ -2,9 +2,9 @@ import React from "react";
 import * as sessionActions from "../../store/session";
 import { useInput, useSubmit } from "../../hooks";
 import { FormErrors } from "../Forms";
-import { Link, Redirect, useHistory } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
-function SignupForm({ onSuccess }) {
+function SignupForm({ onSuccess, sessionUser }) {
   const [email, onEmailChange] = useInput("");
   const [username, onUsernameChange] = useInput("");
   const [password, onPasswordChange] = useInput("");
@@ -19,7 +19,7 @@ function SignupForm({ onSuccess }) {
     },
   });
 
-  const sessionUser = sessionStorage.getItem("currentUser");
+  // const sessionUser = sessionStorage.getItem("currentUser");
 
   // const history = useHistory();
 

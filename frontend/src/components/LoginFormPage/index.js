@@ -1,11 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { Redirect, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { LoginForm } from "../SessionForm";
 import './Login.css';
+import { Redirect } from "react-router-dom";
 
-function LoginFormPage() {
-  const sessionUser = useSelector((state) => state.session.user);
+function LoginFormPage( { sessionUser } ) {
 
   const history = useHistory();
 
@@ -13,9 +12,7 @@ function LoginFormPage() {
     history.push("/signup");
   }
 
-  return sessionUser ? (
-    <Redirect to="/" />
-  ) : (
+  return sessionUser ? (<Redirect to="/" />) : (
     <div className="loginpage-theme-container">
       <div className="login-page-header">
         <div className="spottafy-logo">

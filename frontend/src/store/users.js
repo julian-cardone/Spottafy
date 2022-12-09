@@ -1,33 +1,28 @@
-// ACTION TYPES
-    const RECEIVE_USER = 'users/RECEIVE_USER';
-    const REMOVE_USER = 'users/REMOVE_USER';
+const ADD_USER = 'users/addUser';
+const ADD_USERS = 'users/addUsers';
 
-    // ACTION CREATORS
-    export const receiveUser = user => ({
-        type: RECEIVE_USER,
-        payload: user
-    });
+export const addUser = (user) => ({
+  type: ADD_USER,
+  payload: user
+});
 
-    export const removeUser = userId => ({
-        type: REMOVE_USER,
-        userId // userId: userId
-    });
+export const addUsers = (users) => ({
+  type: ADD_USERS,
+  payload: users
+});
 
-    // REDUCER
-    const userReducer = ( state = {}, action ) => {
-        const nextState = { ...state };
+function usersReducer(state = {}, action) {
+  Object.freeze(state);
+  switch (action.type) {
+    case ADD_USER:
+      const user = action.payload;
+      return { ...state, [user.id]: user };
+    case ADD_USERS:
+      const users = action.payload;
+      return { ...state, ...users };
+    default:
+      return state;
+  }
+}
 
-        switch(action.type) {
-            case RECEIVE_USER:
-                debugger
-                nextState[action.payload.id] = action.payload;
-                return nextState;
-            case REMOVE_USER:
-                delete nextState[action.userId];
-                return nextState;
-            default:
-                return state;
-        }
-    };
-
-    export default userReducer
+export default usersReducer;

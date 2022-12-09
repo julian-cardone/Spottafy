@@ -1,26 +1,30 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 // import { useSelector } from 'react-redux';
-import ProfileButton from './ProfileButton';
+import ProfileButton from '../SessionLinksHeader/ProfileButton';
 import LoginButton from './LoginButton';
 import './Navigation.css';
 
-function SessionLinks() {
-
-  const sessionUser = sessionStorage.getItem("currentUser");
+function SessionLinks({ sessionUser }) {
 
   let sessionLinks;
-  if (sessionUser) {
+  if (sessionUser.sessionUser) {
     sessionLinks = (
-      <ProfileButton user={sessionUser} />
+      <header className="session-links-logged-in">
+      <div className='header-wrapper-logged-in'>
+      <ProfileButton sessionUser={ sessionUser } />
+      </div>
+    </header>
     );
 
   } else {
     sessionLinks = (
       <>
       <header className="session-links">
+        <div className='header-wrapper'>
         <NavLink to="/signup" className="signup-button">Sign up</NavLink>
         <LoginButton />
+        </div>
       </header>
       </>
     );
@@ -33,9 +37,7 @@ function SessionLinks() {
     //   </NavLink>
     <>
       <div className="session-links-header">
-        <div className='header-wrapper'>
           {sessionLinks}
-        </div>
       </div>
       <div className='background-dark-theme'></div>
     </> 

@@ -17,12 +17,12 @@ function LoginForm({ onSuccess }) {
 
   const history = useHistory();
 
-  const handleDemo = () =>{ 
+  const handleDemo = () => { 
     dispatch(sessionActions.login({ credential: "Demo-lition", password: "password" }))
     history.replace('/');
   }
 
-  return (
+  return ( 
     <form onSubmit={onSubmit} className="login-form-inputs"id="loginform">
       <FormErrors errors={errors} />
       

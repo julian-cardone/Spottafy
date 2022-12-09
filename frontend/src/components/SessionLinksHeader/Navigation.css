@@ -1,12 +1,18 @@
+
 .background-dark-theme{
     /* isolation: isolate; */
     position: relative;
     height: 100%;
-    top: 64px;
-    width: 100%;
+    /* top: 64px; */
+    /* width: 100%; */
     background-image: linear-gradient(#212121, #121212);
-    z-index: -1;
+    overflow: visible;
+    z-index: -999;
 }
+
+/* body {
+    background-image: linear-gradient(#212121, #121212);
+} */
 
 .session-links-header{
     grid-area: main-view;
@@ -16,7 +22,7 @@
     background-color: #121212;
     bottom: 0;
     left: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* pointer-events: none; */
     position: fixed;
     right: 0;
@@ -140,4 +146,185 @@
 .signup-button:hover {
     transform: scale(1.04);
     color: #fff
+}
+
+.session-links-logged-in{
+    align-items: center;
+    /* display: -webkit-box; */
+    display: flex;
+    gap: 1px;
+    height: 64px;
+    /* justify-content: space-between; */
+    /* padding: 16px; */
+
+
+    position: relative;
+    width: 100%;
+    justify-content: right;
+}
+
+.header-wrapper-logged-in{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-padding-end: 16px;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    height: 64px;
+    justify-content: right;
+    padding: 16px;
+    padding-inline-end: 16px;
+    position: relative;
+    width: 100%;
+}
+
+.profile-icon{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    background-color: rgba(0,0,0,.7);
+    border: 0;
+    border-radius: 23px;
+    color: #fff;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+    height: 32px;
+    justify-content: center;
+    padding: 2px;
+    position: relative;
+}
+
+.profile-icon:hover{
+    background-color: #282828;
+}
+
+.figurepro{
+    display: inline-block;
+    position: relative;
+    width: 28px;
+    height: 28px;
+}
+
+.wrapper-pro{
+    width: 28px;
+    height: 28px;
+    inset-inline-start: 0px;
+}
+
+.wrapper-pro-two{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    align-items: center;
+    background-color: #535353;
+    border-radius: 50%;
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+
+.user-icon{
+    position: relative;
+    fill: white;
+    /* overflow: hidden; */
+    bottom: 23px;
+}
+
+.span-pro-dropdown{
+    box-sizing: border-box;
+    /* -webkit-tap-highlight-color: transparent; */
+    margin-block: 0px;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    font-family: Helvetica, Arial, sans-serif;
+    letter-spacing: -0.01em;
+    color: inherit;
+}
+
+.svg-arrow-dropdown{
+    position: relative;
+    fill: white;
+    /* overflow: hidden; */
+}
+
+.dropdown-root{
+    position: absolute;
+    /* z-index: 999; */
+    inset: 0px 0px auto auto;
+    margin: 0px;
+    transform: translate(-17px, 72px);
+}
+
+.dropdown-container{
+    position: relative;
+    min-width: 196px;
+}
+
+.profile-dropdown{
+    /* -webkit-app-region: no-drag; */
+    background-color: #282828;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 16px 24px rgb(0 0 0 / 30%), 0 6px 8px rgb(0 0 0 / 20%);
+    box-shadow: 0 16px 24px rgb(0 0 0 / 30%), 0 6px 8px rgb(0 0 0 / 20%);
+    max-height: calc(100vh - 24px);
+    max-width: 350px;
+    min-width: 160px;
+    /* overflow-y: auto; */
+    padding: 4px;
+}
+
+.logout-dropdown-button{
+    -webkit-padding-end: 8px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 8px;
+    height: 40px;
+    justify-content: space-between;
+    padding: 12px;
+    padding-inline-end: 8px;
+    position: relative;
+    text-align: start;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-radius: 2px;
+    color: hsla(0,0%,100%,.9);
+    cursor: default;
+    text-decoration: none;
+}
+
+.logout-dropdown-button:hover{
+    background-color: #535353;
+}
+
+.profile-button{
+    /* position: relative; */
+    /* z-index: 9999; */
 }
