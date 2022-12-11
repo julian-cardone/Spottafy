@@ -15,7 +15,7 @@ const Player = () => (
             <div className='title-div-playbar'>
               <div className='title-div-playbar-pad'>
                 <div className='title-padding-stuff'>
-                <span className='title-name-span'>Title Name</span>
+                <span className='title-name-span'>Cut My Hair</span>
                 </div>
               </div>
             </div>
@@ -55,8 +55,20 @@ const Player = () => (
                 </svg>
               </button>
             </div>
-            <div className=''></div>
           </div>
+            <div className='seeking-bar'>
+              <div className='first-number'>0:00</div>
+              <div className='seeking-bar-wrap'>
+                <div className='seeking-bar-inner'>
+                  <div className='seeking-bar-inner-inner'>
+                    <div className='progress-bar'>
+                      <div className='progress-bar-inner'></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='second-number'>2:07</div>
+            </div>
         </div>
       </div>
 

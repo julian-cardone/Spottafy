@@ -285,3 +285,97 @@
     height: 100%;
     width: 100%;
 }
+
+.seeking-bar{
+    --playback-bar-grid-gap: 8px;
+    /* -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-box-align: center;
+    -ms-flex-align: center; */
+    align-items: center;
+    /* display: -webkit-box;
+    display: -ms-flexbox; */
+    display: flex;
+    /* -ms-flex-direction: row; */
+    flex-direction: row;
+    gap: var(--playback-bar-grid-gap);
+    justify-content: space-between;
+    width: 100%;
+}
+
+.first-number{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+    color: var(--text-subdued,#6a6a6a);
+    min-width: 40px;
+    text-align: right;
+}
+
+.seeking-bar-wrap{
+    height: 12px;
+    position: relative;
+    width: 100%;
+}
+
+.seeking-bar-inner{
+    --bg-color: hsla(0,0%,100%,.3);
+    --fg-color: #fff;
+    --is-active-fg-color: #1db954;
+    --progress-bar-transform: 0%;
+    --progress-bar-height: 4px;
+    --progress-bar-radius: calc(var(--progress-bar-height)/2);
+    height: 100%;
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    width: 100%;
+}
+
+.seeking-bar-inner-inner{
+    border-radius: var(--progress-bar-radius);
+    height: var(--progress-bar-height);
+    width: 100%;
+    background-color: var(--bg-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.progress-bar{
+    border-radius: var(--progress-bar-radius);
+    height: var(--progress-bar-height);
+    width: 100%;
+}
+
+/* for song progress */
+
+/* .progress-bar-inner{
+    background-color: var(--fg-color);
+    border-radius: var(--progress-bar-radius);
+    height: var(--progress-bar-height);
+    -webkit-transform: translateX(calc(-100% + var(--progress-bar-transform)));
+    transform: translateX(calc(-100% + var(--progress-bar-transform)));
+    width: 100%;
+} */
+
+.second-number{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+    color: var(--text-subdued,#6a6a6a);
+    min-width: 40px;
+    text-align: left;
+}
