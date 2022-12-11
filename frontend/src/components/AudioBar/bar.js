@@ -72,8 +72,30 @@ const Player = () => (
         </div>
       </div>
 
-
-      <div></div>
+      {/* 3/3 mute/volume */}
+      <div className='volume-mute-third'>
+        <div className='volume-mute-container'>
+          <div className='volume-bar'>
+            <button className='mute-button'>
+              <svg role="presentation"height="16"width="16"viewBox='0 0 16 16'className='svg-mute'>
+                <path d="M 9.741 0.85 a 0.75 0.75 0 0 1 0.375 0.65 v 13 a 0.75 0.75 0 0 1 -1.125 0.65 l -6.925 -4 a 3.642 3.642 0 0 1 -1.33 -4.967 a 3.639 3.639 0 0 1 1.33 -1.332 l 6.925 -4 a 0.75 0.75 0 0 1 0.75 0 Z m -6.924 5.3 a 2.139 2.139 0 0 0 0 3.7 l 5.8 3.35 V 2.8 l -5.8 3.35 Z m 8.683 4.29 V 5.56 a 2.75 2.75 0 0 1 0 4.88 Z"></path>
+                <path d="M 11.5 13.614 a 5.752 5.752 0 0 0 0 -11.228 v 1.55 a 4.252 4.252 0 0 1 0 8.127 v 1.55 Z"></path>  
+              </svg>
+            </button>
+            <div className='volume-bar-slider-container'>
+              <div className='volume-bar-slider'>
+                <div className='progress-bar'>
+                  <div className='progress-bar-back'>
+                    <div className='progress-bar-background'>
+                      <div className='progress-bar-background-inner'></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 </div>

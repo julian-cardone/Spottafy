@@ -379,3 +379,118 @@
     min-width: 40px;
     text-align: left;
 }
+
+.volume-mute-third{
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: flex-end;
+    min-width: 180px;
+    width: 30%;
+}
+
+.volume-mute-container{
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.volume-bar{
+    margin-right: 4px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-flex: 0;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 1 125px;
+    flex: 0 1 125px;
+    position: relative;
+}
+
+.mute-button{
+    background-color: transparent;
+    border: none;
+    color: hsla(0,0%,100%,.7);
+    height: 32px;
+    min-width: 32px;
+    width: 32px;
+    position: relative;
+}
+
+.svg-mute{
+    fill:hsla(0,0%,100%,.7);
+}
+
+
+/* volume bar slider */
+
+.volume-bar-slider-container{
+    width: 100%;
+}
+
+.volume-bar-slider{
+    height: 12px;
+    position: relative;
+    width: 100%;
+}
+
+.progress-bar{
+    --bg-color: hsla(0,0%,100%,.3);
+    --fg-color: #fff;
+    --is-active-fg-color: #1db954;
+    --progress-bar-transform: 0%;
+    --progress-bar-height: 4px;
+    --progress-bar-radius: calc(var(--progress-bar-height)/2);
+    height: 100%;
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    width: 100%;
+}
+
+.progress-bar-back{
+    border-radius: var(--progress-bar-radius);
+    height: var(--progress-bar-height);
+    width: 100%;
+    background-color: var(--bg-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.progress-bar-background{
+    border-radius: var(--progress-bar-radius);
+    height: var(--progress-bar-height);
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+/* .progress-bar-background-inner{
+    background-color: var(--fg-color);
+    border-radius: var(--progress-bar-radius);
+    height: var(--progress-bar-height);
+    -webkit-transform: translateX(calc(-100% + var(--progress-bar-transform)));
+    transform: translateX(calc(-100% + var(--progress-bar-transform)));
+    width: 100%;
+} */
