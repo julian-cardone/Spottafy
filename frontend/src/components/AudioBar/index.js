@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Player from "./Bar.js";
 import './Bar.css';
 import { useState } from "react";
@@ -13,14 +13,20 @@ const AudioBar = ({ sessionUser }) => {
   // const audioElement = <audio src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"type="audio/mpeg"name="audio"></audio>
   // console.log(audioElement);
   // audioElement.play();
-
   const audioElement = useRef();
+
+  const onPlay = () => {
+    const duration = audioElement.current.duration;
+    const ct = audioElement.current.currentTime;
+
+    setCurrentSong({...currentSong, "progress":ct / duration * 100, "length": duration})
+  }
   
   if (sessionUser.sessionUser){
   return (
     <>
-    <audio ref={audioElement}></audio>
-    <Player songs={songs} setSongs={setSongs} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElement={audioElement}/>
+    <audio ref={audioElement}onTimeUpdate={onPlay}></audio>
+    <Player songs={songs} setSongs={setSongs} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElement={audioElement} currentSong={currentSong}/>
     </>
   ) 
 }

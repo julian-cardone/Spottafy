@@ -1,7 +1,8 @@
 import React from 'react';
 import PlayPauseButton from './PlayPauseButton';
+import SeekBar from './SeekBar';
 
-const Player = ({ audioElement }) => (
+const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => (
   <div className='root-audio-bar'>
   <footer className='audio-footer'>
     <div className='audio-bar-grid'>
@@ -10,7 +11,8 @@ const Player = ({ audioElement }) => (
       <div className='now-playing'>
         <div className='now-playing-widget'>
           <div className='album-cover'>
-            <img src="quadrophenia.jpg"alt="Quadrophenia"className='quadrophenia' />
+            {/* <img src="https://i.discogs.com/dmkhWfNttTRT-mGwIgNGyEhmGxpFitTqdnikg5X6PyU/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNjUw/ODItMTMwMTEyOTk5/MS5qcGVn.jpeg"alt="Quadrophenia"className='quadrophenia' /> */}
+            <img src="quadrophenia"alt="Quadrophenia"className='quadrophenia' />
           </div>
           <div className='song-info-playbar'>
             <div className='title-div-playbar'>
@@ -43,7 +45,7 @@ const Player = ({ audioElement }) => (
                   <path d="M 3.3 1 a 0.7 0.7 0 0 1 0.7 0.7 v 5.15 l 9.95 -5.744 a 0.7 0.7 0 0 1 1.05 0.606 v 12.575 a 0.7 0.7 0 0 1 -1.05 0.607 L 4 9.149 V 14.3 a 0.7 0.7 0 0 1 -0.7 0.7 H 1.7 a 0.7 0.7 0 0 1 -0.7 -0.7 V 1.7 a 0.7 0.7 0 0 1 0.7 -0.7 h 1.6 Z"></path>
                 </svg>
               </button>
-              <PlayPauseButton audioElement={audioElement}/>
+              <PlayPauseButton audioElement={audioElement} isPlaying={isPlaying} setIsPlaying={setIsPlaying}/>
             <button className='back-song'>
                 <svg role="img"height="16"width="16"viewBox="0 0 16 16">
                   <path d="M 12.7 1 a 0.7 0.7 0 0 0 -0.7 0.7 v 5.15 L 2.05 1.107 A 0.7 0.7 0 0 0 1 1.712 v 12.575 a 0.7 0.7 0 0 0 1.05 0.607 L 12 9.149 V 14.3 a 0.7 0.7 0 0 0 0.7 0.7 h 1.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -1.6 Z"></path>
@@ -51,19 +53,7 @@ const Player = ({ audioElement }) => (
               </button>
             </div>
           </div>
-            <div className='seeking-bar'>
-              <div className='first-number'>0:00</div>
-              <div className='seeking-bar-wrap'>
-                <div className='seeking-bar-inner'>
-                  <div className='seeking-bar-inner-inner'>
-                    <div className='progress-bar'>
-                      <div className='progress-bar-inner'></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className='second-number'>2:07</div>
-            </div>
+            <SeekBar currentSong={currentSong}/>
         </div>
       </div>
 

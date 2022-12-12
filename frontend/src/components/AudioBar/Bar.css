@@ -72,6 +72,11 @@
 .album-cover{
     isolation: isolate;
     position: relative;
+    /* bottom: 35%; */
+    /* left: 35%;
+    position: absolute;
+    right: 35%; */
+    /* top: 35%; */
 }
 
 .song-info-playbar{
@@ -287,7 +292,14 @@
 }
 
 .quadrophenia{
+    /* background-color: #000; */
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 100%;
+    left: 0;
+    position: relative;
+    top: 0;
     width: 100%;
 }
 
@@ -328,20 +340,6 @@
     width: 100%;
 }
 
-.seeking-bar-inner{
-    --bg-color: hsla(0,0%,100%,.3);
-    --fg-color: #fff;
-    --is-active-fg-color: #1db954;
-    --progress-bar-transform: 0%;
-    --progress-bar-height: 4px;
-    --progress-bar-radius: calc(var(--progress-bar-height)/2);
-    height: 100%;
-    overflow: hidden;
-    -ms-touch-action: none;
-    touch-action: none;
-    width: 100%;
-}
-
 .seeking-bar-inner-inner{
     border-radius: var(--progress-bar-radius);
     height: var(--progress-bar-height);
@@ -357,9 +355,33 @@
 }
 
 .progress-bar{
+    /* position: relative; */
     border-radius: var(--progress-bar-radius);
     height: var(--progress-bar-height);
-    width: 100%;
+    /* width: 50%; */
+    /* background-color: var(--bg-color); */
+}
+
+.seeking-bar-inner{
+    --bg-color: hsla(0,0%,100%,.3);
+    --fg-color: #fff;
+    --is-active-fg-color: #1db954;
+    --progress-bar-transform: 0%;
+    --progress-bar-height: 4px;
+    --progress-bar-radius: calc(var(--progress-bar-height)/2);
+    height: 100%;
+    overflow: hidden;
+    -ms-touch-action: none;
+    touch-action: none;
+    width: 50%;
+}
+
+.progress-bar-inner{
+    /* position: relative; */
+    border-radius: var(--progress-bar-radius);
+    height: var(--progress-bar-height);
+    width: 0%;
+    background-color: var(--fg-color);
 }
 
 /* for song progress */
