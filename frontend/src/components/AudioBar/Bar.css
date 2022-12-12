@@ -279,6 +279,7 @@
     position: relative;
     /* flex: 1; */
     /* right: 10em; */
+    z-index: 1000;
 }
 
 .play-pause-container:hover{
