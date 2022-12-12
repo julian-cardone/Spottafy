@@ -518,11 +518,17 @@
     /* overflow: hidden; */
 }
 
-/* .progress-bar-background-inner{
+.progress-bar-background-inner{
     background-color: var(--fg-color);
     border-radius: var(--progress-bar-radius);
     height: var(--progress-bar-height);
-    -webkit-transform: translateX(calc(-100% + var(--progress-bar-transform)));
-    transform: translateX(calc(-100% + var(--progress-bar-transform)));
     width: 100%;
-} */
+}
+
+.mute-button:hover .svg-mute{
+    fill: #fff;
+}
+
+.progress-bar-background-inner:hover{
+    background-color: var(--is-active-fg-color);
+}

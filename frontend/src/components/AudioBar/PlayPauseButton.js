@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const PlayPauseButton = ({ audioElement, isPlaying, setIsPlaying }) => {
 
   // const audioTest = (
@@ -39,9 +41,13 @@ const PlayPauseButton = ({ audioElement, isPlaying, setIsPlaying }) => {
   //   }
   // }
 
+  useEffect(()=>{
+    audioElement.current.src="https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3";
+  },[audioElement])
+
   
   const playPause = () => {
-    audioElement.current.src="https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3";
+    
     const path = document.getElementById("pathPlay");
     if (!isPlaying){
       path.setAttribute("d", buttonStatusPlaying)

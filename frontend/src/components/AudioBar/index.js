@@ -18,8 +18,9 @@ const AudioBar = ({ sessionUser }) => {
   const onPlay = () => {
     const duration = audioElement.current.duration;
     const ct = audioElement.current.currentTime;
+    const volume = audioElement.current.volume;
 
-    setCurrentSong({...currentSong, "progress":ct / duration * 100, "length": duration})
+    setCurrentSong({...currentSong, "progress":ct / duration * 100, "length": duration, "volume":volume})
   }
   
   if (sessionUser.sessionUser){

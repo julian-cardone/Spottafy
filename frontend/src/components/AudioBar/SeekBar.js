@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 
 const SeekBar = ({ currentSong, audioElement }) => {
 
+  // audioElement.current.currentTime = 0;
+
   const clickRef = useRef();
 
   const checkWidth = (e) => {
