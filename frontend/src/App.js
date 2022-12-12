@@ -5,6 +5,7 @@ import SessionLinks from "./components/SessionLinksHeader";
 import LoginFormPage from "./components/LoginFormPage";
 import { useSelector } from "react-redux";
 import AudioBar from "./components/AudioBar";
+// import NavBar from "./components/NavBar";
 
 function App() {
   const sessionUser = useSelector((state) => state.session.user);
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/">
           <SessionLinks sessionUser={{ sessionUser }} />
           <AudioBar sessionUser={{ sessionUser }} />
+          {/* <NavBar /> */}
         </Route>
       </Switch>
     </>

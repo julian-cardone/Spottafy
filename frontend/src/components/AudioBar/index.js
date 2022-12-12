@@ -10,13 +10,17 @@ const AudioBar = ({ sessionUser }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSong, setCurrentSong] = useState(songsdata[0])
 
-  const audioElement = useRef();
-  console.log(audioElement);
+  // const audioElement = <audio src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"type="audio/mpeg"name="audio"></audio>
+  // console.log(audioElement);
+  // audioElement.play();
+
+  const audioElement = new Audio("https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav");
   
   if (sessionUser.sessionUser){
   return (
     <>
-    <audio src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"ref={audioElement}type="audio/mpeg"name="audio"></audio>
+    {/* <audio src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"ref={audioElement}type="audio/mpeg"name="audio"></audio> */}
+    {audioElement}
     <Player songs={songs} setSongs={setSongs} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElement={audioElement}/>
     </>
   ) 
