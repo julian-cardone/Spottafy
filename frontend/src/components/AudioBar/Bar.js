@@ -53,7 +53,7 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => (
               </button>
             </div>
           </div>
-            <SeekBar currentSong={currentSong}/>
+            <SeekBar currentSong={currentSong} audioElement={audioElement}/>
         </div>
       </div>
 

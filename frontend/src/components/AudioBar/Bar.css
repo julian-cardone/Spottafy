@@ -338,6 +338,7 @@
     height: 12px;
     position: relative;
     width: 100%;
+    z-index: 900;
 }
 
 .seeking-bar-inner-inner{
@@ -382,6 +383,10 @@
     height: var(--progress-bar-height);
     width: 0%;
     background-color: var(--fg-color);
+}
+
+.seeking-bar-wrap:hover .progress-bar-inner{
+    background-color: var(--is-active-fg-color);
 }
 
 /* for song progress */

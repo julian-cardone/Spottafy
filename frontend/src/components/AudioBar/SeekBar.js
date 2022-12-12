@@ -1,9 +1,28 @@
-const SeekBar = ({ currentSong }) => {
+import { useEffect, useRef, useState } from "react";
+
+const SeekBar = ({ currentSong, audioElement }) => {
+
+  const clickRef = useRef();
+
+  const checkWidth = (e) => {
+    let width = clickRef.current.clientWidth;
+    const offset = e.nativeEvent.offsetX;
+    
+    const divprogress = offset / width * 100;
+    audioElement.current.currentTime = divprogress / 100 * currentSong.length;
+  }
+
+  // const [seconds, setSeconds] = useState(0);
+  // const [minutes, setMinutes] = useState(0);
+
+  // useEffect(()=> {
+  //   setSeconds()
+  // },[])
 
   return (
     <div className='seeking-bar'>
-              <div className='first-number'>0:00</div>
-              <div className='seeking-bar-wrap'>
+              <div className='first-number'>{`${Math.floor(audioElement.currentTime/60)}:${Math.floor(audioElement.currentTime%60)}`}</div>
+              <div className='seeking-bar-wrap'onClick={(e) => checkWidth(e)} ref={clickRef}>
                 <div className='seeking-bar-inner'>
                   <div className='seeking-bar-inner-inner'>
                     <div className='progress-bar'>
@@ -12,7 +31,7 @@ const SeekBar = ({ currentSong }) => {
                   </div>
                 </div>
               </div>
-              <div className='second-number'>2:07</div>
+              <div className='second-number'>{`${Math.floor(currentSong.length / 60)}:${Math.floor(currentSong.length%60)}`}</div>
             </div>
   )
 }
