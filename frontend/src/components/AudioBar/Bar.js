@@ -1,7 +1,7 @@
 import React from 'react';
 import PlayPauseButton from './PlayPauseButton';
 
-const Player = () => (
+const Player = ({ audioElement }) => (
   <div className='root-audio-bar'>
   <footer className='audio-footer'>
     <div className='audio-bar-grid'>
@@ -43,7 +43,7 @@ const Player = () => (
                   <path d="M 3.3 1 a 0.7 0.7 0 0 1 0.7 0.7 v 5.15 l 9.95 -5.744 a 0.7 0.7 0 0 1 1.05 0.606 v 12.575 a 0.7 0.7 0 0 1 -1.05 0.607 L 4 9.149 V 14.3 a 0.7 0.7 0 0 1 -0.7 0.7 H 1.7 a 0.7 0.7 0 0 1 -0.7 -0.7 V 1.7 a 0.7 0.7 0 0 1 0.7 -0.7 h 1.6 Z"></path>
                 </svg>
               </button>
-              <PlayPauseButton />
+              <PlayPauseButton audioElement={audioElement}/>
             <button className='back-song'>
                 <svg role="img"height="16"width="16"viewBox="0 0 16 16">
                   <path d="M 12.7 1 a 0.7 0.7 0 0 0 -0.7 0.7 v 5.15 L 2.05 1.107 A 0.7 0.7 0 0 0 1 1.712 v 12.575 a 0.7 0.7 0 0 0 1.05 0.607 L 12 9.149 V 14.3 a 0.7 0.7 0 0 0 0.7 0.7 h 1.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -1.6 Z"></path>

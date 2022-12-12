@@ -14,13 +14,12 @@ const AudioBar = ({ sessionUser }) => {
   // console.log(audioElement);
   // audioElement.play();
 
-  const audioElement = new Audio("https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav");
+  const audioElement = useRef();
   
   if (sessionUser.sessionUser){
   return (
     <>
-    {/* <audio src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"ref={audioElement}type="audio/mpeg"name="audio"></audio> */}
-    {audioElement}
+    <audio ref={audioElement}></audio>
     <Player songs={songs} setSongs={setSongs} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElement={audioElement}/>
     </>
   ) 

@@ -28,8 +28,16 @@ const PlayPauseButton = ({ audioElement }) => {
     "M 2.7 1 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 H 2.7 Z m 8 0 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -2.6 Z";
 
   const playPause = () => {
-    audioElement.current.play();
-  };
+    const path = document.getElementById("pathPlay");
+    audioElement.current.src="https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3";
+    if (path.getAttribute("d") === buttonStatusPaused){
+      path.setAttribute("d", buttonStatusPlaying)
+      audioElement.current.play();
+    } else {
+      path.setAttribute("d", buttonStatusPaused)
+      audioElement.current.pause();
+    }
+  }
 
   return (
     <>
