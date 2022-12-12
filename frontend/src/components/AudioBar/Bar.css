@@ -208,7 +208,7 @@
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
     gap: 8px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     width: 100%;
     -webkit-box-direction: normal;
     display: -webkit-box;
@@ -271,7 +271,7 @@
     -webkit-transition-property: all;
     transition-property: all;
     width: var(--button-size);  
-    padding: 9px;
+    padding: 8px;
     border-radius: 50%;
 }
 
@@ -279,6 +279,10 @@
     position: relative;
     /* flex: 1; */
     /* right: 10em; */
+}
+
+.play-pause-container:hover{
+    transform: scale(1.07);
 }
 
 .quadrophenia{
@@ -312,7 +316,7 @@
     font-size: 0.6875rem;
     font-weight: 400;
     font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
-    color: var(--text-subdued,#6a6a6a);
+    color: var(--text-subdued,#a7a7a7);
     min-width: 40px;
     text-align: right;
 }
@@ -375,7 +379,7 @@
     font-size: 0.6875rem;
     font-weight: 400;
     font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
-    color: var(--text-subdued,#6a6a6a);
+    color: var(--text-subdued,#a7a7a7);
     min-width: 40px;
     text-align: left;
 }

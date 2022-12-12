@@ -21,7 +21,7 @@ function App() {
         </Route>
         <Route exact path="/">
           <SessionLinks sessionUser={{ sessionUser }} />
-          <AudioBar />
+          <AudioBar sessionUser={{ sessionUser }} />
         </Route>
       </Switch>
     </>
