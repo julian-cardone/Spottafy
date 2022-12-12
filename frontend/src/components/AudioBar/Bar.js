@@ -19,7 +19,7 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => (
             <div className='title-div-playbar'>
               <div className='title-div-playbar-pad'>
                 <div className='title-padding-stuff'>
-                <span className='title-name-span'>Cut My Hair</span>
+                <span className='title-name-span'>{currentSong.title}</span>
                 </div>
               </div>
             </div>
