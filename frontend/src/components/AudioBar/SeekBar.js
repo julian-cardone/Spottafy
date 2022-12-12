@@ -23,7 +23,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
 
   return (
     <div className='seeking-bar'>
-              <div className='first-number'>{`${Math.floor(audioElement.currentTime/60)}:${Math.floor(audioElement.currentTime%60)}`}</div>
+              <div className='first-number'>{`${Math.floor(currentSong.progress/60)}:${Math.floor(currentSong.progress%60)}`}</div>
               <div className='seeking-bar-wrap'onClick={(e) => checkWidth(e)} ref={clickRef}>
                 <div className='seeking-bar-inner'>
                   <div className='seeking-bar-inner-inner'>
