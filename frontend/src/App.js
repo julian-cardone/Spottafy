@@ -20,7 +20,7 @@ function App() {
           <LoginFormPage sessionUser={sessionUser} />
         </Route>
         <Route exact path="/">
-          <NavBar />
+          <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />
           <AudioBar sessionUser={{ sessionUser }} />
         </Route>

@@ -1,8 +1,8 @@
 import Bar from "./Bar.js";
 import './navbar.css';
 
-const NavBar = () => {
-  return(
+const NavBar = ({ sessionUser }) => {
+    return (
     <Bar />
   )
 }
