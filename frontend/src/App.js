@@ -6,6 +6,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import { useSelector } from "react-redux";
 import AudioBar from "./components/AudioBar";
 import NavBar from "./components/NavBar";
+import AlbumIndexPage from "./components/AlbumIndexPage/index.js";
 
 function App() {
   const sessionUser = useSelector((state) => state.session.user);
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/">
           <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />
+          <AlbumIndexPage />
           <AudioBar sessionUser={{ sessionUser }} />
         </Route>
       </Switch>

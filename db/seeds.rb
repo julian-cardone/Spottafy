@@ -34,3 +34,58 @@ end
         password: 'password'
       }) 
     end
+
+    Artist.create!(
+      id: 1,
+      artist_name: "The Who"
+    )
+
+    Artist.create!(
+      id: 2,
+      artist_name: "Metro Boomin"
+    )
+
+    Artist.create!(
+      id: 3,
+      artist_name: "Electric Light Orchestra"
+    )
+
+    Artist.create!(
+      id: 4,
+      artist_name: "Arctic Monkeys"
+    )
+
+    Artist.create!(
+      id: 5,
+      artist_name: "Lil Uzi Vert"
+    )
+
+    Album.create!(
+      album_name: 'Quadropehnia',
+      artist_id: 1,
+      year: 1973
+    )
+
+    Album.create!(
+      album_name: 'HEROES & VILLAINS',
+      artist_id: 2,
+      year: 2022
+    )
+
+    Album.create!(
+      album_name: 'All Over the World',
+      artist_id: 3,
+      year: 1980
+    )
+
+    Album.create!(
+      album_name: 'AM',
+      artist_id: 4,
+      year: 2013
+    )
+
+    Album.create!(
+      album_name: 'Luv is Rage 2',
+      artist_id: 5,
+      year: 2017
+    )

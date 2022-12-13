@@ -1,0 +1,34 @@
+.album-index-page{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-area: album-index-page;
+    min-height: 0;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    background: transparent;
+    /* display: flex; */
+    /* flex-direction: column; */
+    isolation: isolate;
+    border: 10px, pink;
+    /* position: relative; */
+}
+
+.album-index-container{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    min-height: 0;
+    position: relative;
+    display: grid;
+    grid-gap: 24px;
+    padding: 24px, 32px, 0px;
+}
+
+

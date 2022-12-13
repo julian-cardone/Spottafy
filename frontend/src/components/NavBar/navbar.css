@@ -9,7 +9,7 @@
     flex-direction: column;
     grid-area: nav-bar;
     min-height: 0;
-    position: absolute;
+    position: fixed;
     /* width: calc(var(--nav-bar-width) + 9px); */
     width: 255px;
     z-index: 100;

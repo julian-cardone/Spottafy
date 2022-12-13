@@ -38,7 +38,7 @@ function SessionLinks({ sessionUser }) {
     //     <h1>Spottafy</h1>
     //   </NavLink>
     <>
-      <div className="session-links-header-2">
+      <div className="session-links-header">
           {sessionLinks}
       </div>
       <div className='background-dark-theme'></div> 

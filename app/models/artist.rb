@@ -8,4 +8,11 @@
 #  updated_at  :datetime         not null
 #
 class Artist < ApplicationRecord
+
+    has_many :albums, dependent: :destroy
+
 end
+
+# class_name: :artist,
+# dependent: :destroy,
+# inverse_of: :artist

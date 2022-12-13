@@ -329,6 +329,7 @@
     /* z-index: 9999; */
 }
 
+/* doing nothing atm */
 .session-links-header-2{
     grid-area: main-view;
     height: 64px;

@@ -11,6 +11,18 @@
 #
 class Album < ApplicationRecord
 
+    validates :artist_name, presence: true
+    validates :artist_id, presence: true
+    validates :year, presence: true
+
     has_one_attached :photo
 
+    belongs_to :artist
+
 end
+
+# primary_key: :id,
+# foreign_key: :artist_id,
+# class_name: :artist,
+# dependent: :destroy,
+# inverse_of: :albums
