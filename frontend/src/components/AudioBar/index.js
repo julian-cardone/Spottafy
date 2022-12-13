@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Player from "./Bar.js";
-import './Bar.css';
+import './bar.css';
 import { useState } from "react";
 import { songsdata } from "./songsdata";
 

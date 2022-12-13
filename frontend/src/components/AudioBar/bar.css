@@ -3,6 +3,7 @@
     position: fixed;
     /* vertical-align: bottom; */
     bottom: 0px;
+    z-index: 1000;
 }
 
 .audio-footer{

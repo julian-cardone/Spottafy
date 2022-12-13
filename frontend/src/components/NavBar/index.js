@@ -1,4 +1,5 @@
-import Bar from "./components/NavBar";
+import Bar from "./Bar.js";
+import './navbar.css';
 
 const NavBar = () => {
   return(
