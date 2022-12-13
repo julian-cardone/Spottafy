@@ -9,14 +9,31 @@
     grid-area: album-index-page;
     min-height: 0;
     overflow: hidden;
-    position: relative;
-    width: 100%;
+    position: absolute;
+    top: 64px;
+    left: 256px;
+    /* width: 100%; */
+    /* margin-left: -256px; */
+    height: 100%;
+    width: 50%;
 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
     background: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    isolation: isolate;
+    
+    /* z-index: 100; */
+
+    /* background: transparent; */
     /* display: flex; */
     /* flex-direction: column; */
-    isolation: isolate;
-    border: 10px, pink;
+    /* isolation: isolate; */
+    /* border: 10px, pink; */
     /* position: relative; */
 }
 
@@ -28,7 +45,63 @@
     position: relative;
     display: grid;
     grid-gap: 24px;
-    padding: 24px, 32px, 0px;
+    /* padding: 24px, 32px, 0px, 0px; */
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    margin: 0;
+    max-width: 1955px;
 }
 
+.section-1-albums{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    --shelf-min-height: 300px;
+    contain-intrinsic-size: auto var(--shelf-min-height);
+    content-visibility: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 16px;
+    min-height: var(--shelf-min-height);
+    min-width: 100%;
+    position: relative;
+}
 
+.section-1-title-div{
+    grid-column: 1/-1;
+}
+
+.section-1-title-div-inner{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.section-1-title-div-inner-inner{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    display: block;
+    flex-grow: 1;
+    line-height: normal;
+    min-width: 0;
+}
+
+.albums-index-title{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-family,CircularSpTitle,CircularSpTitle-Tall,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+    color: #fff;
+    display: inline-block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

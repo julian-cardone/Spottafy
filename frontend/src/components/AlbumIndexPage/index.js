@@ -17,11 +17,21 @@ function AlbumIndexPage() {
     }, [dispatch]);
 
   return (
+  <div className='background-dark-theme'>
     <div className="album-index-page">
       <div className="album-index-container">
-          TEST
+        <section className="section-1-albums">
+          <div className="section-1-title-div">
+            <div className="section-1-title-div-inner">
+              <div className="section-1-title-div-inner-inner">
+                <h2 className="albums-index-title">Albums</h2>
+              </div> 
+            </div>
+          </div>
+        </section>
       </div>
-  </div>
+    </div>
+  </div> 
   );
 }
 

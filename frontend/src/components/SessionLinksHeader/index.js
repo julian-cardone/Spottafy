@@ -41,7 +41,6 @@ function SessionLinks({ sessionUser }) {
       <div className="session-links-header">
           {sessionLinks}
       </div>
-      <div className='background-dark-theme'></div> 
     </> 
     // </header>
   );
