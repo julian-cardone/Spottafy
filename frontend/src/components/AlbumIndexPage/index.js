@@ -28,6 +28,7 @@ function AlbumIndexPage() {
               </div> 
             </div>
           </div>
+                  <AlbumList albums={albums}/>
         </section>
       </div>
     </div>

@@ -15,7 +15,7 @@
     /* width: 100%; */
     /* margin-left: -256px; */
     height: 100%;
-    width: 50%;
+    /* width: 60%; */
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -104,4 +104,97 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+.grid-container{
+    grid-auto-rows: 0;
+    grid-template-rows: 1fr;
+    overflow-y: hidden;
+    grid-gap: var(--grid-gap);
+    display: grid;
+    grid-template-columns: repeat(var(--column-count),minmax(0,1fr));
+    overflow: hidden;
+}
+
+.album-container{
+    --card-container-border-radius: clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px);
+    -webkit-box-flex: 1;
+    background-image: linear-gradient(#1a1a1a, #1d1d1d);
+    /* background: #202020; */
+    border-radius: 3%;
+    -ms-flex: 1;
+    flex: 1;
+    isolation: isolate;
+    padding: 16px;
+    position: relative;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    width: 82%;
+}
+
+.album-outer{
+    height: 100%;
+}
+
+.album-cover{
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.album-cover-inner{
+    --card-image-border-radius: clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px);
+    background-color: var(--card-color,#333);
+    border-radius: var(--card-image-border-radius);
+    -webkit-box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 50%);
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.album-image{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.song-info{
+    min-height: 62px;
+}
+
+.album-title-link{
+    display: inline-block;
+    max-width: 100%;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.title-album-index{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+    padding-block-end: 4px;
+    color: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #fff;
+}
+
+.artist-name-index-page{
+    flex: 1;
+    isolation: isolate;
+    /* padding: 16px; */
+    position: relative;
+    width: 100%;
+    padding-top: 11px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: var(--font-family,CircularSp,CircularSp-Arab,CircularSp-Hebr,CircularSp-Cyrl,CircularSp-Grek,CircularSp-Deva,var(--fallback-fonts,sans-serif));
+    color: var(--text-subdued,#b3b3b3);
 }
