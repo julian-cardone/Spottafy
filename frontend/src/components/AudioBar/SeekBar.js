@@ -23,7 +23,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
 
   return (
     <div className='seeking-bar'>
-              <div className='first-number'>{`${Math.floor(currentSong.progress/60)}:${Math.floor(currentSong.progress%60)}`}</div>
+              <div className='first-number'>{`${Math.floor(currentSong.progress/60)||"0"}:${Math.floor(currentSong.progress%60)||"00"}`}</div>
               <div className='seeking-bar-wrap'onClick={(e) => checkWidth(e)} ref={clickRef}>
                 <div className='seeking-bar-inner'>
                   <div className='seeking-bar-inner-inner'>
@@ -33,7 +33,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
                   </div>
                 </div>
               </div>
-              <div className='second-number'>{`${Math.floor(currentSong.length / 60)}:${Math.floor(currentSong.length%60)}`}</div>
+              <div className='second-number'>{`${Math.floor(currentSong.length / 60)||"0"}:${Math.floor(currentSong.length%60)||"00"}`}</div>
             </div>
   )
 }

@@ -13,6 +13,7 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => (
         <div className='now-playing-widget'>
           <div className='album-cover'>
             {/* <img src="https://i.discogs.com/dmkhWfNttTRT-mGwIgNGyEhmGxpFitTqdnikg5X6PyU/rs:fit/g:sm/q:90/h:593/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTEwNjUw/ODItMTMwMTEyOTk5/MS5qcGVn.jpeg"alt="Quadrophenia"className='quadrophenia' /> */}
+            {/* <img src={require('./quadrophenia.jpg')}alt="Quadrophenia"className='quadrophenia' /> */}
             <img src="quadrophenia"alt="Quadrophenia"className='quadrophenia' />
           </div>
           <div className='song-info-playbar'>

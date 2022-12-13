@@ -78,6 +78,7 @@
     position: absolute;
     right: 35%; */
     /* top: 35%; */
+    /* width: 50%; */
 }
 
 .song-info-playbar{
@@ -297,11 +298,11 @@
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100%;
+    height: 22%;
     left: 0;
     position: relative;
     top: 0;
-    width: 100%;
+    width: 22%;
 }
 
 .seeking-bar{
@@ -530,6 +531,6 @@
     fill: #fff;
 }
 
-.progress-bar-background-inner:hover{
+.volume-bar-slider-container:hover .progress-bar-background-inner{
     background-color: var(--is-active-fg-color);
 }
