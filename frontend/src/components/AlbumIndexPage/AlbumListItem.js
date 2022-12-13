@@ -1,10 +1,22 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import { useEffect, useState } from "react";
+import csrfFetch from "../../store/csrf";
 
 function AlbumListItem({ album }) {
   // const history = useHistory(); 
 
   const { albumName, artistId, year } = album;
+  
+  const [artistName, setArtistName] = useState("");
+
+    useEffect(() => {
+        csrfFetch(`/api/artists/${artistId}`)
+        .then(res => res.json())
+        .then(data => setArtistName(data.artistName))
+      },[artistId])
+      
+      console.log(artistName);
 
   return (
     <div className="album-container">
@@ -18,7 +30,7 @@ function AlbumListItem({ album }) {
               <a className="album-title-link"href="/">
                 <div className="title-album-index">{albumName}</div>
               </a>
-            <div className="artist-name-index-page">{artistId}</div>
+            <div className="artist-name-index-page">{artistName}</div>
             </div>
           </div>
         </div>
