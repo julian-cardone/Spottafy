@@ -122,8 +122,8 @@
 .album-container{
     --card-container-border-radius: clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px);
     -webkit-box-flex: 1;
-    /* background-image: linear-gradient(#1a1a1a, #181818); */
-    background: #1b1b1b;
+    /* background-image: linear-gradient(#1b1b1b, #181818); */
+    background: #1d1d1d;
     border-radius: 3%;
     -ms-flex: 1;
     flex: 1;

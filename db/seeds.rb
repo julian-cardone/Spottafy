@@ -61,7 +61,7 @@ end
     )
 
     Album.create!(
-      album_name: 'Quadropehnia',
+      album_name: 'Quadrophenia',
       artist_id: 1,
       year: 1973
     )
