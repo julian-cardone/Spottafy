@@ -29,8 +29,8 @@ function App() {
         </Route>
         <Route exact path="/album/:albumId">
           <NavBar sessionUser={sessionUser}/>
-          <SessionLinks sessionUser={{ sessionUser }} />
           <AlbumShowPage />
+          <SessionLinks sessionUser={{ sessionUser }} />
           <AudioBar sessionUser={{ sessionUser }} />
         </Route>
       </Switch>

@@ -6,8 +6,8 @@ const SongList = ({ songs, album }) => {
 
   return (
     <>
-      {songs.map((song)=>(
-        <SongListItem key={song.id}song={song}album={album}/>
+      {songs.map((song, idx)=>(
+        <SongListItem key={song.id}song={song}album={album}idx={idx}/>
       ))}
     </>
   )
