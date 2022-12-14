@@ -25,6 +25,7 @@ const AlbumShowPage = () => {
     <div className="main-content-container">
       <div className="background-theme-album">
         <section className="album-show-section">
+          <div className="background-theme-album-show"></div>
           <div className="header-content-album-show">
             <div className="album-photo-container">
               <div className="album-photo-container-inner">
