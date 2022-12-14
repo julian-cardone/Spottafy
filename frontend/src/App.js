@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import AudioBar from "./components/AudioBar";
 import NavBar from "./components/NavBar";
 import AlbumIndexPage from "./components/AlbumIndexPage/index.js";
+import AlbumShowPage from "./components/AlbumShowPage/index.js";
 
 function App() {
   const sessionUser = useSelector((state) => state.session.user);
@@ -24,6 +25,12 @@ function App() {
           <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />
           <AlbumIndexPage />
+          <AudioBar sessionUser={{ sessionUser }} />
+        </Route>
+        <Route exact path="/album/:albumId">
+          <NavBar sessionUser={sessionUser}/>
+          <SessionLinks sessionUser={{ sessionUser }} />
+          <AlbumShowPage />
           <AudioBar sessionUser={{ sessionUser }} />
         </Route>
       </Switch>

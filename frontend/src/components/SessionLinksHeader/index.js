@@ -10,11 +10,15 @@ function SessionLinks({ sessionUser }) {
   let sessionLinks;
   if (sessionUser.sessionUser) {
     sessionLinks = (
+      <>
+      <div className="session-links-header-2">
       <header className="session-links-logged-in">
       <div className='header-wrapper-logged-in'>
       <ProfileButton sessionUser={ sessionUser } />
       </div>
-    </header>
+      </header>
+      </div>
+      </>
     );
 
   } else {
@@ -38,9 +42,7 @@ function SessionLinks({ sessionUser }) {
     //     <h1>Spottafy</h1>
     //   </NavLink>
     <>
-      <div className="session-links-header">
-          {sessionLinks}
-      </div>
+      {sessionLinks}
     </> 
     // </header>
   );

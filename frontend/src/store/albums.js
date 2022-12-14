@@ -43,7 +43,7 @@ function albumsReducer(state = {}, action) {
       return action.payload;
     case ADD_ALBUM:
       const album = action.payload;
-      return { ...state, [album.id]: album };
+      return { ...state, ...album };
     default:
       return state;
   }

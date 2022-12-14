@@ -59,6 +59,25 @@
     /* justify-content: center; */
 }
 
+.session-links-header-2{
+    grid-area: main-view;
+    height: 64px;
+    min-width: 0;
+    /* pointer-events: none; */
+    /* background-color: #121212; */
+    /* opacity: 1; */
+    bottom: 0;
+    left: 0;
+    /* overflow: hidden; */
+    /* pointer-events: none; */
+    position: fixed;
+    right: 0;
+    top: 0;
+    /* -webkit-transition: background-color .25s;
+    transition: background-color .25s; */
+    /* justify-content: center; */
+}
+
 .session-links{
     /* -webkit-box-align: center;
     -webkit-box-pack: justify;
@@ -181,6 +200,7 @@
     display: flex;
     gap: 1px;
     height: 64px;
+
     /* justify-content: space-between; */
     /* padding: 16px; */
 
@@ -354,23 +374,4 @@
 .profile-button{
     /* position: relative; */
     /* z-index: 9999; */
-}
-
-/* doing nothing atm */
-.session-links-header-2{
-    grid-area: main-view;
-    height: 64px;
-    min-width: 0;
-    /* pointer-events: none; */
-    background-color: #121212;
-    bottom: 0;
-    left: 0;
-    /* overflow: hidden; */
-    /* pointer-events: none; */
-    position: fixed;
-    right: 0;
-    top: 0;
-    -webkit-transition: background-color .25s;
-    transition: background-color .25s;
-    /* justify-content: center; */
 }
