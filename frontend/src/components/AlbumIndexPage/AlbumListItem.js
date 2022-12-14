@@ -15,11 +15,10 @@ function AlbumListItem({ album }) {
         .then(res => res.json())
         .then(data => setArtistName(data.artistName))
       },[artistId])
-      
-      console.log(artistName);
 
   return (
     <div className="album-container">
+      <div className="gradient-div"></div>
           <div className="album-outer">
             <div className="album-cover">
               <div className="album-cover-inner">
