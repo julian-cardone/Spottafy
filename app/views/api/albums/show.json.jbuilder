@@ -1,5 +1,6 @@
 json.set! "album" do
     json.extract! @album, :id, :album_name, :artist_id, :year
+    json.photoUrl @album.photo.url
 end
 
 json.set! "songs" do

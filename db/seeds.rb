@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
+require 'open-uri'
+
 ApplicationRecord.transaction do 
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
@@ -64,12 +66,22 @@ end
 
     puts "Creating albums..."
 
-    Album.create!(
+    album1 = Album.create(
       id: 1,
       album_name: 'Quadrophenia',
       artist_id: 1,
       year: 1973
     )
+
+    album1.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/quadrophenia.jpg"), 
+    filename: "quadrophenia.jpg")
+
+    # Album.create!(
+    #   id: 1,
+    #   album_name: 'Quadrophenia',
+    #   artist_id: 1,
+    #   year: 1973
+    # )
 
     Album.create!(
       id: 2,
