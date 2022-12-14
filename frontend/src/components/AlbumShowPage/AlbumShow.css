@@ -317,6 +317,7 @@
 }
 
 .song-row-outer{
+    justify-content: space-between;
     border: 1px solid transparent;
     border-radius: 4px;
     height: 56px;
@@ -421,14 +422,10 @@
 }
 
 .song-row-time-outer{
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    /* grid-column: last; */
     justify-self: end;
+    /* grid-column: last; */
     /* justify-content: flex-end; */
     /* align-self: center; */
     /* align-self: right; */
@@ -452,4 +449,9 @@
     font-weight: 400;
     font-family: Helvetica, Arial, sans-serif;
     color: #a7a7a7;
+}
+
+.combined-flex{
+    display: flex;
+    gap: 10px;
 }

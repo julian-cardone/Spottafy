@@ -5,6 +5,8 @@ const SongListItem = ({ song, idx }) => {
     <>
       <div className="song-row-container">
         <div className="song-row-outer">
+         
+         <div className="combined-flex">
           <div className="song-number-div">
             <div className="song-number-container">
               {idx + 1}
@@ -17,6 +19,8 @@ const SongListItem = ({ song, idx }) => {
               <span className="song-artist-inner-text">Artist Name</span>
             </div>
           </div>
+          </div>
+
           <div className="song-row-time-outer">
             <div className="time-container-album-show">2:00</div>
           </div>

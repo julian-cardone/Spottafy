@@ -20,6 +20,8 @@ const AudioBar = ({ sessionUser }) => {
     const ct = audioElement.current.currentTime;
     const volume = audioElement.current.volume;
 
+    console.log(audioElement);
+
     setCurrentSong({...currentSong, "progress":ct / duration * 100, "length": duration, "volume":volume, "ct":ct})
   }
   
