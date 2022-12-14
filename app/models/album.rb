@@ -11,7 +11,7 @@
 #
 class Album < ApplicationRecord
 
-    validates :artist_name, presence: true
+    validates :album_name, presence: true
     validates :artist_id, presence: true
     validates :year, presence: true
 

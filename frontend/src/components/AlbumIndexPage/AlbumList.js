@@ -12,6 +12,8 @@ const AlbumList = ({ albums }) => {
       ))}
 
     </div>
+
+    
   )
 }
 
