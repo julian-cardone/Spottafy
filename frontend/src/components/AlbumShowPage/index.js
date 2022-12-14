@@ -9,7 +9,7 @@ import "./AlbumShow.css";
 const AlbumShowPage = () => {
   const dispatch = useDispatch();
   const { albumId } = useParams();
-  const album = useSelector((state) => state.albums.album);
+  const album = useSelector((state) => state.albums.album || "");
   const songs = useSelector((state) => Object.values(state.albums.songs || {}));
   // const songs = Object.values(albumInfo.songs);
   // console.log(Object.values(albumInfo));
@@ -23,7 +23,7 @@ const AlbumShowPage = () => {
     //return the buttons
     //#title, border underneath
     <div className="main-content-container">
-      <SongList songs={songs}/>
+      <SongList songs={songs}album={album}/>
     </div>
   )
 };

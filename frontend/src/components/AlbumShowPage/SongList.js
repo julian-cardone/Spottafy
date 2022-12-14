@@ -1,11 +1,15 @@
 import SongListItem from "./SongListItem";
 
-const SongList = ({ songs }) => {
+const SongList = ({ songs, album }) => {
+
+  const { albumName, year } = album;
 
   return (
     <>
+    <p>{album.albumName}</p>
+    <br/>
     {songs.map((song)=>(
-      <SongListItem key={song.id}song={song}/>
+      <SongListItem key={song.id}song={song}album={album}/>
     ))}
     </>
   )
