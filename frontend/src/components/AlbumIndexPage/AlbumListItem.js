@@ -22,7 +22,7 @@ function AlbumListItem({ album }) {
           <div className="album-outer">
             <div className="album-cover">
               <div className="album-cover-inner">
-                <img className="album-image"src="photo"alt="album-cover"></img>
+                <img className="album-image"src={require("/home/jcar/dev/projects/fullstack/Spottafy/frontend/src/components/AlbumIndexPage/quadrophenia.jpg")}alt="album-cover"></img>
               </div>
             </div>
             <div className="song-info">

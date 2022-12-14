@@ -62,23 +62,27 @@
     flex-direction: row;
     justify-content: flex-start;
     position: relative;
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    -webkit-transition: -webkit-transform .25s cubic-bezier(.3,0,0,1);
+    /* -webkit-transform: translateX(0); */
+    /* transform: translateX(0); */
+    /* -webkit-transition: -webkit-transform .25s cubic-bezier(.3,0,0,1);
     transition: -webkit-transform .25s cubic-bezier(.3,0,0,1);
     transition: transform .25s cubic-bezier(.3,0,0,1);
-    transition: transform .25s cubic-bezier(.3,0,0,1),-webkit-transform .25s cubic-bezier(.3,0,0,1);
+    transition: transform .25s cubic-bezier(.3,0,0,1),-webkit-transform .25s cubic-bezier(.3,0,0,1); */
 }
 
-.album-cover{
+.album-cover-bar{
     isolation: isolate;
     position: relative;
+    margin-right: -45px;
+    /* height: 100%; */
+    /* margin-bottom: -15px; */
     /* bottom: 35%; */
     /* left: 35%;
     position: absolute;
     right: 35%; */
     /* top: 35%; */
     /* width: 50%; */
+    /* justify-content: space-between; */
 }
 
 .song-info-playbar{
@@ -93,6 +97,10 @@
         "title title"
         "badges subtitle"/auto 1fr;
     margin: 0 14px;
+    position: relative;
+    right: 140px;
+    width: 100%;
+    /* justify-self: left; */
 }
 
 .title-div-playbar{
