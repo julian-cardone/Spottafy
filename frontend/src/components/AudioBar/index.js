@@ -6,14 +6,18 @@ import { songsdata } from "./songsdata";
 
 const AudioBar = ({ sessionUser }) => {
 
-  const [songs, setSongs] = useState(songsdata);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [currentSong, setCurrentSong] = useState(songsdata[0])
-
   // const audioElement = <audio src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"type="audio/mpeg"name="audio"></audio>
   // console.log(audioElement);
   // audioElement.play();
+
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentSong, setCurrentSong] = useState(songsdata[0]);
+
   const audioElement = useRef();
+
+    useEffect(()=>{
+    audioElement.current.src="https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3";
+  },[audioElement])
 
   const onPlay = () => {
     const duration = audioElement.current.duration;
@@ -29,7 +33,7 @@ const AudioBar = ({ sessionUser }) => {
   return (
     <>
     <audio ref={audioElement}onTimeUpdate={onPlay}></audio>
-    <Player songs={songs} setSongs={setSongs} isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElement={audioElement} currentSong={currentSong}/>
+    <Player isPlaying={isPlaying} setIsPlaying={setIsPlaying} audioElement={audioElement} currentSong={currentSong}/>
     </>
   ) 
 }

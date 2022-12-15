@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import csrfFetch from "../../store/csrf";
+import { FastAverageColor } from 'fast-average-color';
 
 function AlbumListItem({ album }) {
   // const history = useHistory(); 
@@ -40,32 +41,6 @@ function AlbumListItem({ album }) {
           </div>
         </div>
   )
-
-  // return (
-  //   <div
-  //     className={"bench-list-item" + (isHighlighted ? " highlighted" : "")}
-  //     onClick={() => history.push(`/benches/${bench.id}`)}
-  //     onMouseEnter={() => setHighlightedBench(bench.id)}
-  //     onMouseLeave={() => setHighlightedBench(null)}
-  //   >
-  //     <div className="list-item-info">
-  //       <h2>{title}</h2>
-  //       <div className="list-item-fields">
-  //         <div className="info-field">
-  //           <span className="list-item-category">Average Rating:</span>
-  //           <span className="list-item-copy">
-  //             {averageRating || 'No reviews yet'}
-  //           </span>
-  //         </div>
-  //         <div className="info-field">
-  //           <span className="list-item-category">Price:</span>
-  //           <span className="list-item-copy">${price}</span>
-  //         </div>
-  //       </div>
-  //     </div>
-  //     {photoUrl && <img src={photoUrl} alt='Bench'/>}
-  //   </div>
-  // );
 }
 
 export default AlbumListItem;

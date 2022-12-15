@@ -6,7 +6,7 @@ import { fetchAlbum } from "../../store/albums";
 import "./AlbumShow.css";
 // import AlbumList from "./AlbumList";
 
-const AlbumShowPage = () => {
+const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, audioElement }) => {
   const dispatch = useDispatch();
   const { albumId } = useParams();
   const album = useSelector((state) => state.albums.album || "");
@@ -67,7 +67,7 @@ const AlbumShowPage = () => {
                 </div>
               </div>
               <div className="songs-container-album-show">
-                <SongList songs={songs} album={album} />
+                <SongList songs={songs} album={album} isPlaying={isPlaying}setIsPlaying={setIsPlaying}currentSong={currentSong}setCurrentSong={setCurrentSong}audioElement={audioElement}/>
               </div>
             </div>
           </div>

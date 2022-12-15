@@ -10,6 +10,7 @@ import AlbumIndexPage from "./components/AlbumIndexPage/index.js";
 import AlbumShowPage from "./components/AlbumShowPage/index.js";
 
 function App() {
+
   const sessionUser = useSelector((state) => state.session.user);
 
   return (

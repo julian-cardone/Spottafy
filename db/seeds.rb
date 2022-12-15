@@ -119,15 +119,16 @@ end
 
     album5.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/luvisrage2.jpg"),filename: "luvisrage2.jpg")
 
-
     puts "Creating Songs..."
 
-    Song.create!(
+    song1 = Song.create(
       id: 1,
       artist_id: 1,
       song_title: "Cut My Hair",
       album_id: 1
     )
+
+    song1.song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+Cut+My+Hair.mp3"),filename: "The+Who+-+Cut+My+Hair.mp3")
 
     Song.create!(
       id: 2,

@@ -1,9 +1,15 @@
-const SongListItem = ({ song, idx }) => {
-  const { id, artistId, songTitle, albumId } = song;
+
+
+const SongListItem = ({ song, idx, isPlaying, setIsPlaying, currentSong, setCurrentSong, audioElement }) => {
+  const { id, artistId, songTitle, albumId, songUrl } = song;
+
+  const playSongHandler = () =>{
+    audioElement.current.src = song.songUrl;
+  }
 
   return (
     <>
-      <div className="song-row-container">
+      <div className="song-row-container"onClick={playSongHandler}>
         <div className="song-row-outer">
          
          <div className="combined-flex">

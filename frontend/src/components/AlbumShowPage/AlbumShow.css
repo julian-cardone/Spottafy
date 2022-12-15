@@ -6,8 +6,10 @@
 }
 
 .background-theme-album{
+    --gradient-color-top: white;
+    --gradient-color-bottom: #181818;; 
     position: relative;
-    background-image: linear-gradient(180deg, white, #181818);
+    background-image: linear-gradient(var(--gradient-color-top), var(--gradient-color-bottom));
     height: 100%;
 }
 
