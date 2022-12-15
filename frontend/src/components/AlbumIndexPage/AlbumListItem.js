@@ -32,9 +32,9 @@ function AlbumListItem({ album }) {
               </div>
             </div>
             <div className="song-info">
-              <a className="album-title-link"href="/">
+              {/* <a className="album-title-link"href="/"> */}
                 <div className="title-album-index">{albumName}</div>
-              </a>
+              {/* </a> */}
             <div className="artist-name-index-page">{artistName}</div>
             </div>
           </div>
