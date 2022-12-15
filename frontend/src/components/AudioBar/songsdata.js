@@ -1,6 +1,6 @@
 exports.songsdata = [
   {
-    "title": "Cut My Hair",
+    "title": "Title Name",
     "url": "cmh.mp3"
   }
 ]

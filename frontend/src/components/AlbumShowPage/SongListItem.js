@@ -1,10 +1,17 @@
+import { createContext, useContext } from "react";
 
+const SongListItem = ({ song, idx, isPlaying, setIsPlaying, currentSong, setCurrentSong }) => {
 
-const SongListItem = ({ song, idx, isPlaying, setIsPlaying, currentSong, setCurrentSong, audioElement }) => {
   const { id, artistId, songTitle, albumId, songUrl } = song;
 
+  const audioElement = document.querySelector(".audio-audio")
+
+  // console.log(audioElement.src);
+
   const playSongHandler = () =>{
-    audioElement.current.src = song.songUrl;
+    audioElement.src = song.songUrl;
+    audioElement.setAttribute("data-title", songTitle);
+    // console.log(audioElement.getAttribute("data-title"))
   }
 
   return (
@@ -21,7 +28,7 @@ const SongListItem = ({ song, idx, isPlaying, setIsPlaying, currentSong, setCurr
           </div>
           <div className="song-title-album-show-page">
             <div className="song-title-album-show-container">
-              <div className="song-title-inner-text">{song.songTitle}</div>
+              <div className="song-title-inner-text">{songTitle}</div>
               <span className="song-artist-inner-text">Artist Name</span>
             </div>
           </div>

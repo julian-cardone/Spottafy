@@ -1,9 +1,11 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import PlayPauseButton from './PlayPauseButton';
 import SeekBar from './SeekBar';
 import VolumeButtons from './Volume';
 
 const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => (
+
   <div className='root-audio-bar'>
   <footer className='audio-footer'>
     <div className='audio-bar-grid'>
@@ -20,7 +22,7 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => (
             <div className='title-div-playbar'>
               <div className='title-div-playbar-pad'>
                 <div className='title-padding-stuff'>
-                {/* <span className='title-name-span'>{currentSong.title}</span> */}
+                <span className='title-name-span'>{currentSong.title}</span>
                 </div>
               </div>
             </div>
@@ -28,7 +30,7 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => (
             <div className='artist-name-container-div'>
               <div className='artist-name-padding'>
                 <div className='artist-name-wrapper'>
-                  {/* <span className='artist-name'>The Who</span> */}
+                  <span className='artist-name'>Artist Name</span>
                 </div>
               </div>
             </div>
