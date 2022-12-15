@@ -6,7 +6,9 @@ import csrfFetch from "../../store/csrf";
 function AlbumListItem({ album }) {
   // const history = useHistory(); 
 
-  const { albumName, artistId, year } = album;
+  const history = useHistory();
+
+  const { id, albumName, artistId, year } = album;
   
   const [artistName, setArtistName] = useState("");
 
@@ -16,13 +18,17 @@ function AlbumListItem({ album }) {
         .then(data => setArtistName(data.artistName))
       },[artistId])
 
+  const clickHandler = (e) =>{
+    history.push(`/album/${id}`)
+  }
+
   return (
-    <div className="album-container">
+    <div className="album-container"onClick={(e)=>clickHandler(e)}>
       <div className="gradient-div"></div>
           <div className="album-outer">
             <div className="album-cover">
               <div className="album-cover-inner">
-                <img className="album-image"src={require("/home/jcar/dev/projects/fullstack/Spottafy/frontend/src/components/AlbumIndexPage/quadrophenia.jpg")}alt="album-cover"></img>
+                <img className="album-image"src={album.photoUrl}alt="album-cover"></img>
               </div>
             </div>
             <div className="song-info">
