@@ -217,6 +217,27 @@ end
       song_title: "Dark Queen",
       album_id: 5
     )
+
+    Song.create!(
+      id: 16,
+      artist_id: 1,
+      song_title: "Quadrophenia",
+      album_id: 1
+    )
+
+    Song.create!(
+      id: 17,
+      artist_id: 1,
+      song_title: "The Punk and the Godfather",
+      album_id: 1
+    )
+
+    Song.create!(
+      id: 18,
+      artist_id: 1,
+      song_title: "Is It In My Head?",
+      album_id: 1
+    )
     
     puts "Seeding complete!"
     

@@ -40,7 +40,7 @@
 
     margin: 0;
     max-width: 1955px;
-    padding: 0 20px;
+    padding: 0 30px;
     padding-bottom: 20px;
 }
 
@@ -111,11 +111,12 @@
 
 .span-album-title-show{
     line-height: normal;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     overflow: hidden;
     text-align: left;
     width: 100%;
     word-break: break-word;
+    padding-bottom: 10px;
 }
 
 .span-inner-title-show{
@@ -138,6 +139,7 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-top: 8px;
+    margin-bottom: 6px;
 }
 
 .artist-info-album-show{
@@ -196,8 +198,8 @@
 .gradient-fade-show{
     /* background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to(var(--background-base))),var(--background-noise); */
     /* background-image: linear-gradient(white, black); */
-    background-color: black;
-    height: 232px;
+    background-color: #181818;
+    height: 280px;
     position: absolute;
     width: 100%;
     /* z-index: -1; */
@@ -244,13 +246,12 @@
     height: 36px;
     margin: 0 -32px 16px;
     padding: 0 32px;
-    position: sticky;
     z-index: 2;
 }
 
 .title-title-container{
     border-bottom: 1px solid hsla(0,0%,100%,.1);
-    color: #b3b3b3;
+    color: #dddddd;
     height: 36px;
     grid-gap: 16px;
     /* display: grid; */
