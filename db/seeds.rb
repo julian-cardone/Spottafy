@@ -92,26 +92,33 @@ end
 
     album2.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/heroes%26villains.webp"),filename: "heroes%26villains.webp")
 
-    Album.create!(
+    album3 = Album.create(
       id: 3,
       album_name: 'All Over the World',
       artist_id: 3,
       year: 1980
     )
 
-    Album.create!(
+    album3.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/allovertheworld.jpg"),filename: "allovertheworld.jpg")
+
+    album4 = Album.create(
       id: 4,
       album_name: 'AM',
       artist_id: 4,
       year: 2013
     )
 
-    Album.create!(
+    album4.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/am.jpg"),filename: "am.jpg")
+
+    album5 = Album.create(
       id: 5,
       album_name: 'Luv is Rage 2',
       artist_id: 5,
       year: 2017
     )
+
+    album5.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/luvisrage2.jpg"),filename: "luvisrage2.jpg")
+
 
     puts "Creating Songs..."
 
