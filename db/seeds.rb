@@ -83,12 +83,14 @@ end
     #   year: 1973
     # )
 
-    Album.create!(
+    album2 = Album.create(
       id: 2,
       album_name: 'HEROES & VILLAINS',
       artist_id: 2,
       year: 2022
     )
+
+    album2.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/heroes%26villains.webp"),filename: "heroes%26villains.webp")
 
     Album.create!(
       id: 3,
