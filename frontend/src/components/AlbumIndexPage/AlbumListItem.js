@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
 import { useEffect, useState } from "react";
 import csrfFetch from "../../store/csrf";
 import { FastAverageColor } from 'fast-average-color';
+import { SongContext } from "../../App";
 
 function AlbumListItem({ album }) {
   // const history = useHistory(); 
@@ -12,6 +13,8 @@ function AlbumListItem({ album }) {
   const { id, albumName, artistId, year } = album;
   
   const [artistName, setArtistName] = useState("");
+
+  // const songPict = useContext(SongContext);
 
     useEffect(() => {
         csrfFetch(`/api/artists/${artistId}`)

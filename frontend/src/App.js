@@ -16,6 +16,7 @@ export const SongContext = createContext(null);
 function App() {
 
   const [songCurr, setSongCurr] = useState(null);
+  const [songPict, setSongPict] = useState(null);
 
   const sessionUser = useSelector((state) => state.session.user);
 
@@ -27,8 +28,8 @@ function App() {
         </Route>
         <Route path="/login">
           <LoginFormPage sessionUser={sessionUser} />
-        </Route>0
-    <SongContext.Provider value={{songInfo: [songCurr, setSongCurr]}}>
+        </Route>
+    <SongContext.Provider value={{songInfo: [songCurr, setSongCurr], songPic: [songPict, setSongPict]}}>
         <Route exact path="/">
           <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />

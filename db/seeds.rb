@@ -61,7 +61,7 @@ end
 
     Artist.create!(
       id: 5,
-      artist_name: "Lil Uzi Vert"
+      artist_name: "Mariah Carey"
     )
 
     puts "Creating albums..."
@@ -112,12 +112,12 @@ end
 
     album5 = Album.create(
       id: 5,
-      album_name: 'Luv is Rage 2',
+      album_name: 'Merry Christmas',
       artist_id: 5,
-      year: 2017
+      year: 1994
     )
 
-    album5.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/luvisrage2.jpg"),filename: "luvisrage2.jpg")
+    album5.photo.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Merry_Christmas_Mariah_Carey.png"),filename: "Merry_Christmas_Mariah_Carey.png")
 
     puts "Creating Songs..."
 
@@ -129,6 +129,15 @@ end
     )
 
     song1.song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+Cut+My+Hair.mp3"),filename: "The+Who+-+Cut+My+Hair.mp3")
+
+    song2 = Song.create(
+      id: 13,
+      artist_id: 5,
+      song_title: "All I Want For Christmas is You",
+      album_id: 5
+    )
+
+    song2.song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Mariah+Carey+-+All+I+Want+For+Christmas+Is+You+(Official+Video).mp3"),filename: "Mariah+Carey+-+All+I+Want+For+Christmas+Is+You+(Official+Video).mp3")
 
     Song.create!(
       id: 2,
@@ -207,26 +216,19 @@ end
       album_id: 4
     )
 
-    Song.create!(
-      id: 13,
-      artist_id: 5,
-      song_title: "20 Min",
-      album_id: 5
-    )
+    # Song.create!(
+    #   id: 14,
+    #   artist_id: 5,
+    #   song_title: "How To Talk",
+    #   album_id: 5
+    # )
 
-    Song.create!(
-      id: 14,
-      artist_id: 5,
-      song_title: "How To Talk",
-      album_id: 5
-    )
-
-    Song.create!(
-      id: 15,
-      artist_id: 5,
-      song_title: "Dark Queen",
-      album_id: 5
-    )
+    # Song.create!(
+    #   id: 15,
+    #   artist_id: 5,
+    #   song_title: "Dark Queen",
+    #   album_id: 5
+    # )
 
     Song.create!(
       id: 16,
