@@ -6,6 +6,11 @@ import SeekBar from "./SeekBar";
 import VolumeButtons from "./Volume";
 
 const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => {
+
+  const songInfo = useContext(SongContext);
+
+  console.log(songInfo.songInfo[0]);
+
   return (
     <div className="root-audio-bar">
       <footer className="audio-footer">
@@ -24,7 +29,7 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => {
                   <div className="title-div-playbar-pad">
                     <div className="title-padding-stuff">
                       <span className="title-name-span">
-                        {currentSong.title}
+                        {songInfo.songInfo[0]}
                       </span>
                     </div>
                   </div>

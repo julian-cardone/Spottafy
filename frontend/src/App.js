@@ -27,7 +27,7 @@ function App() {
         </Route>
         <Route path="/login">
           <LoginFormPage sessionUser={sessionUser} />
-        </Route>
+        </Route>0
     <SongContext.Provider value={{songInfo: [songCurr, setSongCurr]}}>
         <Route exact path="/">
           <NavBar sessionUser={sessionUser}/>

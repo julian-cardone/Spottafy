@@ -20,7 +20,7 @@ const SongListItem = ({
   const playSongHandler = () => {
     audioElement.src = song.songUrl;
     songInfo.songInfo[1](songTitle);
-    console.log(songInfo.songInfo[0]);
+    // console.log(songInfo.songInfo[0]);
   };
 
   return (
