@@ -18,9 +18,9 @@ const AudioBar = ({ sessionUser }) => {
 
   // console.log(audioElement);
 
-    useEffect(()=>{
-    audioElement.current.src="https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3";
-  },[audioElement])
+  //   useEffect(()=>{
+  //   audioElement.current.src="https://hanzluo.s3-us-west-1.amazonaws.com/music/ziyounvshen.mp3";
+  // },[audioElement])
 
   const onPlay = () => {
     const duration = audioElement.current.duration;

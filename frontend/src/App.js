@@ -8,8 +8,14 @@ import AudioBar from "./components/AudioBar";
 import NavBar from "./components/NavBar";
 import AlbumIndexPage from "./components/AlbumIndexPage/index.js";
 import AlbumShowPage from "./components/AlbumShowPage/index.js";
+import { createContext } from "react";
+import { useState } from "react";
+
+export const SongContext = createContext(null);
 
 function App() {
+
+  const [songCurr, setSongCurr] = useState(null);
 
   const sessionUser = useSelector((state) => state.session.user);
 
@@ -22,6 +28,7 @@ function App() {
         <Route path="/login">
           <LoginFormPage sessionUser={sessionUser} />
         </Route>
+    <SongContext.Provider value={{songInfo: [songCurr, setSongCurr]}}>
         <Route exact path="/">
           <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />
@@ -34,6 +41,7 @@ function App() {
           <SessionLinks sessionUser={{ sessionUser }} />
           <AudioBar sessionUser={{ sessionUser }} />
         </Route>
+    </SongContext.Provider>
       </Switch>
     </>
   );
