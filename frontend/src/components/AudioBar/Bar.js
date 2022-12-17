@@ -9,7 +9,9 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => {
 
   const songInfo = useContext(SongContext);
 
-  console.log(songInfo.songInfo[0]);
+  const albumPic = useContext(SongContext);
+
+  // console.log(songInfo.songInfo[0]);
 
   return (
     <div className="root-audio-bar">
@@ -19,8 +21,8 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => {
             <div className="now-playing-widget">
               <div className="album-cover-bar">
                 <img
-                  src={require("./quadrophenia.jpg")}
-                  alt="Quadrophenia"
+                  src={albumPic.songPic[0]}
+                  alt=""
                   className="quadrophenia"
                 />
               </div>

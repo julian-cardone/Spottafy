@@ -8,6 +8,7 @@ const SongListItem = ({
   setIsPlaying,
   currentSong,
   setCurrentSong,
+  album
 }) => {
   const { id, artistId, songTitle, albumId, songUrl } = song;
 
@@ -15,12 +16,13 @@ const SongListItem = ({
 
   const audioElement = document.querySelector(".audio-audio");
 
-  // console.log(songInfo.songInfo)
+  // console.log(album.photoUrl)
 
   const playSongHandler = () => {
     audioElement.src = song.songUrl;
     songInfo.songInfo[1](songTitle);
-    // console.log(songInfo.songInfo[0]);
+    songInfo.songPic[1](album.photoUrl);
+    console.log(songInfo.songPic[0]);
   };
 
   return (
