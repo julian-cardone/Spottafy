@@ -1,5 +1,5 @@
 class CreatePlaylistSongs < ActiveRecord::Migration[7.0]
-  def change
+  def create
     create_table :playlist_songs do |t|
       t.integer :playlist_id, null: false
       t.integer :song_id, null: false
