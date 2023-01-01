@@ -15,6 +15,11 @@ function AlbumIndexPage() {
   useEffect(() => {
       dispatch(fetchAlbums());
     }, [dispatch]);
+    
+    // console.log(window.screen.width);
+    // console.log(gridContainer);
+    // const gridContainer = document.querySelector(".grid-container") || "";
+    // gridContainer.setAttribute("style", Math.floor((window.screen.width)/275));
 
   return (
   <div className='background-dark-theme'>
@@ -34,11 +39,11 @@ function AlbumIndexPage() {
           <div className="section-1-title-div">
             <div className="section-1-title-div-inner">
               <div className="section-1-title-div-inner-inner">
-                <h2 className="albums-index-title">Albums</h2>
+                {/* <h2 className="albums-index-title">Albums</h2> */}
               </div> 
             </div>
           </div>
-                  <AlbumList albums={albums}/>
+                  {/* <AlbumList albums={albums}/> */}
         </section>
       </div>
     </div>

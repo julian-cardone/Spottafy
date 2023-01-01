@@ -8,6 +8,7 @@ const AlbumList = ({ albums }) => {
       {albums.map((album)=>(
         <>  
             <AlbumListItem key={album.id}album={album}/>
+            <AlbumListItem key={album.id}album={album}/>
         </>
       ))}
 
