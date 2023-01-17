@@ -46,8 +46,8 @@
     /* display: grid; */
     /* grid-gap: 24px; */
     /* padding: 24px, 32px, 0px, 0px; */
-    padding-left: 32px;
-    padding-right: 32px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-top: 24px;
     padding-bottom: 24px;
     margin: 0;
@@ -143,7 +143,7 @@
     /* width: 82%; */
     /* overflow-x: wrap; */
     /* overflow-wrap: break-word; */
-    gap: 24px;
+    gap: 3vh;
     /* display: flex; */
     /* grid-auto-flow: column; */
 }
@@ -162,8 +162,8 @@
     /* -webkit-transition: background-image .3s ease; */
     /* transition: background-image .3s ease; */
     width: 82%;
-    min-width: 168px;
-    max-width: 8.5vw;
+    min-width: 160px;
+    max-width: 8vw;
     /* overflow: auto; */
     /* resize: vertical; */
 }
@@ -251,6 +251,7 @@
     transition-timing-function: ease;
     transition-delay: 0s;
     transition-property: opacity;
+    /* max-width: 8.5vw; */
 }
 
 .album-container:hover .gradient-div{

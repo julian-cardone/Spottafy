@@ -1,15 +1,19 @@
 
 .background-dark-theme{
-    /* isolation: isolate; */
     position: relative;
-    height: 130%;
-    /* top: 64px; */
-    /* width: 100%; */
+    height: 100%;
     background-image: linear-gradient(#222222, #0c0c0c);
-    /* overflow: visible; */
     overflow-y: visible;
     z-index: -9999;
 }
+
+/* body{
+        position: relative;
+        height: 100%;
+        background-image: linear-gradient(#222222, #0c0c0c);
+        overflow-y: visible;
+        z-index: -9999;
+} */
 
 ::-webkit-scrollbar {
     width: 15px;
