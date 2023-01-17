@@ -11,7 +11,7 @@
     overflow: hidden;
     position: absolute;
     top: 64px;
-    left: 256px;
+    left: 255px;
     /* width: 100%; */
     /* margin-left: -256px; */
     height: 100%;
@@ -35,6 +35,12 @@
     /* isolation: isolate; */
     /* border: 10px, pink; */
     /* position: relative; */
+    /* position: relative; */
+    /* overflow-x: hidden; */
+    height: 100%;
+    background-image: linear-gradient(#222222, #0c0c0c);
+    /* overflow-y: visible; */
+    z-index: -9999;
 }
 
 .album-index-container{
