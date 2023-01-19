@@ -405,6 +405,16 @@
     width: 0%;
     background-color: var(--fg-color);
 }
+.seeking-bar-wrap:hover .circle-on-seek{
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom: 12.6px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    z-index: 1000;
+}
 
 .seeking-bar-wrap:hover .progress-bar-inner{
     background-color: var(--is-active-fg-color);
