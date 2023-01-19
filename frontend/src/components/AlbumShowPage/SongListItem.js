@@ -1,5 +1,7 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { SongContext } from "../../App";
+import { fetchArtist } from "../../store/artists";
 
 const SongListItem = ({
   song,
@@ -8,7 +10,7 @@ const SongListItem = ({
   setIsPlaying,
   currentSong,
   setCurrentSong,
-  album
+  album,
 }) => {
   const { id, artistId, songTitle, albumId, songUrl } = song;
 
@@ -16,9 +18,12 @@ const SongListItem = ({
 
   const audioElement = document.querySelector(".audio-audio");
 
-  // console.log(album.photoUrl)
+  const dispatch = useDispatch();
+
+  const artist = useSelector((state) => state.artists.artist) || "";
 
   const playSongHandler = () => {
+    dispatch(fetchArtist(album.artistId));
     audioElement.src = song.songUrl;
     songInfo.songInfo[1](songTitle);
     songInfo.songPic[1](album.photoUrl);
@@ -31,15 +36,14 @@ const SongListItem = ({
         <div className="song-row-outer">
           <div className="combined-flex">
             <div className="song-number-div">
-              <div className="song-number-container">
-                {idx + 1}
-                {/* <span className="song-number-album-show">1</span> */}
-              </div>
+              <div className="song-number-container">{idx + 1}</div>
             </div>
             <div className="song-title-album-show-page">
               <div className="song-title-album-show-container">
                 <div className="song-title-inner-text">{songTitle}</div>
-                <span className="song-artist-inner-text">Artist Name</span>
+                <span className="song-artist-inner-text">
+                  {artist.artistName}
+                </span>
               </div>
             </div>
           </div>

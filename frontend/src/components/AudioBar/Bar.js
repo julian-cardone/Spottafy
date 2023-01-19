@@ -11,7 +11,7 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => {
 
   const albumPic = useContext(SongContext);
 
-  // console.log(songInfo.songInfo[0]);
+  const artist = useSelector(state => state.artists.artist) || "";
 
   return (
     <div className="root-audio-bar">
@@ -40,7 +40,7 @@ const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => {
                   <div className="artist-name-container-div">
                     <div className="artist-name-padding">
                       <div className="artist-name-wrapper">
-                        <span className="artist-name">Artist Name</span>
+                        <span className="artist-name">{artist.artistName}</span>
                       </div>
                     </div>
                   </div>
