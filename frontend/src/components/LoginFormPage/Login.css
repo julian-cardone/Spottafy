@@ -113,6 +113,10 @@
     margin-top: 16px;
 }
 
+.login-button:active{
+    transform: scale(0.98);
+}
+
 .login-button-li-page{
     display: block;
 }
@@ -251,6 +255,10 @@
 .sign-up-for-text{
     letter-spacing: 0.09em;
     color: #6A6A6A;
+}
+
+.signup-button:active{
+    transform: scale(0.98);
 }
 
 .sign-up-for-spotify:hover{
