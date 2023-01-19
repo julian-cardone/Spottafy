@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import csrfFetch from "../../store/csrf";
 import { FastAverageColor } from 'fast-average-color';
 import { SongContext } from "../../App";
+import { useSelector } from "react-redux";
 
 function AlbumListItem({ album }) {
   // const history = useHistory(); 

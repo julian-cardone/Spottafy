@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router-dom";
 import { fetchAlbum } from "../../store/albums";
 import "./AlbumShow.css";
+import { fetchArtist } from "../../store/artists";
 // import AlbumList from "./AlbumList";
 
 const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, audioElement }) => {
@@ -11,12 +12,15 @@ const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, a
   const { albumId } = useParams();
   const album = useSelector((state) => state.albums.album || "");
   const songs = useSelector((state) => Object.values(state.albums.songs || {}));
-  // const songs = Object.values(albumInfo.songs);
-  // console.log(Object.values(albumInfo));
+  const artist = useSelector(state => state.artists.artist) || "";
 
   useEffect(() => {
     dispatch(fetchAlbum(albumId));
   }, [dispatch, albumId]);
+
+  useEffect(() => {
+    dispatch(fetchArtist(album.artistId));
+  }, [dispatch, album]);
 
   return (
     //album, title, artist, etc.... in the header
@@ -43,7 +47,7 @@ const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, a
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">
-                  <span className="artist-name-album-show">Artist Name</span>
+                  <span className="artist-name-album-show">{artist.artistName}</span>
                 </div>
                 <span className="year-info-album-show">{album.year}</span>
                 <span className="album-info-time">

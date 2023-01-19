@@ -294,6 +294,10 @@
     border-radius: 50%;
 }
 
+.play-pause-playbar:active{
+    transform: scale(0.93);
+}
+
 .play-pause-container{
     position: relative;
     /* flex: 1; */
