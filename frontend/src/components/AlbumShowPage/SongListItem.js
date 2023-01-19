@@ -27,7 +27,6 @@ const SongListItem = ({
     audioElement.src = song.songUrl;
     songInfo.songInfo[1](songTitle);
     songInfo.songPic[1](album.photoUrl);
-    console.log(songInfo.songPic[0]);
   };
 
   return (

@@ -145,6 +145,14 @@
     /* animation: click 1s; */
 }
 
+.home-link-nav:hover{
+    color: white;
+}
+
+.home-link-nav:hover .nav-home-sav-hidden{
+    fill: white;
+}
+
 .nav-home-sav-hidden{
     fill: #B3B3B3;
 }

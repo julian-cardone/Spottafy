@@ -1,8 +1,21 @@
 import "./navbar.css";
-import { useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 const Bar = () => {
   const location = useLocation();
+  const history = useHistory();
+
+  const clickHandle = () => {
+    history.replace("/");
+  }
+
+  const clickHandle2 = () => {
+    history.replace("/search");
+  }
+
+  const clickHandle3 = () => {
+    history.replace("/library");
+  }
 
   return (
     <>
@@ -20,7 +33,7 @@ const Bar = () => {
           <ul className="nav-bar-button-list">
 
             <li className="nav-bar-list-item">
-              <a className="home-link-nav" href="/">
+              <div className="home-link-nav" onClick={clickHandle}>
                 {location.pathname !== "/" && (
                   <>
                     <svg
@@ -52,11 +65,11 @@ const Bar = () => {
                     </span>
                   </>
                 )}
-              </a>
+              </div>
             </li>
 
             <li className="nav-bar-list-item">
-              <a className="home-link-nav" href="search">
+              <div className="home-link-nav" onClick={clickHandle2}>
                 {location.pathname !== "search" && (
                   <>
                     <svg
@@ -88,11 +101,11 @@ const Bar = () => {
                     </span>
                   </>
                 )}
-              </a>
+              </div>
             </li>
 
             <li className="nav-bar-list-item">
-              <a className="home-link-nav" href="library">
+              <div className="home-link-nav" onClick={clickHandle3}>
                 {location.pathname !== "search" && (
                   <>
                     <svg
@@ -124,7 +137,7 @@ const Bar = () => {
                     </span>
                   </>
                 )}
-              </a>
+              </div>
             </li>
 
           </ul>
