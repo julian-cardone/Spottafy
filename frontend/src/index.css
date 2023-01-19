@@ -1,8 +1,8 @@
 /* TODO Add site wide styles */
 #root {
-    min-height: 200vh;
-    height: 100%;
-    display: flex;
+    /* min-height: 100vh; */
+    /* height: 100%; */
+    /* display: flex; */
     position: relative;
     isolation: isolate;
     width: 100%;
