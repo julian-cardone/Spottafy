@@ -249,18 +249,24 @@
 }
 
 .title-title-album-show{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     top: 64px;
     border-bottom: 1px solid transparent;
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
     height: 36px;
-    margin: 0 -32px 16px;
-    padding: 0 32px;
+    /* margin-left: 16px;
+    margin-right: 16px; */
+    margin-bottom: 16px;
+    /* margin: 0 -32px 16px;
+    padding: 0 32px; */
     z-index: 2;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
 }
 
 .title-title-container{
-    border-bottom: 1px solid hsla(0,0%,100%,.1);
     color: #dddddd;
     height: 36px;
     grid-gap: 16px;
@@ -342,9 +348,11 @@
     background-color: rgba(90, 90, 90, 0.5);
 }
 
-/* .song-number-container:active{
-    color: #1DB954;
-} */
+.clock-symbol{
+    fill: #b3b3b3;
+    position: relative;
+    right: 35px;
+}
 
 .song-number-div{
     -webkit-box-align: center;

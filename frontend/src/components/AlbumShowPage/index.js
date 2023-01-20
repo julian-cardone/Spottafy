@@ -63,12 +63,14 @@ const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, a
               <div className="title-title-album-show">
                 <div className="title-title-container">
                   <div className="hashtag-album-show">#</div>
-                  {/* <div className="title-word-show"> */}
-                  {/* <div className="title-word-show-container"> */}
                   <span className="title-word-show-word">TITLE</span>
-                  {/* </div> */}
-                  {/* </div> */}
                 </div>
+                  <div className="clock-symbol">
+                    <svg role="img"height="16"width="16"viewBox="0 0 16 16">
+                      <path d="M 8 1.5 a 6.5 6.5 0 1 0 0 13 a 6.5 6.5 0 0 0 0 -13 Z M 0 8 a 8 8 0 1 1 16 0 A 8 8 0 0 1 0 8 Z"></path>
+                      <path d="M 8 3.25 a 0.75 0.75 0 0 1 0.75 0.75 v 3.25 H 11 a 0.75 0.75 0 0 1 0 1.5 H 7.25 V 4 A 0.75 0.75 0 0 1 8 3.25 Z"></path>
+                    </svg>
+                  </div>
               </div>
               <div className="songs-container-album-show">
                 <SongList songs={songs} album={album} isPlaying={isPlaying}setIsPlaying={setIsPlaying}currentSong={currentSong}setCurrentSong={setCurrentSong}audioElement={audioElement}/>
