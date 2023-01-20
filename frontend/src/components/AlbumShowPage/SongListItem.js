@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { SongContext } from "../../App";
 import { fetchArtist } from "../../store/artists";
@@ -22,11 +22,16 @@ const SongListItem = ({
 
   const artist = useSelector((state) => state.artists.artist) || "";
 
+  const [color, setColor] = useState("white");
+
+  // console.log(currentSong);
+
   const playSongHandler = () => {
     dispatch(fetchArtist(album.artistId));
     audioElement.src = song.songUrl;
     songInfo.songInfo[1](songTitle);
     songInfo.songPic[1](album.photoUrl);
+    setColor("#1DB954");
   };
 
   return (
@@ -35,11 +40,11 @@ const SongListItem = ({
         <div className="song-row-outer">
           <div className="combined-flex">
             <div className="song-number-div">
-              <div className="song-number-container">{idx + 1}</div>
+              <div className="song-number-container"style={{color: color}}>{idx + 1}</div>
             </div>
             <div className="song-title-album-show-page">
               <div className="song-title-album-show-container">
-                <div className="song-title-inner-text">{songTitle}</div>
+                <div className="song-title-inner-text"style={{color: color}}>{songTitle}</div>
                 <span className="song-artist-inner-text">
                   {artist.artistName}
                 </span>
