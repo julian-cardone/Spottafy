@@ -34,14 +34,14 @@ function App() {
           <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />
           <AlbumIndexPage />
-          <AudioBar sessionUser={{ sessionUser }} />
+          {/* <AudioBar sessionUser={{ sessionUser }} /> */}
         </Route>
         <Route exact path="/album/:albumId">
           <NavBar sessionUser={sessionUser}/>
           <AlbumShowPage />
           <SessionLinks sessionUser={{ sessionUser }} />
-          <AudioBar sessionUser={{ sessionUser }} />
         </Route>
+          <AudioBar sessionUser={{ sessionUser }} />
     </SongContext.Provider>
       </Switch>
     </>
