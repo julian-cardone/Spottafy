@@ -550,8 +550,6 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .svg-mute{
     fill:hsla(0,0%,100%,.7);
 }
-
-
 /* volume bar slider */
 
 .volume-bar-slider-container{
