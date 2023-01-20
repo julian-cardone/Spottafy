@@ -28,7 +28,7 @@
 }
 
 .header-content-album-show{
-    color: #fff;
+    background-image: linear-gradient(white, gray);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -109,6 +109,9 @@
     margin-top: 4px;
     font-family: Helvetica, Arial, sans-serif;
     letter-spacing: 0.02em;
+    color: white;
+    position: relative;
+    top: 10px;
 }
 
 .span-album-title-show{
@@ -125,10 +128,13 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     margin-block: 0px;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 900;
     font-family: Helvetica, Arial, sans-serif;
-    color: white
+    color: white;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .more-info-album-show{
@@ -186,6 +192,7 @@
     font-weight: 400;
     font-family: Helvetica, Arial, sans-serif;
     white-space: nowrap;
+    color: white;
 }
 
 .album-info-time::before{
@@ -199,9 +206,9 @@
 
 .gradient-fade-show{
     /* background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.6)),to(var(--background-base))),var(--background-noise); */
-    /* background-image: linear-gradient(white, black); */
-    background-color: #181818;
-    height: 280px;
+    background-image: linear-gradient(white, rgb(12, 12, 12));
+    /* background-color: #181818; */
+    height: 250px;
     position: absolute;
     width: 100%;
     /* z-index: -1; */
@@ -232,6 +239,7 @@
     padding: 0 32px;
     margin: 0;
     max-width: 1955px;
+    background: rgb(12, 12, 12);
 }
 
 .songs-grid-album-show{
