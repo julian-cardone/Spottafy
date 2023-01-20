@@ -3,6 +3,12 @@ import { useEffect, useRef, useState } from "react";
 const SeekBar = ({ currentSong, audioElement }) => {
   // audioElement.current.currentTime = 0;
 
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    setValue(currentSong.progress);
+  }, [currentSong]);
+
   const clickRef = useRef();
 
   const checkWidth = (e) => {
@@ -19,7 +25,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
   // useEffect(()=> {
   //   setSeconds()
   // },[])
-  // console.log(currentSong.progress)
+  // console.log(value);
   return (
     <div className="seeking-bar">
       <div className="first-number">{`${
@@ -42,7 +48,21 @@ const SeekBar = ({ currentSong, audioElement }) => {
             </div>
           </div>
         </div>
-          <div className="circle-on-seek"style={{left: `${currentSong.progress - 1 + "%"}`}}></div>
+        <input
+          type="range"
+          className="range-audio"
+          min="0"
+          max="100"
+          value={value}
+          step="0.01"
+          onChange={(e)=>{
+            setValue(e.target.value);
+          }}
+        ></input>
+        {/* <div
+          className="circle-on-seek"
+          style={{ left: `${currentSong.progress - 1 + "%"}` }}
+        ></div> */}
       </div>
       <div className="second-number">{`${
         Math.floor(currentSong.length / 60) || "0"
