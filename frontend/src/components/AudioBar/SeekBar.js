@@ -19,7 +19,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
   // useEffect(()=> {
   //   setSeconds()
   // },[])
-
+  // console.log(currentSong.progress)
   return (
     <div className="seeking-bar">
       <div className="first-number">{`${

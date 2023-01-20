@@ -404,6 +404,7 @@
     height: var(--progress-bar-height);
     width: 0%;
     background-color: var(--fg-color);
+    /* resize: horizontal; */
 }
 .seeking-bar-wrap:hover .circle-on-seek{
     position: relative;
