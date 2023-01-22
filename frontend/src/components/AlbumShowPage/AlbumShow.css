@@ -444,7 +444,7 @@
     display: -webkit-box;
     white-space: unset;
     word-break: break-all;
-    overflow: hidden;
+    /* overflow: hidden; */
     text-overflow: ellipsis;
     white-space: nowrap;
 }
