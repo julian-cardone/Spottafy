@@ -25,6 +25,14 @@ const SongListItem = ({
   const [color, setColor] = useState("white");
   const path = document.getElementById("pathPlay");
 
+  useEffect(()=>{
+    if (songInfo.songInfo[0] === songTitle){
+      setColor("#1DB954");
+    } else {
+      setColor("white");
+    }
+  },[songInfo])
+
   const playSongHandler = () => {
     dispatch(fetchArtist(album.artistId));
     audioElement.src = song.songUrl;
@@ -34,7 +42,6 @@ const SongListItem = ({
     path.setAttribute("d", "M 2.7 1 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 H 2.7 Z m 8 0 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -2.6 Z")
     songInfo.songPlaying[1](true);
     songInfo.artistInfo[1](artist.artistName);
-    setColor("#1DB954");
   };
 
 
