@@ -32,7 +32,8 @@ const SongListItem = ({
     songInfo.songPic[1](album.photoUrl);
     songInfo.songInfo2[0].current.play()
     path.setAttribute("d", "M 2.7 1 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 H 2.7 Z m 8 0 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -2.6 Z")
-    songInfo.songPlaying[1](true)
+    songInfo.songPlaying[1](true);
+    songInfo.artistInfo[1](artist.artistName);
     setColor("#1DB954");
   };
 
