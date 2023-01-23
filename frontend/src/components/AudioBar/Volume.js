@@ -36,14 +36,16 @@ const VolumeButtons = ({ audioElement, currentSong }) => {
     const offset = e.nativeEvent.offsetX;
 
     const divprogress = (offset / width) * 100;
+    console.log(divprogress / 100)
     if ((divprogress / 100) > 1){
       audioElement.current.volume=1;
-    } else if ((divprogress / 100) <1){
+    } else if ((divprogress / 100) < 0){
       audioElement.current.volume=0;
     } else {
       audioElement.current.volume = divprogress / 100;
     }
   };
+
 
   return (
     <>
