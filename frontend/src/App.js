@@ -10,10 +10,28 @@ import AlbumIndexPage from "./components/AlbumIndexPage/index.js";
 import AlbumShowPage from "./components/AlbumShowPage/index.js";
 import { createContext } from "react";
 import { useState } from "react";
+import { useRef } from "react";
+import { songsdata } from "./components/AudioBar/songsdata.js";
 
 export const SongContext = createContext(null);
 
 function App() {
+
+  // section 1 start
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentSong, setCurrentSong] = useState(songsdata[0]);
+
+  const audioElement = useRef();
+
+  const onPlay = () => {
+    const duration = audioElement.current.duration;
+    const ct = audioElement.current.currentTime;
+    const volume = audioElement.current.volume;
+
+    setCurrentSong({...currentSong, "progress":ct / duration * 100, "length": duration, "volume":volume, "ct":ct})
+  }
+
+  // section 1 end
 
   const [songCurr, setSongCurr] = useState(null);
   const [songPict, setSongPict] = useState(null);
@@ -29,12 +47,12 @@ function App() {
         <Route path="/login">
           <LoginFormPage sessionUser={sessionUser} />
         </Route>
-    <SongContext.Provider value={{songInfo: [songCurr, setSongCurr], songPic: [songPict, setSongPict]}}>
+    <SongContext.Provider value={{songInfo: [songCurr, setSongCurr], songPic: [songPict, setSongPict], songPlaying: [isPlaying, setIsPlaying], songInfo2: [audioElement, currentSong]}}>
+    <audio ref={audioElement}onTimeUpdate={onPlay}className="audio-audio"></audio>
         <Route exact path="/">
           <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />
           <AlbumIndexPage />
-          {/* <AudioBar sessionUser={{ sessionUser }} /> */}
         </Route>
         <Route exact path="/album/:albumId">
           <NavBar sessionUser={sessionUser}/>

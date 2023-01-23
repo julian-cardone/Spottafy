@@ -44,7 +44,7 @@ const VolumeButtons = ({ audioElement, currentSong }) => {
       audioElement.current.volume = divprogress / 100;
     }
   };
-console.log(currentSong.volume)
+
   return (
     <>
       <button className="mute-button" onClick={muteAudio}>
