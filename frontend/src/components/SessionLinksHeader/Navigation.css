@@ -366,4 +366,6 @@
 .profile-button{
     /* position: relative; */
     /* z-index: 9999; */
+    /* position: relative;
+    justify-self: right; */
 }

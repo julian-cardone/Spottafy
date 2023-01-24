@@ -12,6 +12,7 @@ import { createContext } from "react";
 import { useState } from "react";
 import { useRef } from "react";
 import { songsdata } from "./components/AudioBar/songsdata.js";
+import SearchPage from "./components/SearchPage/index.js";
 
 export const SongContext = createContext(null);
 
@@ -63,6 +64,7 @@ function App() {
         <Route exact path="/search">
           <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />
+          <SearchPage />
         </Route>
           <AudioBar sessionUser={{ sessionUser }} />
     </SongContext.Provider>
