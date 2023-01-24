@@ -7,15 +7,15 @@ const Bar = () => {
 
   const clickHandle = () => {
     history.replace("/");
-  }
+  };
 
   const clickHandle2 = () => {
     history.replace("/search");
-  }
+  };
 
   const clickHandle3 = () => {
     history.replace("/library");
-  }
+  };
 
   return (
     <>
@@ -31,7 +31,6 @@ const Bar = () => {
             </div>
           </div>
           <ul className="nav-bar-button-list">
-
             <li className="nav-bar-list-item">
               <div className="home-link-nav" onClick={clickHandle}>
                 {location.pathname !== "/" && (
@@ -70,7 +69,7 @@ const Bar = () => {
 
             <li className="nav-bar-list-item">
               <div className="home-link-nav" onClick={clickHandle2}>
-                {location.pathname !== "search" && (
+                {location.pathname !== "/search" && (
                   <>
                     <svg
                       role="img"
@@ -84,7 +83,7 @@ const Bar = () => {
                     <span className="home-nav-text">Search</span>
                   </>
                 )}
-                {location.pathname === "search" && (
+                {location.pathname === "/search" && (
                   <>
                     <svg
                       role="img"
@@ -94,6 +93,7 @@ const Bar = () => {
                       viewBox="0 0 24 24"
                       style={{ fill: "white" }}
                     >
+                      <path d="M 10.533 1.279 c -5.18 0 -9.407 4.14 -9.407 9.279 s 4.226 9.279 9.407 9.279 c 2.234 0 4.29 -0.77 5.907 -2.058 l 4.353 4.353 a 1 1 0 1 0 1.414 -1.414 l -4.344 -4.344 a 9.157 9.157 0 0 0 2.077 -5.816 c 0 -5.14 -4.226 -9.28 -9.407 -9.28 Z m -7.407 9.279 c 0 -4.006 3.302 -7.28 7.407 -7.28 s 7.407 3.274 7.407 7.28 s -3.302 7.279 -7.407 7.279 s -7.407 -3.273 -7.407 -7.28 Z"></path>
                       <path d="M 15.356 10.558 c 0 2.623 -2.16 4.75 -4.823 4.75 c -2.664 0 -4.824 -2.127 -4.824 -4.75 s 2.16 -4.75 4.824 -4.75 c 2.664 0 4.823 2.127 4.823 4.75 Z"></path>
                     </svg>
                     <span className="home-nav-text" style={{ color: "white" }}>
@@ -133,13 +133,12 @@ const Bar = () => {
                       <path d="M 3 22 a 1 1 0 0 1 -1 -1 V 3 a 1 1 0 0 1 2 0 v 18 a 1 1 0 0 1 -1 1 Z M 15.5 2.134 A 1 1 0 0 0 14 3 v 18 a 1 1 0 0 0 1 1 h 6 a 1 1 0 0 0 1 -1 V 6.464 a 1 1 0 0 0 -0.5 -0.866 l -6 -3.464 Z M 9 2 a 1 1 0 0 0 -1 1 v 18 a 1 1 0 1 0 2 0 V 3 a 1 1 0 0 0 -1 -1 Z"></path>
                     </svg>
                     <span className="home-nav-text" style={{ color: "white" }}>
-                    Your Library
+                      Your Library
                     </span>
                   </>
                 )}
               </div>
             </li>
-
           </ul>
         </div>
       </nav>

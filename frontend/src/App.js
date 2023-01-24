@@ -60,6 +60,10 @@ function App() {
           <AlbumShowPage />
           <SessionLinks sessionUser={{ sessionUser }} />
         </Route>
+        <Route exact path="/search">
+          <NavBar sessionUser={sessionUser}/>
+          <SessionLinks sessionUser={{ sessionUser }} />
+        </Route>
           <AudioBar sessionUser={{ sessionUser }} />
     </SongContext.Provider>
       </Switch>
