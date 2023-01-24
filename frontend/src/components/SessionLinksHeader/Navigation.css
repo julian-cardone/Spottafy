@@ -4,37 +4,23 @@
     /* height: 100%; */
     /* background-image: linear-gradient(#222222, #0c0c0c); */
     /* overflow-y: visible; */
-    position: relative;
+    /* position: relative; */
     z-index: -9999;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    /* height: 100vh; */
     height: 100%;
+    max-width: fit-content;
+    max-height: fit-content;
+    /* left: 265px; */
+    /* top: 64px; */
     display: flex;
-    /* overflow-x: hidden; */
-
-    /* -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    grid-area: album-index-page;
-    min-height: 0;
     overflow: hidden;
+
     position: absolute;
     top: 64px;
-    left: 256px;
-    height: 100%;
-
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    background: transparent;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    isolation: isolate; */
+    left: 255px;
+    /* margin-right: 255px; */
+    overflow-x: hidden;
 }
 
 body{

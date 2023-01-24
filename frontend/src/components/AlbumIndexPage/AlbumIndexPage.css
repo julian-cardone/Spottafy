@@ -6,18 +6,18 @@
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    grid-area: album-index-page;
-    min-height: 0;
+    /* grid-area: album-index-page; */
     /* overflow: hidden; */
     /* overflow-y: scroll; */
-    position: absolute;
-    top: 64px;
-    left: 255px;
     /* width: 100%; */
     /* margin-left: -256px; */
-    height: 100%;
+    /* min-height: 150%; */
+    max-height: fit-content;
+    min-height: fit-content;
     /* min-height: 150vh; */
     /* width: 60%; */
+    position: relative;
+    overflow-x: hidden;
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -49,7 +49,7 @@
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    min-height: 0;
+    min-height: fit-content;
     position: relative;
     /* display: grid; */
     /* grid-gap: 24px; */
@@ -62,6 +62,8 @@
     max-width: 1955px;
     height: 100%;
     display: flex;
+
+    min-height: fit-content;
 }
 
 .section-1-albums{
@@ -80,6 +82,7 @@
     min-width: 100%;
     position: relative;
 
+    /* min-height: fit-content; */
     height: 100%;
 }
 
