@@ -26,14 +26,27 @@
     font-weight: 400;
     font-family: Helvetica, Arial, sans-serif;
     color: inherit;
+    letter-spacing: 0.02rem;
+    box-shadow: none;
 
-    border: 0;
+    border: 1.5px solid black;
     border-radius: 500px;
-    color: #000;
+    /* color: #000; */
     height: 40px;
     padding: 6px 48px;
     text-overflow: ellipsis;
     width: 364px;
+}
+
+.search-input:hover{
+    /* border: none; */
+    /* outline: none; */
+    /* border: 0.01rem solid black; */
+    box-shadow: none;
+}
+
+.search-input:focus{
+    outline: none;
 }
 
 .div-inside-input{
