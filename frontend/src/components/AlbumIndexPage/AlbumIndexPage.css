@@ -12,8 +12,10 @@
     /* width: 100%; */
     /* margin-left: -256px; */
     /* min-height: 150%; */
-    max-height: fit-content;
-    min-height: fit-content;
+
+    /* max-height: fit-content;
+    min-height: fit-content; */
+
     /* min-height: 150vh; */
     /* width: 60%; */
     position: relative;
@@ -29,17 +31,7 @@
     flex-direction: column;
     isolation: isolate;
     
-    /* z-index: 100; */
-
-    /* background: transparent; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* isolation: isolate; */
-    /* border: 10px, pink; */
-    /* position: relative; */
-    /* position: relative; */
-    /* overflow-x: hidden; */
-    height: 100%;
+    /* height: 100%; */
     background-image: linear-gradient(#222222, #0c0c0c);
     /* overflow-y: visible; */
     z-index: -9999;
@@ -49,7 +41,10 @@
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    min-height: fit-content;
+
+    /* min-height: fit-content; */
+    /* height: 100%; */
+
     position: relative;
     /* display: grid; */
     /* grid-gap: 24px; */
@@ -60,10 +55,9 @@
     padding-bottom: 24px;
     margin: 0;
     max-width: 1955px;
-    height: 100%;
     display: flex;
 
-    min-height: fit-content;
+    /* min-height: fit-content; */
 }
 
 .section-1-albums{
@@ -78,12 +72,12 @@
     -ms-flex-direction: column;
     flex-direction: column;
     /* margin-bottom: 30px; */
-    min-height: var(--shelf-min-height);
+    /* min-height: var(--shelf-min-height); */
     min-width: 100%;
     position: relative;
 
     /* min-height: fit-content; */
-    height: 100%;
+    /* height: 100%; */
 }
 
 .section-1-title-div{

@@ -2,7 +2,7 @@
 #root {
     /* min-height: 100vh; */
     /* height: 100%; */
-    /* display: flex; */
+    display: flex;
     position: absolute;
     /* isolation: isolate; */
     height: 100%;
