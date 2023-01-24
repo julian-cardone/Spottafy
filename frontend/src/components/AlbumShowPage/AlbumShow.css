@@ -334,6 +334,10 @@
     height: 56px;
 }
 
+.song-row-container:hover{
+    cursor: default;
+}
+
 .song-row-outer{
     justify-content: space-between;
     border: 1px solid transparent;
