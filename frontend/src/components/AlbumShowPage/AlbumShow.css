@@ -3,6 +3,9 @@
     /* background-color: pink; */
     margin-left: 255px;
     height: 100%;
+    /* overflow-y: scroll; */
+    overflow: overlay;
+    /* padding-right: 15px; */
 }
 
 .background-theme-album{

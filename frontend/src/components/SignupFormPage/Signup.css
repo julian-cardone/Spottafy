@@ -30,6 +30,8 @@
     --essential-announcement: #0d72ea;
     --decorative-base: #000;
     --decorative-subdued: #dedede;
+
+    overflow-y: scroll;
 }
 
 .signup-page{
