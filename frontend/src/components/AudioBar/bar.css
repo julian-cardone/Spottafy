@@ -611,3 +611,4 @@ input[type=range]:focus::-webkit-slider-runnable-track {
 .volume-bar-slider-container:hover .progress-bar-background-inner{
     background-color: var(--is-active-fg-color);
 }
+

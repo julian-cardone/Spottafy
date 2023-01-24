@@ -8,13 +8,15 @@
     flex-direction: column;
     grid-area: album-index-page;
     min-height: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
+    /* overflow-y: scroll; */
     position: absolute;
     top: 64px;
     left: 255px;
     /* width: 100%; */
     /* margin-left: -256px; */
     height: 100%;
+    /* min-height: 150vh; */
     /* width: 60%; */
 
     -webkit-box-orient: vertical;
@@ -58,12 +60,14 @@
     padding-bottom: 24px;
     margin: 0;
     max-width: 1955px;
+    height: 100%;
+    display: flex;
 }
 
 .section-1-albums{
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    --shelf-min-height: 300px;
+    /* --shelf-min-height: 300px;    */
     contain-intrinsic-size: auto var(--shelf-min-height);
     content-visibility: auto;
     display: -webkit-box;
@@ -71,10 +75,12 @@
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     min-height: var(--shelf-min-height);
     min-width: 100%;
     position: relative;
+
+    height: 100%;
 }
 
 .section-1-title-div{
@@ -145,6 +151,7 @@
     /* overflow-block:visible; */
     display: flex;
     flex-wrap: wrap;
+    /* overflow-y: scroll; */
     /* justify-content: space-evenly; */
     /* width: 82%; */
     /* overflow-x: wrap; */
@@ -153,6 +160,8 @@
     /* display: flex; */
     /* grid-auto-flow: column; */
 }
+
+
 
 .album-container{
     --card-container-border-radius: clamp(4px,(var(--column-width,0px) - 32px) * 0.025,8px);

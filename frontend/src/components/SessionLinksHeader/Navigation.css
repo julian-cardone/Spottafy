@@ -8,6 +8,8 @@
     z-index: -9999;
     min-height: 100vh;
     height: 100%;
+    display: flex;
+    /* overflow-x: hidden; */
 
     /* -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
