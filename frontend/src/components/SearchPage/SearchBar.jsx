@@ -1,10 +1,18 @@
+import { useState } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+ 
 function SearchBar() {
+
+  const dispatch = useDispatch();
+  const [value, setValue] = useState();
+  const albums = useSelector(state => state.albums)
 
   return (
     <>
       <div className="search-bar-container">
         <form role="search">
-          <input className="search-input"placeholder="What do you want to listen to?"maxLength="800"></input>
+          <input className="search-input"placeholder="What do you want to listen to?"maxLength="800"onChange={(e)=>setValue(e.target.value)}></input>
           <div className="div-inside-input">
             <span className="span-inside-input">
               <svg role="img"height="24"width="24"viewBox="0 0 24 24">

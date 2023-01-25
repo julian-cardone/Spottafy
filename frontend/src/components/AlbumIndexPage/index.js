@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { fetchAlbums } from "../../store/albums";
 import AlbumList from "./AlbumList";
 import './AlbumIndexPage.css';
@@ -9,13 +9,14 @@ function AlbumIndexPage() {
   const history = useHistory(); 
   const dispatch = useDispatch();
   const albums = useSelector(state => Object.values(state.albums));
+  // const location = useLocation();
   // const [highlightedBench, setHighlightedBench] = useState(null);
   // const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
       dispatch(fetchAlbums());
     }, [dispatch]);
-    
+
     // console.log(window.screen.width);
     // console.log(gridContainer);
     // const gridContainer = document.querySelector(".grid-container") || "";

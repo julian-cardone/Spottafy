@@ -9,6 +9,7 @@
     --gradient-color-bottom: #050505;; 
     background-image: linear-gradient(var(--gradient-color-top), var(--gradient-color-bottom));
     /* background-image: linear-gradient(#222222, #050505); */
+    z-index: 0;
 } 
 .search-bar-container{
     position: relative;
