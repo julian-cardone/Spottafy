@@ -221,6 +221,25 @@
     width: 100%;
 }
 
+.header-wrapper-logged-in-search{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-padding-end: 16px;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 16px;
+    height: 64px;
+    justify-content: right;
+    padding: 16px;
+    padding-inline-end: 16px;
+    position: relative;
+    width: 100%;
+}
+
 .profile-icon{
     -webkit-box-align: center;
     -ms-flex-align: center;
