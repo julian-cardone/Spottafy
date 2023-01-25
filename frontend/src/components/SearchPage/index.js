@@ -1,12 +1,11 @@
-import AlbumIndexPage from '../AlbumIndexPage';
-import './searchpage.css';
+import AlbumIndexPage from "../AlbumIndexPage";
+import "./searchpage.css";
 
 function SearchPage() {
-
   return (
     <>
-    {/* <div className='search-page-fit'></div>  */}
-    <AlbumIndexPage />
+      {/* <div className='search-page-fit'></div>  */}
+      <AlbumIndexPage />
     </>
   );
 }
