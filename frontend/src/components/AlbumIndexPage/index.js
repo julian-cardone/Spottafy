@@ -1,21 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
 import { fetchAlbums } from "../../store/albums";
 import AlbumList from "./AlbumList";
 import './AlbumIndexPage.css';
+import { SongContext } from "../../App";
 
 function AlbumIndexPage() {
+  const searchInfo = useContext(SongContext);
   const history = useHistory(); 
   const dispatch = useDispatch();
-  const albums = useSelector(state => Object.values(state.albums));
-  // const location = useLocation();
+  const albumsAll = useSelector(state => Object.values(state.albums));
+  const location = useLocation();
+  const [albums, setAlbums] = useState(albumsAll)
   // const [highlightedBench, setHighlightedBench] = useState(null);
   // const [bounds, setBounds] = useState(null);
 
   useEffect(() => {
       dispatch(fetchAlbums());
-    }, [dispatch]);
+      searchInfo.searchInfo[1]("");
+    }, [dispatch, location]);
+
+    
+
+    // console.log(searchInfo.searchInfo[0])
 
     // console.log(window.screen.width);
     // console.log(gridContainer);

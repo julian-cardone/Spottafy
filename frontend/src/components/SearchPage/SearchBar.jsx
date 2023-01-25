@@ -1,18 +1,23 @@
 import { useState } from "react";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useContext } from "react";
+import { SongContext } from "../../App";
  
 function SearchBar() {
 
-  const dispatch = useDispatch();
-  const [value, setValue] = useState();
-  const albums = useSelector(state => state.albums)
+  const searchInfo = useContext(SongContext);
+  // const [search, setSearch] = useState(searchInfo.searchInfo[0]);
+
+  const change = async (e) =>{
+    searchInfo.searchInfo[1](e.target.value);
+    // await setSearch(e.target.value);
+  }
+  // console.log(searchInfo.searchInfo[0])
 
   return (
     <>
       <div className="search-bar-container">
         <form role="search">
-          <input className="search-input"placeholder="What do you want to listen to?"maxLength="800"onChange={(e)=>setValue(e.target.value)}></input>
+          <input className="search-input"placeholder="What do you want to listen to?"maxLength="800"onChange={change}value={searchInfo.searchInfo[0]}></input>
           <div className="div-inside-input">
             <span className="span-inside-input">
               <svg role="img"height="24"width="24"viewBox="0 0 24 24">

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import SearchBar from "../SearchPage/SearchBar";
 // import { useSelector } from 'react-redux';
@@ -8,10 +8,6 @@ import "./Navigation.css";
 
 function SessionLinks({ sessionUser }) {
   const location = useLocation();
-
-  // useEffect(()=>{
-  //   location.pathname === "/search" ? document.querySelector(".header-wrapper-logged-in").style.justifyContent="space-between" : document.querySelector(".header-wrapper-logged-in").style.justifyContent="space-right";
-  // },[location.pathname])
 
   let sessionLinks;
   if (sessionUser.sessionUser) {

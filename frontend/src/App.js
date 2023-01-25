@@ -37,6 +37,7 @@ function App() {
   const [songCurr, setSongCurr] = useState(null);
   const [songPict, setSongPict] = useState(null);
   const [artist, setArtist] = useState("");
+  const [search, setSearch] = useState("");
   
   const sessionUser = useSelector((state) => state.session.user);
 
@@ -49,7 +50,7 @@ function App() {
         <Route path="/login">
           <LoginFormPage sessionUser={sessionUser} />
         </Route>
-    <SongContext.Provider value={{songInfo: [songCurr, setSongCurr], songPic: [songPict, setSongPict], songPlaying: [isPlaying, setIsPlaying], songInfo2: [audioElement, currentSong], artistInfo: [artist, setArtist]}}>
+    <SongContext.Provider value={{songInfo: [songCurr, setSongCurr], songPic: [songPict, setSongPict], songPlaying: [isPlaying, setIsPlaying], songInfo2: [audioElement, currentSong], artistInfo: [artist, setArtist], searchInfo: [search, setSearch]}}>
     <audio ref={audioElement}onTimeUpdate={onPlay}className="audio-audio"></audio>
         <Route exact path="/">
           <NavBar sessionUser={sessionUser}/>
