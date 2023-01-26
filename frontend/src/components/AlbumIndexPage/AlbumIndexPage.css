@@ -35,6 +35,7 @@
     background-image: linear-gradient(#222222, #050505);
     /* overflow-y: visible; */
     z-index: -9999;
+    width: 100%;
 }
 
 .album-index-container{
