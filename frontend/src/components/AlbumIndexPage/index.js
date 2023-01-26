@@ -12,16 +12,18 @@ function AlbumIndexPage() {
   const dispatch = useDispatch();
   const albumsAll = useSelector(state => Object.values(state.albums));
   const location = useLocation();
-  const [albums, setAlbums] = useState(albumsAll)
   // const [highlightedBench, setHighlightedBench] = useState(null);
   // const [bounds, setBounds] = useState(null);
+  // console.log(albums);
 
   useEffect(() => {
       dispatch(fetchAlbums());
-      searchInfo.searchInfo[1]("");
     }, [dispatch, location]);
-
     
+    if (location.pathname !== "/search"){
+      searchInfo.searchInfo[1]("");
+    }
+
 
     // console.log(searchInfo.searchInfo[0])
 
@@ -42,7 +44,14 @@ function AlbumIndexPage() {
               </div> 
             </div>
           </div>
-                  <AlbumList albums={albums}/>
+                  {location.pathname === "/" && <AlbumList albums={albumsAll}/>}
+                  {location.pathname === "/search" && <AlbumList albums={albumsAll.filter((val)=>{
+                    if (searchInfo.searchInfo[0] === ""){
+                      return val
+                    } else if (val.albumName.toLowerCase().includes(searchInfo.searchInfo[0].toLowerCase())){
+                      return val
+                    }
+                  })}/>}
         </section>
       </div>
     </div>
