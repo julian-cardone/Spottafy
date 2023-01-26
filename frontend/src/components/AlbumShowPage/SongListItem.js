@@ -25,25 +25,27 @@ const SongListItem = ({
   const [color, setColor] = useState("white");
   const path = document.getElementById("pathPlay");
 
-  useEffect(()=>{
-    if (songInfo.songInfo[0] === songTitle){
+  useEffect(() => {
+    if (songInfo.songInfo[0] === songTitle) {
       setColor("#1DB954");
     } else {
       setColor("white");
     }
-  },[songInfo])
+  }, [songInfo]);
 
   const playSongHandler = () => {
     dispatch(fetchArtist(album.artistId));
     audioElement.src = song.songUrl;
     songInfo.songInfo[1](songTitle);
     songInfo.songPic[1](album.photoUrl);
-    songInfo.songInfo2[0].current.play()
-    path.setAttribute("d", "M 2.7 1 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 H 2.7 Z m 8 0 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -2.6 Z")
+    songInfo.songInfo2[0].current.play();
+    path.setAttribute(
+      "d",
+      "M 2.7 1 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 H 2.7 Z m 8 0 a 0.7 0.7 0 0 0 -0.7 0.7 v 12.6 a 0.7 0.7 0 0 0 0.7 0.7 h 2.6 a 0.7 0.7 0 0 0 0.7 -0.7 V 1.7 a 0.7 0.7 0 0 0 -0.7 -0.7 h -2.6 Z"
+    );
     songInfo.songPlaying[1](true);
     songInfo.artistInfo[1](artist.artistName);
   };
-
 
   return (
     <>
@@ -51,11 +53,15 @@ const SongListItem = ({
         <div className="song-row-outer">
           <div className="combined-flex">
             <div className="song-number-div">
-              <div className="song-number-container"style={{color: color}}>{idx + 1}</div>
+              <div className="song-number-container" style={{ color: color }}>
+                {idx + 1}
+              </div>
             </div>
             <div className="song-title-album-show-page">
               <div className="song-title-album-show-container">
-                <div className="song-title-inner-text"style={{color: color}}>{songTitle}</div>
+                <div className="song-title-inner-text" style={{ color: color }}>
+                  {songTitle}
+                </div>
                 <span className="song-artist-inner-text">
                   {artist.artistName}
                 </span>
