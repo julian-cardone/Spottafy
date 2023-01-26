@@ -8,16 +8,22 @@ import { fetchArtist } from "../../store/artists";
 import { SongContext } from "../../App";
 // import AlbumList from "./AlbumList";
 
-const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, audioElement }) => {
+const AlbumShowPage = ({
+  isPlaying,
+  setIsPlaying,
+  currentSong,
+  setCurrentSong,
+  audioElement,
+}) => {
   const dispatch = useDispatch();
   const { albumId } = useParams();
   const album = useSelector((state) => state.albums.album || "");
   const songs = useSelector((state) => Object.values(state.albums.songs || {}));
-  const artist = useSelector(state => state.artists.artist) || "";
+  const artist = useSelector((state) => state.artists.artist) || "";
   const location = useLocation();
   const searchInfo = useContext(SongContext);
 
-  if (location.pathname !== "/search"){
+  if (location.pathname !== "/search") {
     searchInfo.searchInfo[1]("");
   }
 
@@ -54,7 +60,9 @@ const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, a
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">
-                  <span className="artist-name-album-show">{artist.artistName}</span>
+                  <span className="artist-name-album-show">
+                    {artist.artistName}
+                  </span>
                 </div>
                 <span className="year-info-album-show">{album.year}</span>
                 <span className="album-info-time">
@@ -72,15 +80,23 @@ const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, a
                   <div className="hashtag-album-show">#</div>
                   <span className="title-word-show-word">TITLE</span>
                 </div>
-                  <div className="clock-symbol">
-                    <svg role="img"height="16"width="16"viewBox="0 0 16 16">
-                      <path d="M 8 1.5 a 6.5 6.5 0 1 0 0 13 a 6.5 6.5 0 0 0 0 -13 Z M 0 8 a 8 8 0 1 1 16 0 A 8 8 0 0 1 0 8 Z"></path>
-                      <path d="M 8 3.25 a 0.75 0.75 0 0 1 0.75 0.75 v 3.25 H 11 a 0.75 0.75 0 0 1 0 1.5 H 7.25 V 4 A 0.75 0.75 0 0 1 8 3.25 Z"></path>
-                    </svg>
-                  </div>
+                <div className="clock-symbol">
+                  <svg role="img" height="16" width="16" viewBox="0 0 16 16">
+                    <path d="M 8 1.5 a 6.5 6.5 0 1 0 0 13 a 6.5 6.5 0 0 0 0 -13 Z M 0 8 a 8 8 0 1 1 16 0 A 8 8 0 0 1 0 8 Z"></path>
+                    <path d="M 8 3.25 a 0.75 0.75 0 0 1 0.75 0.75 v 3.25 H 11 a 0.75 0.75 0 0 1 0 1.5 H 7.25 V 4 A 0.75 0.75 0 0 1 8 3.25 Z"></path>
+                  </svg>
+                </div>
               </div>
               <div className="songs-container-album-show">
-                <SongList songs={songs} album={album} isPlaying={isPlaying}setIsPlaying={setIsPlaying}currentSong={currentSong}setCurrentSong={setCurrentSong}audioElement={audioElement}/>
+                <SongList
+                  songs={songs}
+                  album={album}
+                  isPlaying={isPlaying}
+                  setIsPlaying={setIsPlaying}
+                  currentSong={currentSong}
+                  setCurrentSong={setCurrentSong}
+                  audioElement={audioElement}
+                />
               </div>
             </div>
           </div>
