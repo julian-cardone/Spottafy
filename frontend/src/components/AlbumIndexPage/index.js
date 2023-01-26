@@ -39,7 +39,12 @@ function AlbumIndexPage() {
           <div className="section-1-title-div">
             <div className="section-1-title-div-inner">
               <div className="section-1-title-div-inner-inner">
+              {location.pathname === "/" && 
                 <h2 className="albums-index-title">Albums</h2>
+              }
+                            {location.pathname === "/search" && 
+                <h2 className="albums-index-title">Top Results</h2>
+              }
               </div> 
             </div>
           </div>
