@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SongList from "./SongList";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory, useLocation, useParams } from "react-router-dom";
 import { fetchAlbum } from "../../store/albums";
 import "./AlbumShow.css";
 import { fetchArtist } from "../../store/artists";
+import { SongContext } from "../../App";
 // import AlbumList from "./AlbumList";
 
 const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, audioElement }) => {
@@ -13,6 +14,12 @@ const AlbumShowPage = ({ isPlaying, setIsPlaying, currentSong, setCurrentSong, a
   const album = useSelector((state) => state.albums.album || "");
   const songs = useSelector((state) => Object.values(state.albums.songs || {}));
   const artist = useSelector(state => state.artists.artist) || "";
+  const location = useLocation();
+  const searchInfo = useContext(SongContext);
+
+  if (location.pathname !== "/search"){
+    searchInfo.searchInfo[1]("");
+  }
 
   useEffect(() => {
     dispatch(fetchAlbum(albumId));

@@ -10,7 +10,7 @@ function AlbumIndexPage() {
   const searchInfo = useContext(SongContext);
   const history = useHistory(); 
   const dispatch = useDispatch();
-  const albumsAll = useSelector(state => Object.values(state.albums));
+  const albumsAll = useSelector(state => Object.values(state.albums)||[]);
   const location = useLocation();
   // const [highlightedBench, setHighlightedBench] = useState(null);
   // const [bounds, setBounds] = useState(null);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage/index.js";
 import SessionLinks from "./components/SessionLinksHeader";
 import LoginFormPage from "./components/LoginFormPage";
@@ -17,6 +17,8 @@ import SearchPage from "./components/SearchPage/index.js";
 export const SongContext = createContext(null);
 
 function App() {
+
+  const location = useLocation();
 
   // section 1 start
   const [isPlaying, setIsPlaying] = useState(false);
