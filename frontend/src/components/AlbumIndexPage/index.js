@@ -18,12 +18,11 @@ function AlbumIndexPage() {
 
   useEffect(() => {
       dispatch(fetchAlbums());
-    }, [dispatch, location]);
+    }, [dispatch, location, searchInfo]);
     
     if (location.pathname !== "/search"){
       searchInfo.searchInfo[1]("");
     }
-
 
     // console.log(searchInfo.searchInfo[0])
 
