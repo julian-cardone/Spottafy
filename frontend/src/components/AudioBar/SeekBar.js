@@ -55,7 +55,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
           max="100"
           value={value}
           step="0.01"
-          onChange={(e)=>{
+          onChange={(e) => {
             setValue(e.target.value);
           }}
         ></input>
