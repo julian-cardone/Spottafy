@@ -6,7 +6,6 @@ import SeekBar from "./SeekBar";
 import VolumeButtons from "./Volume";
 
 const Player = ({ audioElement, isPlaying, setIsPlaying, currentSong }) => {
-
   const songInfo = useContext(SongContext);
 
   const albumPic = useContext(SongContext);
