@@ -49,6 +49,12 @@ function SessionLinks({ sessionUser }) {
                 <ProfileButton sessionUser={sessionUser} />
               </div>
             )}
+            {location.pathname !== "/search" && location.pathname !== "/" && (
+              <div className="header-wrapper-logged-in-search">
+                {symbols}
+                <ProfileButton sessionUser={sessionUser} />
+              </div>
+            )}
           </header>
         </div>
       </>
@@ -58,7 +64,7 @@ function SessionLinks({ sessionUser }) {
       <>
         <div className="session-links-header">
           <header className="session-links">
-          {symbols}
+            {symbols}
             <div className="header-wrapper">
               <NavLink to="/signup" className="signup-button">
                 Sign up
@@ -75,5 +81,3 @@ function SessionLinks({ sessionUser }) {
 }
 
 export default SessionLinks;
-
-
