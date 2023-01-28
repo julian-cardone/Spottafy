@@ -6,7 +6,7 @@ import AlbumList from "./AlbumList";
 import "./AlbumIndexPage.css";
 import { SongContext } from "../../App";
 
-function AlbumIndexPage() {
+function AlbumIndexPage(sessionUser) {
   const searchInfo = useContext(SongContext);
   const history = useHistory();
   const dispatch = useDispatch();
@@ -48,7 +48,7 @@ function AlbumIndexPage() {
                 </div>
               </div>
             </div>
-            {location.pathname === "/" && <AlbumList albums={albumsAll} />}
+            {location.pathname === "/" && <AlbumList sessionUser={sessionUser}albums={albumsAll} />}
             {location.pathname === "/search" && (
               <AlbumList
                 albums={albumsAll.filter((val) => {

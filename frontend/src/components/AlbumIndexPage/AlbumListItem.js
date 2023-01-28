@@ -6,7 +6,7 @@ import { FastAverageColor } from "fast-average-color";
 import { SongContext } from "../../App";
 import { useSelector } from "react-redux";
 
-function AlbumListItem({ album }) {
+function AlbumListItem({ album, sessionUser }) {
   // const history = useHistory();
 
   const history = useHistory();
@@ -24,7 +24,11 @@ function AlbumListItem({ album }) {
   }, [artistId]);
 
   const clickHandler = (e) => {
-    history.push(`/album/${id}`);
+    if (sessionUser.sessionUser.sessionUser){
+      history.push(`/album/${id}`);
+    } else {
+      history.push("/login")
+    }
   };
 
   return (

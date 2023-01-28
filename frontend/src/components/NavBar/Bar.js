@@ -1,7 +1,7 @@
 import "./navbar.css";
 import { useHistory, useLocation } from "react-router-dom";
 
-const Bar = () => {
+const Bar = (sessionUser) => {
   const location = useLocation();
   const history = useHistory();
 
@@ -10,7 +10,11 @@ const Bar = () => {
   };
 
   const clickHandle2 = () => {
-    history.replace("/search");
+    if (sessionUser.sessionUser){
+      history.replace("/search");
+    } else {
+      history.replace("/login")
+    }
   };
 
   const clickHandle3 = () => {

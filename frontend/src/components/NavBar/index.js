@@ -3,7 +3,7 @@ import './navbar.css';
 
 const NavBar = ({ sessionUser }) => {
     return (
-    <Bar />
+    <Bar sessionUser={sessionUser}/>
   )
 }
 

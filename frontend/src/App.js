@@ -57,7 +57,7 @@ function App() {
         <Route exact path="/">
           <NavBar sessionUser={sessionUser}/>
           <SessionLinks sessionUser={{ sessionUser }} />
-          <AlbumIndexPage />
+          <AlbumIndexPage sessionUser={{ sessionUser }}/>
         </Route>
         <Route exact path="/album/:albumId">
           <NavBar sessionUser={sessionUser}/>
