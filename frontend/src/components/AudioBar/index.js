@@ -4,6 +4,7 @@ import "./bar.css";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { SongContext } from "../../App.js";
+import PlayerTwo from "./PlayerTwo.js";
 
 const AudioBar = ({ sessionUser }) => {
   const songContext = useContext(SongContext);
@@ -19,6 +20,10 @@ const AudioBar = ({ sessionUser }) => {
         />
       </>
     );
+  } else {
+    return (
+      <PlayerTwo />
+    )
   }
 };
 
