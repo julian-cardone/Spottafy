@@ -58,6 +58,7 @@ function SessionLinks({ sessionUser }) {
       <>
         <div className="session-links-header">
           <header className="session-links">
+          {symbols}
             <div className="header-wrapper">
               <NavLink to="/signup" className="signup-button">
                 Sign up

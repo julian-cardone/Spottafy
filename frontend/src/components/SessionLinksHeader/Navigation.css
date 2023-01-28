@@ -86,14 +86,14 @@
 
     position: relative;
     width: 100%;
-    justify-content: right;
-    /* padding-right: 16px; */
+    justify-content: space-between;
+    padding-left: 16px;
 }
 
 .header-wrapper{
     position: absolute;
     right: 0px;
-    padding-inline-end: 32px;
+    padding-right: 48px;
 }
 
 .signup-button{
