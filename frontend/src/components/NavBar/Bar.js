@@ -158,6 +158,11 @@ const Bar = (sessionUser) => {
                   <span className="create-playlist-text">Create Playlist</span>
                 </button>
               </div>
+              <div className="divider-playlist">
+                <hr className="divider-playlist-real"></hr>
+                <div className="space-after-divider"></div>
+              </div>
+              <div className="playlists-list-div">playlists go in here</div>
             </div>
           </div>
         </div>

@@ -283,3 +283,34 @@
 /* .create-playlist-button:hover .div-inside-svg{
     background: white;
 } */
+
+.divider-playlist{
+    position: relative;
+}
+
+.divider-playlist-real{
+    background-color: #282828;
+    border: none;
+    height: 1px;
+    margin: 8px var(--left-sidebar-padding-right) 0 var(--left-sidebar-padding-left);
+    min-height: 1px;
+}
+
+/* cool fade effect on top when scrolling through the playlists: */
+.space-after-divider{
+    background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.7)),to(transparent));
+    background: linear-gradient(180deg,rgba(0,0,0,.7),transparent);
+    bottom: -16px;
+    height: 16px;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.playlists-list-div{
+    height: 100%;
+    color: white;
+}
