@@ -1,6 +1,7 @@
 import "./newPlaylist.css";
 
 function NewPlaylist() {
+
   return (
     <div className="main-content-container">
       <div className="background-theme-album-2">
@@ -13,9 +14,9 @@ function NewPlaylist() {
               </div>
             </div>
             <div className="album-info-show-page-container">
-              <h2 className="album-title-show-page">PLAYLIST</h2>
+              <h2 className="album-title-show-page-2">PLAYLIST</h2>
               <span className="span-album-title-show">
-                <h1 className="span-inner-title-show">placeholder</h1>
+              <input className="span-inner-title-show-2"placeholder="placeholder"></input>
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">
