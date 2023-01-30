@@ -17,9 +17,9 @@ const Bar = (sessionUser) => {
     }
   };
 
-  const clickHandle3 = () => {
-    history.replace("/library");
-  };
+  const handleButton = () =>{
+    history.replace("/newPlaylist")
+  }
 
   return (
     <>
@@ -147,7 +147,7 @@ const Bar = (sessionUser) => {
           <div className="playlist-button-container">
             <div className="playlist-button-wrapper">
               <div className="create-playlist-outer-div">
-                <button className="create-playlist-button">
+                <button className="create-playlist-button"onClick={handleButton}>
                   <div className="svg-button-div">
                     <div className="div-inside-svg">
                       <svg role="img"height="12"width="12"viewBox="0 0 16 16 ">

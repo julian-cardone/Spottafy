@@ -1,0 +1,41 @@
+.background-theme-album-2{
+    --gradient-color-top: #353535;
+    --gradient-color-bottom: #131313;; 
+    position: relative;
+    background-image: linear-gradient(var(--gradient-color-top), var(--gradient-color-bottom));
+    height: 100%;
+    /* margin-top: 64px; */
+}
+
+.header-content-album-show-2{
+    background-image: linear-gradient(#525252, #303030);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: none;
+    overflow: hidden;
+    padding-bottom: 24px;
+    position: relative;
+    height: 30vh;
+    max-height: 500px;
+    min-height: 320px;
+
+    margin: 0;
+    max-width: 1955px;
+    padding: 0 30px;
+    padding-bottom: 20px;
+}
+
+/* .year-info-album-show-2::before{
+    content: "•";
+    margin: 0px 4px;
+} */
+
+
+/* .gradient-fade-show-2{
+    background-image: linear-gradient(white, rgb(12, 12, 12));
+    height: 250px;
+    position: absolute;
+    width: 100%;
+    opacity: 0.25;
+} */

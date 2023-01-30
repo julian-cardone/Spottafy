@@ -18,7 +18,7 @@
     /* overflow-y: scroll; */
 
     position: absolute;
-    top: 64px;
+    /* top: 64px; */
     left: 255px;
     /* bottom: 90px; */
     /* max-height: max-content; */
@@ -59,6 +59,7 @@
     /* background-color: #121212; */
     /* opacity: 1; */
     background-color: #121212;
+    /* background-color: transparent; */
     bottom: 0;
     left: 255px;
     /* overflow: hidden; */
@@ -394,6 +395,7 @@
     position: relative;
     display: flex;
     gap: 8px;
+    /* z-index: 100; */
 }
 
 .github-svg{
