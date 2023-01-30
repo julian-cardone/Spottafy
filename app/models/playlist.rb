@@ -8,4 +8,7 @@
 #  updated_at    :datetime         not null
 #
 class Playlist < ApplicationRecord
+
+    validates :playlist_name, presence: true
+
 end
