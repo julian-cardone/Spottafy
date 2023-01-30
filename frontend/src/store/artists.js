@@ -1,4 +1,4 @@
-import csrfFetch from "./csrf.js";
+  import csrfFetch from "./csrf.js";
 
 const SET_ARTISTS = 'artists/setArtists';
 const ADD_ARTIST = 'artists/addArtist';
