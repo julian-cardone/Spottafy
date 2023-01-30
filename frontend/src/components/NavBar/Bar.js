@@ -1,9 +1,20 @@
 import "./navbar.css";
 import { useHistory, useLocation } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { createPlaylist, fetchPlaylist, fetchPlaylists } from "../../store/playlist";
+import { useEffect } from "react";
 
 const Bar = (sessionUser) => {
   const location = useLocation();
   const history = useHistory();
+  const dispatch = useDispatch();
+
+  const playlists = useSelector(state => console.log(state))
+  const newPlaylist = useSelector(state => console.log(state))
+
+  useEffect(()=>{
+    dispatch(fetchPlaylists())
+  },[dispatch])
 
   const clickHandle = () => {
     history.replace("/");
@@ -18,7 +29,8 @@ const Bar = (sessionUser) => {
   };
 
   const handleButton = () =>{
-    history.replace("/newPlaylist")
+    dispatch(createPlaylist({playlistName: "test"}))
+    // history.replace(`/playlists/playlist/${id}`)
   }
 
   return (

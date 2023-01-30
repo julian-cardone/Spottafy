@@ -100,7 +100,7 @@ function App() {
             <SessionLinks sessionUser={{ sessionUser }} />
             <SearchPage />
           </Route>
-          <Route exact path="/newPlaylist">
+          <Route exact path="/playlist/:playlistId">
             <NavBar sessionUser={sessionUser} />
             <SessionLinks sessionUser={{ sessionUser }} />
             <NewPlaylist />
