@@ -108,7 +108,7 @@ const Bar = (sessionUser) => {
               </div>
             </li>
 
-            <li className="nav-bar-list-item">
+            {/* <li className="nav-bar-list-item">
               <div className="home-link-nav" onClick={clickHandle3}>
                 {location.pathname !== "search" && (
                   <>
@@ -142,7 +142,7 @@ const Bar = (sessionUser) => {
                   </>
                 )}
               </div>
-            </li>
+            </li> */}
           </ul>
           <div className="playlist-button-container">
             <div className="playlist-button-wrapper">

@@ -28,11 +28,20 @@ const SeekBar = ({ currentSong, audioElement }) => {
   // console.log(value);
   return (
     <div className="seeking-bar">
-      <div className="first-number">{`${
-        Math.floor(currentSong.ct / 60) || "0"
-      }:${Math.floor(((currentSong.ct / 10) % 60) % 6) || "0"}${
-        Math.floor((currentSong.ct % 60) % 10) || "0"
-      }`}</div>
+      {currentSong.ct && (
+        <div className="first-number">{`${
+          Math.floor(currentSong.ct / 60) || "0"
+        }:${Math.floor(((currentSong.ct / 10) % 60) % 6) || "0"}${
+          Math.floor((currentSong.ct % 60) % 10) || "0"
+        }`}</div>
+      )}
+      {!currentSong.ct && (
+        <div className="first-number">{`${
+          Math.floor(currentSong.ct / 60) || "-"
+        }:${Math.floor(((currentSong.ct / 10) % 60) % 6) || "-"}${
+          Math.floor((currentSong.ct % 60) % 10) || ""
+        }`}</div>
+      )}
       <div
         className="seeking-bar-wrap"
         onClick={(e) => checkWidth(e)}
@@ -65,8 +74,8 @@ const SeekBar = ({ currentSong, audioElement }) => {
         ></div> */}
       </div>
       <div className="second-number">{`${
-        Math.floor(currentSong.length / 60) || "0"
-      }:${Math.floor(currentSong.length % 60) || "00"}`}</div>
+        Math.floor(currentSong.length / 60) || "-"
+      }:${Math.floor(currentSong.length % 60) || "-"}`}</div>
     </div>
   );
 };
