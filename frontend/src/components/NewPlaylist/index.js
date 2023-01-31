@@ -1,6 +1,29 @@
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
 import "./newPlaylist.css";
 
 function NewPlaylist() {
+  // const playlist = useSelector(state => console.log(state.playlists.all));
+  const { playlistId } = useParams();
+  const dispatch = useDispatch();
+  const playlist = useSelector((state) => state.playlists.one) || {};
+  const [value, setValue] = useState(playlist.playlistName);
+  console.log(value);
+
+  useEffect(() => {
+    dispatch(fetchPlaylist(playlistId));
+  }, [dispatch, playlistId, value]);
+
+  const changeValue = (e) => {
+    setValue(e.target.value);
+    const newPlaylist = {
+      ...playlist,
+      playlistName: value,
+    };
+    dispatch(updatePlaylist(newPlaylist));
+  };
 
   return (
     <div className="main-content-container">
@@ -10,13 +33,24 @@ function NewPlaylist() {
           <div className="header-content-album-show-2">
             <div className="album-photo-container">
               <div className="album-photo-container-inner">
-                <img className="album-image-show-page" alt="albumm"></img>
+                {/* <img className="album-image-show-page" alt="albumm"></img> */}
+                <div className="playlist-img">
+                  <div className="playlist-img-svg-div">
+                    <svg role="img" height="55" width="55" viewBox="0 0 24 24">
+                      <path d="M 6 3 h 15 v 15.167 a 3.5 3.5 0 1 1 -3.5 -3.5 H 19 V 5 H 8 v 13.167 a 3.5 3.5 0 1 1 -3.5 -3.5 H 6 V 3 Z m 0 13.667 H 4.5 a 1.5 1.5 0 1 0 1.5 1.5 v -1.5 Z m 13 0 h -1.5 a 1.5 1.5 0 1 0 1.5 1.5 v -1.5 Z"></path>
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="album-info-show-page-container">
               <h2 className="album-title-show-page-2">PLAYLIST</h2>
               <span className="span-album-title-show">
-              <input className="span-inner-title-show-2"placeholder="placeholder"></input>
+                <input
+                  className="span-inner-title-show-2"
+                  value={value}
+                  onChange={changeValue}
+                ></input>
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">

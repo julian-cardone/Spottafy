@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Route, Switch, useLocation, useParams } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage/index.js";
 import SessionLinks from "./components/SessionLinksHeader";
 import LoginFormPage from "./components/LoginFormPage";

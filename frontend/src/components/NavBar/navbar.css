@@ -329,7 +329,7 @@
     box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
     margin-block: 0px;
-    font-size: 0.895rem;
+    font-size: 0.9rem;
     font-weight: 500;
     font-family: Helvetica, Arial, sans-serif;}
 
@@ -340,4 +340,31 @@
 
 .playlist-list-item:hover{
     color: white;
+}
+
+.playlist-img{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background: rgb(43, 43, 43);
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+
+    box-shadow: 0 4px 60px rgb(0 0 0 / 50%);
+}
+
+.playlist-img-svg-div{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    align-items: center;
+    /* background-color: #282828; */
+    fill: #7f7f7f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
