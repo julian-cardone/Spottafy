@@ -14,9 +14,9 @@ const Bar = (sessionUser) => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  // const playlists = useSelector((state) => state.playlists.all)||[];
-  const newPlaylist = useSelector((state) => state.playlists.new);
-  // const newPlaylist = Object.values(playlists).pop();
+  const playlists = useSelector((state) => state.playlists.all)||[];
+  // const newPlaylist = useSelector((state) => state.playlists.new.id)||"1";
+  // const newPlaylist = useSelector((state) => console.log(state));
 
   // const [createdPlaylist, setCreatedPlaylist] = useState();
 
@@ -38,7 +38,7 @@ const Bar = (sessionUser) => {
 
   const handleButton = () => {
     dispatch(createPlaylist({ playlist: { playlistName: "test2" } }));
-    history.push(`playlist/${newPlaylist.id}`)
+    history.push(`playlist/${Object.values(playlists).pop().id + 1}`);
   };
 
 
