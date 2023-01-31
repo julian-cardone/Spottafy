@@ -3,27 +3,28 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
 import "./newPlaylist.css";
+import PlaylistInput from "./PlaylistInput";
 
 function NewPlaylist() {
   // const playlist = useSelector(state => console.log(state.playlists.all));
   const { playlistId } = useParams();
   const dispatch = useDispatch();
-  const playlist = useSelector((state) => state.playlists.one) || {};
-  const [value, setValue] = useState(playlist.playlistName);
-  console.log(value);
-
+  
+  const playlist = useSelector((state) => state.playlists.one)||{};
+  const [value, setValue] = useState(playlist);
+  
   useEffect(() => {
     dispatch(fetchPlaylist(playlistId));
-  }, [dispatch, playlistId, value]);
+  }, [dispatch, playlistId]);
+  
+  
+  // console.log(playlist.playlistName);
+  
 
-  const changeValue = (e) => {
-    setValue(e.target.value);
-    const newPlaylist = {
-      ...playlist,
-      playlistName: value,
-    };
-    dispatch(updatePlaylist(newPlaylist));
-  };
+  // const changeValue = (e) => {
+  //   setValue({...value, playlistName: e.target.value});
+  //   dispatch(updatePlaylist(value));
+  // };
 
   return (
     <div className="main-content-container">
@@ -46,11 +47,7 @@ function NewPlaylist() {
             <div className="album-info-show-page-container">
               <h2 className="album-title-show-page-2">PLAYLIST</h2>
               <span className="span-album-title-show">
-                <input
-                  className="span-inner-title-show-2"
-                  value={value}
-                  onChange={changeValue}
-                ></input>
+                <PlaylistInput playlist={playlist}value={value}setValue={setValue}/>
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">

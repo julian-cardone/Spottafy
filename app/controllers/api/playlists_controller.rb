@@ -19,7 +19,7 @@ class Api::PlaylistsController < ApplicationController
         end
     end
 
-    def edit
+    def update
         @playlist = Playlist.find_by(id: params[:id])
 
         if @playlist.update(playlist_params)
