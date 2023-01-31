@@ -14,10 +14,11 @@ const Bar = (sessionUser) => {
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const playlists = useSelector((state) => state.playlists.all)||[] ;
+  // const playlists = useSelector((state) => state.playlists.all)||[];
   const newPlaylist = useSelector((state) => state.playlists.new);
+  // const newPlaylist = Object.values(playlists).pop();
 
-  // const [createdPlaylist, setCreatedPlaylist] = useState(newPlaylist);
+  // const [createdPlaylist, setCreatedPlaylist] = useState();
 
   useEffect(() => {
     dispatch(fetchPlaylists());
@@ -37,10 +38,9 @@ const Bar = (sessionUser) => {
 
   const handleButton = () => {
     dispatch(createPlaylist({ playlist: { playlistName: "test2" } }));
-    // setCreatedPlaylist(newPlaylist);
-    history.replace(`playlist/${Object.values(playlists).length+1}`);
-    // console.log(playlists)
+    history.push(`playlist/${newPlaylist.id}`)
   };
+
 
   return (
     <>
