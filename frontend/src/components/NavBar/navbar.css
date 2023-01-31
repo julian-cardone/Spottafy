@@ -18,6 +18,7 @@
 }
 
 .nav-bar-div{
+    /* height: fit-content; */
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-box-flex: 1;
@@ -190,6 +191,8 @@
     flex-shrink: 0;
     margin-top: 24px;
     position: relative;
+
+    margin-bottom: 90px;
 }
 
 .playlist-button-wrapper{
@@ -300,7 +303,7 @@
 .space-after-divider{
     background: -webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.7)),to(transparent));
     background: linear-gradient(180deg,rgba(0,0,0,.7),transparent);
-    bottom: -16px;
+    /* bottom: -16px; */
     height: 16px;
     left: 0;
     pointer-events: none;
@@ -311,6 +314,30 @@
 }
 
 .playlists-list-div{
+    position: relative;
     height: 100%;
+    /* bottom: 90px; */
+    color: #b3b3b3;
+    cursor: default;
+    text-decoration: none;
+    padding: 0px 24px;
+    padding-bottom: 85px;
+    /* padding-top: 8px; */
+    overflow-y: scroll;
+    bottom: 16px;
+
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin-block: 0px;
+    font-size: 0.895rem;
+    font-weight: 500;
+    font-family: Helvetica, Arial, sans-serif;}
+
+.playlist-list-item{
+    padding-top: 15px;
+    padding-bottom: 3px;
+}
+
+.playlist-list-item:hover{
     color: white;
 }

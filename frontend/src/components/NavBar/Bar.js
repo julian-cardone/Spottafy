@@ -8,13 +8,14 @@ import {
 } from "../../store/playlist";
 import { useEffect } from "react";
 import { useState } from "react";
+import PlaylistList from "./PlaylistList";
 
 const Bar = (sessionUser) => {
   const location = useLocation();
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const playlists = useSelector((state) => state.playlists.all)||[];
+  const playlists = useSelector((state) => state.playlists.all) || [];
   // const newPlaylist = useSelector((state) => state.playlists.new.id)||"1";
   // const newPlaylist = useSelector((state) => console.log(state));
 
@@ -40,7 +41,6 @@ const Bar = (sessionUser) => {
     dispatch(createPlaylist({ playlist: { playlistName: "test2" } }));
     history.push(`playlist/${Object.values(playlists).pop().id + 1}`);
   };
-
 
   return (
     <>
@@ -191,7 +191,10 @@ const Bar = (sessionUser) => {
                 <hr className="divider-playlist-real"></hr>
                 <div className="space-after-divider"></div>
               </div>
-              <div className="playlists-list-div">playlists go in here</div>
+              <div className="playlists-list-div">
+                {/* <div style={{color: "black"}}>nothing</div> */}
+                <PlaylistList playlists={playlists} />
+              </div>
             </div>
           </div>
         </div>
