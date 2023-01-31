@@ -1,37 +1,45 @@
 import "./navbar.css";
 import { useHistory, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { createPlaylist, fetchPlaylist, fetchPlaylists } from "../../store/playlist";
+import {
+  createPlaylist,
+  fetchPlaylist,
+  fetchPlaylists,
+} from "../../store/playlist";
 import { useEffect } from "react";
+import { useState } from "react";
 
 const Bar = (sessionUser) => {
   const location = useLocation();
   const history = useHistory();
   const dispatch = useDispatch();
 
-  const playlists = useSelector(state => console.log(state))
-  const newPlaylist = useSelector(state => console.log(state))
+  const playlists = useSelector((state) => state.playlists.all);
+  const newPlaylist = useSelector((state) => state.playlists.new);
 
-  useEffect(()=>{
-    dispatch(fetchPlaylists())
-  },[dispatch])
+  // const [createdPlaylist, setCreatedPlaylist] = useState(newPlaylist);
+
+  useEffect(() => {
+    dispatch(fetchPlaylists());
+  }, [dispatch]);
 
   const clickHandle = () => {
     history.replace("/");
   };
 
   const clickHandle2 = () => {
-    if (sessionUser.sessionUser){
+    if (sessionUser.sessionUser) {
       history.replace("/search");
     } else {
-      history.replace("/login")
+      history.replace("/login");
     }
   };
 
-  const handleButton = () =>{
-    dispatch(createPlaylist({playlistName: "test"}))
-    // history.replace(`/playlists/playlist/${id}`)
-  }
+  const handleButton = () => {
+    dispatch(createPlaylist({ playlist: { playlistName: "test2" } }));
+    // setCreatedPlaylist(newPlaylist);
+    history.replace(`playlist/${newPlaylist.id}`);
+  };
 
   return (
     <>
@@ -159,10 +167,18 @@ const Bar = (sessionUser) => {
           <div className="playlist-button-container">
             <div className="playlist-button-wrapper">
               <div className="create-playlist-outer-div">
-                <button className="create-playlist-button"onClick={handleButton}>
+                <button
+                  className="create-playlist-button"
+                  onClick={handleButton}
+                >
                   <div className="svg-button-div">
                     <div className="div-inside-svg">
-                      <svg role="img"height="12"width="12"viewBox="0 0 16 16 ">
+                      <svg
+                        role="img"
+                        height="12"
+                        width="12"
+                        viewBox="0 0 16 16 "
+                      >
                         <path d="M 15.25 8 a 0.75 0.75 0 0 1 -0.75 0.75 H 8.75 v 5.75 a 0.75 0.75 0 0 1 -1.5 0 V 8.75 H 1.5 a 0.75 0.75 0 0 1 0 -1.5 h 5.75 V 1.5 a 0.75 0.75 0 0 1 1.5 0 v 5.75 h 5.75 a 0.75 0.75 0 0 1 0.75 0.75 Z"></path>
                       </svg>
                     </div>

@@ -9,6 +9,7 @@ class Api::PlaylistsController < ApplicationController
     end
 
     def create 
+
         @playlist = Playlist.new(playlist_params)
 
         if @playlist.save
@@ -37,7 +38,7 @@ class Api::PlaylistsController < ApplicationController
     def playlist_params
         params.require(:playlist).permit(
             :playlist_name
-        )
+            )
     end
 
 end

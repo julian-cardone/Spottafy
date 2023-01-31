@@ -40,7 +40,6 @@ export const fetchPlaylist = playlistId => async dispatch => {
 };
 
 export const createPlaylist = data => async dispatch =>{
-  debugger
   const response = await csrfFetch('/api/playlists',{
     method: 'POST',
     headers: {"Content-Type" : "application/json"},
@@ -73,11 +72,11 @@ export const deletePlaylist = playlistId => async dispatch => {
 const playlistsReducer = (state = {}, action) => {
   switch(action.type){
     case ADD_PLAYLIST:
-      return { ...state, new: action.playlist}
+      return { ...state, new: action.payload}
     case SET_PLAYLIST:
-      return { ...state, one: action.playlist, new: undefined}
+      return { ...state, one: action.payload}
     case SET_PLAYLISTS:
-      return { ...state, all: action.playlists, new: undefined}
+      return { ...state, all: action.payload}
     case REMOVE_PLAYLIST:
       delete state[action.playlistId];
       return state;
