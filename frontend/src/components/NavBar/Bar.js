@@ -165,38 +165,42 @@ const Bar = (sessionUser) => {
               </div>
             </li> */}
           </ul>
-          <div className="playlist-button-container">
-            <div className="playlist-button-wrapper">
-              <div className="create-playlist-outer-div">
-                <button
-                  className="create-playlist-button"
-                  onClick={handleButton}
-                >
-                  <div className="svg-button-div">
-                    <div className="div-inside-svg">
-                      <svg
-                        role="img"
-                        height="12"
-                        width="12"
-                        viewBox="0 0 16 16 "
-                      >
-                        <path d="M 15.25 8 a 0.75 0.75 0 0 1 -0.75 0.75 H 8.75 v 5.75 a 0.75 0.75 0 0 1 -1.5 0 V 8.75 H 1.5 a 0.75 0.75 0 0 1 0 -1.5 h 5.75 V 1.5 a 0.75 0.75 0 0 1 1.5 0 v 5.75 h 5.75 a 0.75 0.75 0 0 1 0.75 0.75 Z"></path>
-                      </svg>
+          {sessionUser.sessionUser && (
+            <div className="playlist-button-container">
+              <div className="playlist-button-wrapper">
+                <div className="create-playlist-outer-div">
+                  <button
+                    className="create-playlist-button"
+                    onClick={handleButton}
+                  >
+                    <div className="svg-button-div">
+                      <div className="div-inside-svg">
+                        <svg
+                          role="img"
+                          height="12"
+                          width="12"
+                          viewBox="0 0 16 16 "
+                        >
+                          <path d="M 15.25 8 a 0.75 0.75 0 0 1 -0.75 0.75 H 8.75 v 5.75 a 0.75 0.75 0 0 1 -1.5 0 V 8.75 H 1.5 a 0.75 0.75 0 0 1 0 -1.5 h 5.75 V 1.5 a 0.75 0.75 0 0 1 1.5 0 v 5.75 h 5.75 a 0.75 0.75 0 0 1 0.75 0.75 Z"></path>
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                  <span className="create-playlist-text">Create Playlist</span>
-                </button>
-              </div>
-              <div className="divider-playlist">
-                <hr className="divider-playlist-real"></hr>
-                <div className="space-after-divider"></div>
-              </div>
-              <div className="playlists-list-div">
-                {/* <div style={{color: "black"}}>nothing</div> */}
-                <PlaylistList playlists={playlists} />
+                    <span className="create-playlist-text">
+                      Create Playlist
+                    </span>
+                  </button>
+                </div>
+                <div className="divider-playlist">
+                  <hr className="divider-playlist-real"></hr>
+                  <div className="space-after-divider"></div>
+                </div>
+                <div className="playlists-list-div">
+                  {/* <div style={{color: "black"}}>nothing</div> */}
+                  <PlaylistList playlists={playlists} />
+                </div>
               </div>
             </div>
-          </div>
+          )}
         </div>
       </nav>
     </>
