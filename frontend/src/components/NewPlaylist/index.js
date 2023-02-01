@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
@@ -10,13 +10,18 @@ function NewPlaylist() {
   const { playlistId } = useParams();
   const dispatch = useDispatch();
   
+  const [render, setRender] = useState();
+
   const playlist = useSelector((state) => state.playlists.one)||{};
-  const [value, setValue] = useState(playlist);
   
   useEffect(() => {
-    dispatch(fetchPlaylist(playlistId));
-  }, [dispatch, playlistId]);
-  
+      dispatch(fetchPlaylist(playlistId));
+    }, [dispatch, playlistId, render]);
+    
+    // useLayoutEffect(() => {
+    //   dispatch(fetchPlaylist(playlistId));
+    // }, [dispatch, playlistId]);
+    
   
   // console.log(playlist.playlistName);
   
@@ -47,7 +52,7 @@ function NewPlaylist() {
             <div className="album-info-show-page-container">
               <h2 className="album-title-show-page-2">PLAYLIST</h2>
               <span className="span-album-title-show">
-                <PlaylistInput playlist={playlist}value={value}setValue={setValue}/>
+                <PlaylistInput playlist={playlist}setRender={setRender}/>
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">
