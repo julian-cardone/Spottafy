@@ -14,7 +14,7 @@ function AlbumIndexPage(sessionUser) {
   const location = useLocation();
   // const [highlightedBench, setHighlightedBench] = useState(null);
   // const [bounds, setBounds] = useState(null);
-  // console.log(albums);
+  console.log(sessionUser);
 
   useEffect(() => {
     dispatch(fetchAlbums());
@@ -48,9 +48,12 @@ function AlbumIndexPage(sessionUser) {
                 </div>
               </div>
             </div>
-            {location.pathname === "/" && <AlbumList sessionUser={sessionUser}albums={albumsAll} />}
+            {location.pathname === "/" && (
+              <AlbumList sessionUser={sessionUser} albums={albumsAll} />
+            )}
             {location.pathname === "/search" && (
               <AlbumList
+                sessionUser={sessionUser}
                 albums={albumsAll.filter((val) => {
                   if (searchInfo.searchInfo[0] === "") {
                     return val;

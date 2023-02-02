@@ -11,7 +11,7 @@ function PlaylistInput({ playlist, setRender }) {
     
     setRender("anything");
     const [value, setValue] = useState(playlist);
-    console.log(value);
+    // console.log(value);
     
   // },[dispatch, playlistId])
 

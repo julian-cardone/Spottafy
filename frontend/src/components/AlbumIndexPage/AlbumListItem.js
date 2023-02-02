@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 function AlbumListItem({ album, sessionUser }) {
   // const history = useHistory();
+  // console.log(sessionUser);
 
   const history = useHistory();
 
@@ -24,6 +25,7 @@ function AlbumListItem({ album, sessionUser }) {
   }, [artistId]);
 
   const clickHandler = (e) => {
+    // console.log(sessionUser);
     if (sessionUser.sessionUser.sessionUser){
       history.push(`/album/${id}`);
     } else {

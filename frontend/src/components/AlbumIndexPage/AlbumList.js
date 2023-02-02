@@ -2,7 +2,7 @@ import React from "react";
 import AlbumListItem from "./AlbumListItem";
 
 const AlbumList = ({ albums, sessionUser}) => {
-  console.log(albums);
+
   return (
     <div className="grid-container">
       {albums.map((album) => (
