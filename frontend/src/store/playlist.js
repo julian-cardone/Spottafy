@@ -59,7 +59,6 @@ export const updatePlaylist = playlist => async dispatch => {
     body: JSON.stringify(playlist)
   });
   const data = await response.json();
-  debugger 
   dispatch(setPlaylist(data));
   // return response;
 };
