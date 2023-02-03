@@ -23,6 +23,7 @@ class Api::PlaylistsController < ApplicationController
         @playlist = Playlist.find_by(id: params[:id])
 
         if @playlist.update(playlist_params)
+            # debugger
             render :show
         else 
             render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity

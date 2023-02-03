@@ -53,14 +53,15 @@ export const createPlaylist = data => async dispatch =>{
 export const updatePlaylist = playlist => async dispatch => {
   const response = await csrfFetch(`/api/playlists/${playlist.id}`,{
     method: 'PATCH',
-    body: JSON.stringify(playlist),
     headers: {
         'Content-Type': 'application/json'
-    }
+    },
+    body: JSON.stringify(playlist)
   });
   const data = await response.json();
+  debugger 
   dispatch(setPlaylist(data));
-  return response;
+  // return response;
 };
 
 export const deletePlaylist = playlistId => async dispatch => {

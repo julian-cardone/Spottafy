@@ -12,11 +12,15 @@ function NewPlaylist() {
   // const dispatch = useDispatch();
 
   const [value, setValue] = useState({});
+  const [newVal, setNewVal] = useState({});
 
   useEffect(() => {
     csrfFetch(`/api/playlists/${playlistId}`)
       .then((res) => res.json())
-      .then((data) => setValue(data));
+      .then((data) => {
+        setValue(data)
+        setNewVal(data.playlistName)
+      });
   }, [playlistId]);
 
   // const playlist = useSelector((state) => console.log(state));
@@ -53,7 +57,7 @@ function NewPlaylist() {
             <div className="album-info-show-page-container">
               <h2 className="album-title-show-page-2">PLAYLIST</h2>
               <span className="span-album-title-show">
-                <PlaylistInput value={value} setValue={setValue} />
+                <PlaylistInput value={value} setValue={setValue} newVal={newVal} setNewVal={setNewVal}/>
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">
