@@ -8,7 +8,6 @@ import { useSelector } from "react-redux";
 
 function AlbumListItem({ album, sessionUser }) {
   // const history = useHistory();
-  // console.log(sessionUser);
 
   const history = useHistory();
 

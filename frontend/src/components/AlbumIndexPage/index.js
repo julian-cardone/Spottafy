@@ -14,7 +14,7 @@ function AlbumIndexPage(sessionUser) {
   const location = useLocation();
   // const [highlightedBench, setHighlightedBench] = useState(null);
   // const [bounds, setBounds] = useState(null);
-  console.log(sessionUser);
+  // console.log(sessionUser);
 
   useEffect(() => {
     dispatch(fetchAlbums());

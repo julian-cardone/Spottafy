@@ -2,28 +2,20 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
 
-function PlaylistInput({ playlist, setRender }) {
+function PlaylistInput({ value }) {
   const dispatch = useDispatch();
 
-  // const playlist = useSelector(state=> state.playlist.one)
-  // useEffect(()=>{
-    //   dispatch(fetchPlaylist(playlistId))
-    
-    setRender("anything");
-    const [value, setValue] = useState(playlist);
-    // console.log(value);
-    
-  // },[dispatch, playlistId])
+  console.log(value);
 
   const changeName = (e) => {
-    setValue({ ...value, playlistName: e.target.value });
-    dispatch(updatePlaylist(value));
+    // setValue({ ...value, playlistName: e.target.value });
+    // dispatch(updatePlaylist(value));
   };
 
   return (
     <input
       className="span-inner-title-show-2"
-      value={value.playlistName}
+      value={value}
       onChange={changeName}
     ></input>
   );

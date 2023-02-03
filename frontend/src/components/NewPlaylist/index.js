@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import csrfFetch from "../../store/csrf";
 import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
 import "./newPlaylist.css";
 import PlaylistInput from "./PlaylistInput";
@@ -9,22 +10,22 @@ function NewPlaylist() {
   // const playlist = useSelector(state => console.log(state.playlists.all));
   const { playlistId } = useParams();
   const dispatch = useDispatch();
-  
-  const [render, setRender] = useState();
 
-  const playlist = useSelector((state) => state.playlists.one)||{};
-  
+  const [value, setValue] = useState();
+
   useEffect(() => {
-      dispatch(fetchPlaylist(playlistId));
-    }, [dispatch, playlistId, render]);
-    
-    // useLayoutEffect(() => {
-    //   dispatch(fetchPlaylist(playlistId));
-    // }, [dispatch, playlistId]);
-    
-  
+    csrfFetch(`/api/playlists/${playlistId}`)
+      .then((res) => res.json())
+      .then((data) => setValue(data.playlistName));
+  }, [playlistId]);
+
+  // const playlist = useSelector((state) => console.log(state));
+
+  // useLayoutEffect(() => {
+  //   dispatch(fetchPlaylist(playlistId));
+  // }, [dispatch, playlistId]);
+
   // console.log(playlist.playlistName);
-  
 
   // const changeValue = (e) => {
   //   setValue({...value, playlistName: e.target.value});
@@ -52,7 +53,7 @@ function NewPlaylist() {
             <div className="album-info-show-page-container">
               <h2 className="album-title-show-page-2">PLAYLIST</h2>
               <span className="span-album-title-show">
-                <PlaylistInput playlist={playlist}setRender={setRender}/>
+                <PlaylistInput value={value} />
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">
