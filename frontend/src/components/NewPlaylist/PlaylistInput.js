@@ -10,7 +10,7 @@ function PlaylistInput({ value, setValue }) {
 
   const changeName = (e) => {
     setValue(e.target.value);
-    dispatch(updatePlaylist({playistName: value}));
+    dispatch(updatePlaylist({playlist: {playistName: value}}));
   };
 
   return (
