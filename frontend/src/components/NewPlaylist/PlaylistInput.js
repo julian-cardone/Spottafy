@@ -2,14 +2,15 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
 
-function PlaylistInput({ value }) {
+function PlaylistInput({ value, setValue }) {
   const dispatch = useDispatch();
 
-  console.log(value);
+  // const [title, setTitle] = useState(value);
+  // console.log(title)
 
   const changeName = (e) => {
-    // setValue({ ...value, playlistName: e.target.value });
-    // dispatch(updatePlaylist(value));
+    setValue(e.target.value);
+    dispatch(updatePlaylist({playistName: value}));
   };
 
   return (

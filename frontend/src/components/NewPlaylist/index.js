@@ -9,7 +9,7 @@ import PlaylistInput from "./PlaylistInput";
 function NewPlaylist() {
   // const playlist = useSelector(state => console.log(state.playlists.all));
   const { playlistId } = useParams();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   const [value, setValue] = useState();
 
@@ -53,7 +53,7 @@ function NewPlaylist() {
             <div className="album-info-show-page-container">
               <h2 className="album-title-show-page-2">PLAYLIST</h2>
               <span className="span-album-title-show">
-                <PlaylistInput value={value} />
+                <PlaylistInput value={value} setValue={setValue} />
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">
