@@ -5,18 +5,15 @@ import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
 function PlaylistInput({ value, setValue }) {
   const dispatch = useDispatch();
 
-  // const [title, setTitle] = useState(value);
-  // console.log(title)
-
   const changeName = (e) => {
-    setValue(e.target.value);
-    dispatch(updatePlaylist({playlist: {playistName: value}}));
+    setValue({ ...value, playlistName: e.target.value });
+    dispatch(updatePlaylist(value));
   };
 
   return (
     <input
       className="span-inner-title-show-2"
-      value={value}
+      value={value.playlistName}
       onChange={changeName}
     ></input>
   );

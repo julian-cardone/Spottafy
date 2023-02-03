@@ -11,12 +11,12 @@ function NewPlaylist() {
   const { playlistId } = useParams();
   // const dispatch = useDispatch();
 
-  const [value, setValue] = useState();
+  const [value, setValue] = useState({});
 
   useEffect(() => {
     csrfFetch(`/api/playlists/${playlistId}`)
       .then((res) => res.json())
-      .then((data) => setValue(data.playlistName));
+      .then((data) => setValue(data));
   }, [playlistId]);
 
   // const playlist = useSelector((state) => console.log(state));
