@@ -4,7 +4,9 @@ import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
 
 function PlaylistInput({ value, setValue }) {
   const dispatch = useDispatch();
-  
+
+  const playlist = useSelector((state) => console.log(state));
+
   const changeName = (e) => {
     setValue(e.target.value);
     // setTimeout(dispatch(updatePlaylist({})), 500);
