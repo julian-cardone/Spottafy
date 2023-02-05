@@ -25,10 +25,10 @@ function AlbumListItem({ album, sessionUser }) {
 
   const clickHandler = (e) => {
     // console.log(sessionUser);
-    if (sessionUser.sessionUser.sessionUser){
+    if (sessionUser.sessionUser.sessionUser) {
       history.push(`/album/${id}`);
     } else {
-      history.push("/login")
+      history.push("/login");
     }
   };
 
