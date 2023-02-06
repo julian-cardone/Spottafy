@@ -11,7 +11,7 @@ export function LoginModal({ onClose, onSuccess }) {
     <Modal onClose={onClose}>
       <div className="session-modal">
         <h1>Log In</h1>
-        <LoginForm onSuccess={onSuccess}/>
+        <LoginForm onSuccess={onSuccess} />
       </div>
     </Modal>
   );
@@ -25,14 +25,11 @@ export function SessionModal({ onClose, onSuccess }) {
       <div className="session-modal">
         <h1>{showSignup ? "Sign Up" : "Log In"}</h1>
         {showSignup ? (
-          <SignupForm onSuccess={onSuccess}/>
-        ): (
-          <LoginForm onSuccess={onSuccess}/>
+          <SignupForm onSuccess={onSuccess} />
+        ) : (
+          <LoginForm onSuccess={onSuccess} />
         )}
-        <button
-          className="link"
-          onClick={() => setShowSignup(prev => !prev)}
-        >
+        <button className="link" onClick={() => setShowSignup((prev) => !prev)}>
           {showSignup ? "Log in" : "Sign up"} instead
         </button>
       </div>

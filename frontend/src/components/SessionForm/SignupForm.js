@@ -27,7 +27,9 @@ function SignupForm({ onSuccess, sessionUser }) {
   //   history.replace("/");
   // }
 
-  return sessionUser ? ( <Redirect to="/" /> ) : (
+  return sessionUser ? (
+    <Redirect to="/" />
+  ) : (
     <form onSubmit={onSubmit} className="form">
       <FormErrors errors={errors} />
 
@@ -90,7 +92,9 @@ function SignupForm({ onSuccess, sessionUser }) {
           required
           placeholder="Enter a profile name."
         ></input>
-        <div className="this-appears-profile">This appears on your profile.</div>
+        <div className="this-appears-profile">
+          This appears on your profile.
+        </div>
       </div>
 
       <div className="tos-and-signup">
@@ -104,24 +108,24 @@ function SignupForm({ onSuccess, sessionUser }) {
         <p className="tos-p-tag">
           <span className="tos-span">
             To learn more about a random topic, click this link&nbsp;
-            <a href="https://en.wikipedia.org/wiki/Special:Random">Random Wiki Page</a>
+            <a href="https://en.wikipedia.org/wiki/Special:Random">
+              Random Wiki Page
+            </a>
           </span>
         </p>
 
-      <div className="signup-button-container">
-      <button type="submit" className="signup-form-button">
-        <div className="inner-button">Sign up
+        <div className="signup-button-container">
+          <button type="submit" className="signup-form-button">
+            <div className="inner-button">Sign up</div>
+          </button>
         </div>
-      </button>
-      </div>
-      <p className="account-link-p">
+        <p className="account-link-p">
           <span className="account-link-span">
             Have an account?&nbsp;
-          <Link to="/login">Log in</Link>
+            <Link to="/login">Log in</Link>
           </span>
-      </p>
+        </p>
       </div>
-
     </form>
   );
 }

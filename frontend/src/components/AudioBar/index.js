@@ -21,9 +21,7 @@ const AudioBar = ({ sessionUser }) => {
       </>
     );
   } else {
-    return (
-      <PlayerTwo />
-    )
+    return <PlayerTwo />;
   }
 };
 
