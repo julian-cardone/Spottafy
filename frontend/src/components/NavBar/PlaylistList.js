@@ -9,7 +9,7 @@ function PlaylistList({ playlists }) {
           <li>
             <PlaylistListItem playlist={playlist} />
           </li>
-        )
+        );
       })}
     </ul>
   );

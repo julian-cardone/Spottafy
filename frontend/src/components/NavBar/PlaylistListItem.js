@@ -3,8 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { fetchPlaylist } from "../../store/playlist";
 
-function PlaylistListItem(playlist){
-
+function PlaylistListItem(playlist) {
   const history = useHistory();
   // const dispatch = useDispatch();
 
@@ -12,13 +11,15 @@ function PlaylistListItem(playlist){
   //   dispatch(fetchPlaylist(playlist.playlist.id))
   // },[dispatch, playlist])
 
-  const playlistShow = () =>{
-    history.push(`/playlist/${playlist.playlist.id}`)
-  }
-  
+  const playlistShow = () => {
+    history.push(`/playlist/${playlist.playlist.id}`);
+  };
+
   return (
-    <div onClick={playlistShow}className="playlist-list-item">{playlist.playlist.playlistName}</div>
-  )
+    <div onClick={playlistShow} className="playlist-list-item">
+      {playlist.playlist.playlistName}
+    </div>
+  );
 }
 
 export default PlaylistListItem;
