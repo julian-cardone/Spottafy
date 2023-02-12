@@ -21,7 +21,9 @@ export function TextArea({ label, ...textAreaProps }) {
 export function FormErrors({ errors }) {
   return (
     <ul className="form-errors">
-      {errors.map(error => <li key={error}>{error}</li>)}
+      {errors.map((error) => (
+        <li key={error}>{error}</li>
+      ))}
     </ul>
   );
 }
