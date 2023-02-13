@@ -52,7 +52,7 @@ function App() {
 
   // window.scroll(function() {
   //   let scrollTop = document.scrollTop();
-  
+
   //   document.querySelector('.header-overlay').css({
   //     opacity: function() {
   //       let elementHeight = document.querySelector('.header-overlay').height();
@@ -98,7 +98,7 @@ function App() {
           <Route exact path="/search">
             <NavBar sessionUser={sessionUser} />
             <SessionLinks sessionUser={{ sessionUser }} />
-            <SearchPage sessionUser={ sessionUser }/>
+            <SearchPage sessionUser={sessionUser} />
           </Route>
           <Route exact path="/playlist/:playlistId">
             <NavBar sessionUser={sessionUser} />
