@@ -7,7 +7,7 @@ export function useInput(initialValue) {
   return [value, onChange];
 }
 
-export function useSubmit({ createAction, action, validate, onSuccess }){
+export function useSubmit({ createAction, action, validate, onSuccess }) {
   const dispatch = useDispatch();
   const [errors, setErrors] = useState([]);
 
@@ -23,21 +23,18 @@ export function useSubmit({ createAction, action, validate, onSuccess }){
       setErrors(errors);
     } else {
       setErrors([]);
-      return dispatch(action).then(
-        onSuccess,
-        async (res) => {
-          let data;
-          try {
-            // .clone() essentially allows you to read the response body twice
-            data = await res.clone().json();
-          } catch {
-            data = await res.text(); // Will hit this case if, e.g., server is down
-          }
-          if (data?.errors) setErrors(data.errors);
-          else if (data) setErrors([data]);
-          else setErrors([res.statusText]);
+      return dispatch(action).then(onSuccess, async (res) => {
+        let data;
+        try {
+          // .clone() essentially allows you to read the response body twice
+          data = await res.clone().json();
+        } catch {
+          data = await res.text(); // Will hit this case if, e.g., server is down
         }
-      );
+        if (data?.errors) setErrors(data.errors);
+        else if (data) setErrors([data]);
+        else setErrors([res.statusText]);
+      });
     }
   };
 
