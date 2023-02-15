@@ -1,31 +1,31 @@
-  import csrfFetch from "./csrf.js";
+import csrfFetch from "./csrf.js";
 
-const SET_ARTISTS = 'artists/setArtists';
-const ADD_ARTIST = 'artists/addArtist';
+const SET_ARTISTS = "artists/setArtists";
+const ADD_ARTIST = "artists/addArtist";
 
-export const setArtists = artists => ({
+export const setArtists = (artists) => ({
   type: SET_ARTISTS,
-  payload: artists
+  payload: artists,
 });
 
-export const addArtist = artist => ({
+export const addArtist = (artist) => ({
   type: ADD_ARTIST,
-  payload: artist
+  payload: artist,
 });
 
-export const fetchArtists = () => async dispatch => {
+export const fetchArtists = () => async (dispatch) => {
   const response = await csrfFetch(`/api/artists`);
   const data = await response.json();
   dispatch(setArtists(data));
   return response;
 };
 
-export const fetchArtist = artistId => async dispatch => {
+export const fetchArtist = (artistId) => async (dispatch) => {
   const response = await csrfFetch(`/api/artists/${artistId}`);
   const data = await response.json();
   dispatch(addArtist(data));
   return response;
-}
+};
 
 function artistsReducer(state = {}, action) {
   switch (action.type) {

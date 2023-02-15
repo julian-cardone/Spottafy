@@ -1,31 +1,31 @@
 import csrfFetch from "./csrf.js";
 
-const SET_ALBUMS = 'albums/setAlbums';
-const ADD_ALBUM = 'albums/addAlbum';
+const SET_ALBUMS = "albums/setAlbums";
+const ADD_ALBUM = "albums/addAlbum";
 
-const setAlbums = albums => ({
+const setAlbums = (albums) => ({
   type: SET_ALBUMS,
-  payload: albums
+  payload: albums,
 });
 
-export const addAlbum = album => ({
+export const addAlbum = (album) => ({
   type: ADD_ALBUM,
-  payload: album
+  payload: album,
 });
 
-export const fetchAlbums = () => async dispatch => {
+export const fetchAlbums = () => async (dispatch) => {
   const response = await csrfFetch(`/api/albums`);
   const data = await response.json();
   dispatch(setAlbums(data));
   return response;
 };
 
-export const fetchAlbum = albumId => async dispatch => {
+export const fetchAlbum = (albumId) => async (dispatch) => {
   const response = await csrfFetch(`/api/albums/${albumId}`);
   const data = await response.json();
   dispatch(addAlbum(data));
   return response;
-}
+};
 
 // export const createAlbum = albumFormData => async dispatch => {
 //   const response = await csrfFetch("/api/albums", {
