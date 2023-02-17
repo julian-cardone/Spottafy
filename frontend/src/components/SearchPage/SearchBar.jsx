@@ -10,7 +10,6 @@ function SearchBar() {
     searchInfo.searchInfo[1](e.target.value);
     // await setSearch(e.target.value);
   };
-  // console.log(searchInfo.searchInfo[0])
 
   return (
     <>

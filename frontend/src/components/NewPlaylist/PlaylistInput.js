@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPlaylist, updatePlaylist } from "../../store/playlist";
+import { fetchPlaylist, fetchPlaylists, updatePlaylist } from "../../store/playlist";
 
 function PlaylistInput({ value, setValue }) {
   const dispatch = useDispatch();
-
-  const playlist = useSelector((state) => console.log(state));
-
+  
   const changeName = (e) => {
-    setValue(e.target.value);
-    // setTimeout(dispatch(updatePlaylist({})), 500);
+    setValue({ ...value, playlistName: e.target.value});
   };
+
+  useEffect(()=>{
+    dispatch(updatePlaylist({playlist: {playlistName: value.playlistName}, id: value.id}));
+    dispatch(fetchPlaylists());
+  },[value])
 
   return (
     <input

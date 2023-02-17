@@ -17,7 +17,6 @@ const Bar = (sessionUser) => {
 
   const playlists = useSelector((state) => state.playlists.all) || [];
   // const newPlaylist = useSelector((state) => state.playlists.new.id)||"1";
-  // const newPlaylist = useSelector((state) => console.log(state));
 
   // const [createdPlaylist, setCreatedPlaylist] = useState();
 

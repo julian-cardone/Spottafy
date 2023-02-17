@@ -14,7 +14,6 @@ function AlbumIndexPage(sessionUser) {
   const location = useLocation();
   // const [highlightedBench, setHighlightedBench] = useState(null);
   // const [bounds, setBounds] = useState(null);
-  // console.log(sessionUser);
 
   useEffect(() => {
     dispatch(fetchAlbums());
@@ -24,10 +23,7 @@ function AlbumIndexPage(sessionUser) {
     searchInfo.searchInfo[1]("");
   }
 
-  // console.log(searchInfo.searchInfo[0])
 
-  // console.log(window.screen.width);
-  // console.log(gridContainer);
   // const gridContainer = document.querySelector(".grid-container") || "";
   // gridContainer.setAttribute("style", Math.floor((window.screen.width)/275));
 

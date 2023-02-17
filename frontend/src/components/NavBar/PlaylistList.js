@@ -1,7 +1,6 @@
 import PlaylistListItem from "./PlaylistListItem";
 
 function PlaylistList({ playlists }) {
-  // console.log(playlists);
   return (
     <ul>
       {Object.values(playlists).map((playlist) => {

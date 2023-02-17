@@ -25,7 +25,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
   // useEffect(()=> {
   //   setSeconds()
   // },[])
-  // console.log(value);
+
   return (
     <div className="seeking-bar">
       {currentSong.ct && (

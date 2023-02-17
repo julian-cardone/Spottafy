@@ -1,5 +1,7 @@
 class Api::PlaylistsController < ApplicationController
 
+    wrap_parameters include: Playlist.attribute_names, format: :multipart_form
+
     def index
         @playlists = Playlist.all
     end
@@ -11,19 +13,20 @@ class Api::PlaylistsController < ApplicationController
     def create 
 
         @playlist = Playlist.new(playlist_params)
-
+        
         if @playlist.save
             render :show
         else
             render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
         end
     end
-
+    
     def update
         @playlist = Playlist.find_by(id: params[:id])
-
+        # debugger
+        
         if @playlist.update(playlist_params)
-            # debugger
+            # print params
             render :show
         else 
             render json: { errors: @user.errors.full_messages }, status: :unprocessable_entity
@@ -38,7 +41,6 @@ class Api::PlaylistsController < ApplicationController
     private
     def playlist_params
         params.require(:playlist).permit(
-            :id,
             :playlist_name
             )
     end

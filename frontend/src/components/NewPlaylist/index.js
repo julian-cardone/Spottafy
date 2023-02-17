@@ -7,7 +7,6 @@ import "./newPlaylist.css";
 import PlaylistInput from "./PlaylistInput";
 
 function NewPlaylist() {
-  // const playlist = useSelector(state => console.log(state.playlists.all));
   const { playlistId } = useParams();
   // const dispatch = useDispatch();
 
@@ -19,13 +18,9 @@ function NewPlaylist() {
       .then((data) => setValue(data));
   }, [playlistId]);
 
-  // const playlist = useSelector((state) => console.log(state));
-
   // useLayoutEffect(() => {
   //   dispatch(fetchPlaylist(playlistId));
   // }, [dispatch, playlistId]);
-
-  // console.log(playlist.playlistName);
 
   // const changeValue = (e) => {
   //   setValue({...value, playlistName: e.target.value});
@@ -53,7 +48,7 @@ function NewPlaylist() {
             <div className="album-info-show-page-container">
               <h2 className="album-title-show-page-2">PLAYLIST</h2>
               <span className="span-album-title-show">
-                <PlaylistInput value={value} setValue={setValue} />
+                <PlaylistInput value={ value } setValue={setValue} />
               </span>
               <div className="more-info-album-show">
                 <div className="artist-info-album-show">
