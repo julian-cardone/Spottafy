@@ -39,7 +39,8 @@ const Bar = (sessionUser) => {
 
   const handleButton = () => {
     dispatch(createPlaylist({ playlist: { playlistName: "test2" } }));
-    history.push(`playlist/${Object.values(playlists).pop().id + 1}`);
+    history.replace("/")
+    history.replace(`playlist/${Object.values(playlists).pop().id + 1}`);
   };
 
   return (
