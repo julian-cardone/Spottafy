@@ -1,14 +1,14 @@
-const ADD_USER = 'users/addUser';
-const ADD_USERS = 'users/addUsers';
+const ADD_USER = "users/addUser";
+const ADD_USERS = "users/addUsers";
 
 export const addUser = (user) => ({
   type: ADD_USER,
-  payload: user
+  payload: user,
 });
 
 export const addUsers = (users) => ({
   type: ADD_USERS,
-  payload: users
+  payload: users,
 });
 
 function usersReducer(state = {}, action) {
