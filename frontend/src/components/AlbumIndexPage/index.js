@@ -26,7 +26,7 @@ function AlbumIndexPage(sessionUser) {
 
   // const gridContainer = document.querySelector(".grid-container") || "";
   // gridContainer.setAttribute("style", Math.floor((window.screen.width)/275));
-
+ 
   return (
     <div className="background-dark-theme">
       <div className="album-index-page">
