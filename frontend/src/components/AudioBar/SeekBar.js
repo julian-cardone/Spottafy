@@ -28,11 +28,13 @@ const SeekBar = ({ currentSong, audioElement }) => {
 
   return (
     <div className="seeking-bar">
-      {currentSong.ct && (
+      {!!currentSong.ct && (
         <div className="first-number">{`${
-          Math.floor(currentSong.ct / 60) || "0"
-        }:${Math.floor(((currentSong.ct / 10) % 60) % 6) || "0"}${
-          Math.floor((currentSong.ct % 60) % 10) || "0"
+          Math.floor(audioElement.current.currentTime / 60) || "0"
+        }:${
+          Math.floor(((audioElement.current.currentTime / 10) % 60) % 6) || "0"
+        }${
+          Math.floor((audioElement.current.currentTime % 60) % 10) || "0"
         }`}</div>
       )}
       {!currentSong.ct && <div className="first-number">{`${"-"}:${"-"}`}</div>}
