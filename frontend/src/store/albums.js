@@ -27,16 +27,6 @@ export const fetchAlbum = (albumId) => async (dispatch) => {
   return response;
 };
 
-// export const createAlbum = albumFormData => async dispatch => {
-//   const response = await csrfFetch("/api/albums", {
-//     method: "POST",
-//     body: albumFormData
-//   });
-//   const data = await response.json();
-//   dispatch(addAlbum(data.album));
-//   return response;
-// };
-
 function albumsReducer(state = {}, action) {
   switch (action.type) {
     case SET_ALBUMS:
