@@ -329,8 +329,9 @@
 }
 
 .songs-container-album-show{
-    height: 840px;
-    contain: layout size;
+    height: 100%;
+    padding-bottom: 125px;
+    /* contain: layout size; */
     position: relative;
 }
 

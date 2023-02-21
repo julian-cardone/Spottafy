@@ -34,7 +34,7 @@ const AlbumShowPage = ({
   useEffect(() => {
     dispatch(fetchArtist(album.artistId));
   }, [dispatch, album]);
-
+  
   return (
     //album, title, artist, etc.... in the header
     //return the buttons
