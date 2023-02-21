@@ -35,13 +35,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
           Math.floor((currentSong.ct % 60) % 10) || "0"
         }`}</div>
       )}
-      {!currentSong.ct && (
-        <div className="first-number">{`${
-          Math.floor(currentSong.ct / 60) || "-"
-        }:${Math.floor(((currentSong.ct / 10) % 60) % 6) || "-"}${
-          Math.floor((currentSong.ct % 60) % 10) || ""
-        }`}</div>
-      )}
+      {!currentSong.ct && <div className="first-number">{`${"-"}:${"-"}`}</div>}
       <div
         className="seeking-bar-wrap"
         onClick={(e) => checkWidth(e)}
