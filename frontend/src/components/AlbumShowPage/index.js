@@ -66,8 +66,8 @@ const AlbumShowPage = ({
                 </div>
                 <span className="year-info-album-show">{album.year}</span>
                 <span className="album-info-time">
-                  {songs.length} songs,&nbsp;
-                  <span className="album-info-time-length">song-time</span>
+                  {songs.length} songs&nbsp;
+                  <span className="album-info-time-length"></span>
                 </span>
               </div>
             </div>
