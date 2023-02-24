@@ -144,8 +144,9 @@ require 'open-uri'
       id: 2,
       artist_id: 1,
       song_title: "Sea and Sand",
-      album_id: 1
-    )
+      album_id: 1,
+      song_time: "5:02"
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+Sea+And+Sand.mp3"),filename: "The+Who+-+Sea+And+Sand.mp3")
 
     Song.create!(
       id: 3,

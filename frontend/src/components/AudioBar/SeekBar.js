@@ -4,9 +4,15 @@ const SeekBar = ({ currentSong, audioElement }) => {
   // audioElement.current.currentTime = 0;
 
   const [value, setValue] = useState(0);
+  const [zero, setZero] = useState("");
 
   useEffect(() => {
     setValue(currentSong.progress);
+    if (currentSong.length % 60 < 10) {
+      setZero(0);
+    } else {
+      setZero("");
+    }
   }, [currentSong]);
 
   const clickRef = useRef();
@@ -17,6 +23,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
 
     const divprogress = (offset / width) * 100;
     audioElement.current.currentTime = (divprogress / 100) * currentSong.length;
+
   };
 
   // const [seconds, setSeconds] = useState(0);
@@ -71,7 +78,7 @@ const SeekBar = ({ currentSong, audioElement }) => {
       </div>
       <div className="second-number">{`${
         Math.floor(currentSong.length / 60) || "-"
-      }:${Math.floor(currentSong.length % 60) || "-"}`}</div>
+      }:${zero}${Math.floor(currentSong.length % 60) || "-"}`}</div>
     </div>
   );
 };
