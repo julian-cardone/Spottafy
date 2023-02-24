@@ -140,7 +140,7 @@ require 'open-uri'
       song_time: "3:55"
     )
 
-    song2.song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Mariah+Carey+-+All+I+Want+For+Christmas+Is+You+(Official+Video).mp3"),filename: "Mariah+Carey+-+All+I+Want+For+Christmas+Is+You+(Official+Video).mp3")
+    # song2.song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Mariah+Carey+-+All+I+Want+For+Christmas+Is+You+(Official+Video).mp3"),filename: "Mariah+Carey+-+All+I+Want+For+Christmas+Is+You+(Official+Video).mp3")
 
     Song.create!(
       id: 2,

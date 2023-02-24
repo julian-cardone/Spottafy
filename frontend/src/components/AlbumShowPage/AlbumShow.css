@@ -206,7 +206,8 @@
 }
 
 .album-info-time-length{
-    color: rgb(211, 211, 211)
+    position: relative;
+    color: rgb(211, 211, 211);
 }
 
 .gradient-fade-show{
