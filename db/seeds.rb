@@ -126,7 +126,8 @@ require 'open-uri'
       id: 1,
       artist_id: 1,
       song_title: "Cut My Hair",
-      album_id: 1
+      album_id: 1,
+      song_time: "3:45"
     )
 
     song1.song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+Cut+My+Hair.mp3"),filename: "The+Who+-+Cut+My+Hair.mp3")
@@ -135,7 +136,8 @@ require 'open-uri'
       id: 13,
       artist_id: 5,
       song_title: "All I Want For Christmas is You",
-      album_id: 5
+      album_id: 5,
+      song_time: "3:55"
     )
 
     song2.song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Mariah+Carey+-+All+I+Want+For+Christmas+Is+You+(Official+Video).mp3"),filename: "Mariah+Carey+-+All+I+Want+For+Christmas+Is+You+(Official+Video).mp3")
@@ -145,7 +147,7 @@ require 'open-uri'
       artist_id: 1,
       song_title: "Sea and Sand",
       album_id: 1,
-      song_time: "5:02"
+      song_time: "5:01"
     ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+Sea+And+Sand.mp3"),filename: "The+Who+-+Sea+And+Sand.mp3")
 
     Song.create!(
