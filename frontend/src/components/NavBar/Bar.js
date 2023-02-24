@@ -25,7 +25,7 @@ const Bar = (sessionUser) => {
   }, [dispatch]);
 
   const clickHandle = () => {
-    // setTimeout(20000, history.replace("/"));
+    // setTimeout(()=>history.replace("/"), 2000);
     history.replace("/");
   };
 

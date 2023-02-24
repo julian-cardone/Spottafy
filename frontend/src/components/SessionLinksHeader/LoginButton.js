@@ -6,7 +6,7 @@ function LoginButton() {
 
   const routeChange = () => {
     let path = "/login";
-    history.push(path);
+    setTimeout(() => history.push(path), 200);
   };
 
   return (

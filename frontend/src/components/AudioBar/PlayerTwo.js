@@ -4,7 +4,7 @@ function PlayerTwo() {
   const history = useHistory();
 
   const routeChange = () => {
-    history.replace("/signup");
+    history.push("/signup");
   };
 
   return (
