@@ -9,6 +9,15 @@ import "./Navigation.css";
 function SessionLinks({ sessionUser }) {
   const location = useLocation();
 
+  //for event listener?
+  //   componentDidMount() {
+  //     ReactDOM.findDOMNode(this).addEventListener('nv-event', this._handleNVEvent);
+  // }
+
+  // componentWillUnmount() {
+  //     ReactDOM.findDOMNode(this).removeEventListener('nv-event', this._handleNVEvent);
+  // }
+
   const symbols = (
     <div className="bar-svg-div">
       <a href="https://github.com/julian-cardone">
