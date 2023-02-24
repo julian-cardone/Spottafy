@@ -154,8 +154,9 @@ require 'open-uri'
       id: 3,
       artist_id: 1,
       song_title: "Love, Reign O'er Me",
-      album_id: 1
-    )
+      album_id: 1,
+      song_time: "5:56"
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+Love+reign+over+me.mp3"),filename: "The+Who+-+Love+reign+over+me.mp3")
 
     Song.create!(
       id: 4,
