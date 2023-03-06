@@ -81,4 +81,4 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['postgres://spottafy_db_user:4wSofaUDhxdHuhfasE5n1Vt0hbljJNXI@dpg-cg30d7vdvk4sgu0ceo8g-a/spottafy_db'] %>
+  url: <%= ENV['DATABASE_URL'] %>
