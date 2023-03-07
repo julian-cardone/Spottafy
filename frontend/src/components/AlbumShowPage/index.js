@@ -67,7 +67,7 @@ const AlbumShowPage = ({
                 <span className="year-info-album-show">{album.year}</span>
                 <span className="album-info-time">
                   {songs.length} songs&nbsp;
-                  <span className="album-info-time-length">&emsp;Disclaimer: To best avoid copyright issues, I only added songs by The Who.</span>
+                  <span className="album-info-time-length"></span>
                 </span>
               </div>
             </div>
