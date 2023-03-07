@@ -67,7 +67,7 @@ const AlbumShowPage = ({
                 <span className="year-info-album-show">{album.year}</span>
                 <span className="album-info-time">
                   {songs.length} songs&nbsp;
-                  <span className="album-info-time-length"></span>
+                  <span className="album-info-time-length">Disclaimer: to best avoid copyright issues, the only playable song is "Cut My Hair" by The Who</span>
                 </span>
               </div>
             </div>

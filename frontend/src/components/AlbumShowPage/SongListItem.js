@@ -70,7 +70,7 @@ const SongListItem = ({
           </div>
 
           <div className="song-row-time-outer">
-            <div className="time-container-album-show">2:00</div>
+            <div className="time-container-album-show">3:45</div>
           </div>
         </div>
       </div>
