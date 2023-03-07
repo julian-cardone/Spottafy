@@ -6,5 +6,5 @@ set -o errexit
 ls
 npm run build
 bundle install
-rails db:migrate --trace
+rails db:migrate
 rails db:seed #if needed
