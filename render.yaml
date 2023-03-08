@@ -1,5 +1,6 @@
 databases:
   - name: spottafy
+    databaseName: spottafy_vplk
     user: spottafy
     plan: free
     region: ohio
@@ -18,5 +19,6 @@ services:
         fromDatabase:
           name: spottafy
           property: connectionString
+        value: postgres://spottafy:x4gGC6NzD2TnYWSuQBKhNwic2U4270o8@dpg-cg4dqsvdvk4n2c6id2i0-a/spottafy_vplk
       - key: RAILS_MASTER_KEY
         sync: false
