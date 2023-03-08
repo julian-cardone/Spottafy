@@ -9,7 +9,7 @@
     "build": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "engines": {
-    "node": "16.x"
+    "node": "16.17.0"
   },
   "keywords": [],
   "author": "",
@@ -25,5 +25,13 @@
   },
   "devDependencies": {
     "redux-logger": "^3.0.6"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julian-cardone/fullstack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/julian-cardone/fullstack/issues"
+  },
+  "homepage": "https://github.com/julian-cardone/fullstack#readme"
 }
