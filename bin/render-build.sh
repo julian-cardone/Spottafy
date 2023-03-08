@@ -7,4 +7,4 @@ ls
 npm run build
 bundle install
 rails db:migrate RAILS_ENV=production
-rails db:seed #if needed
+rails db:seed RAILS_ENV=production #if needed
