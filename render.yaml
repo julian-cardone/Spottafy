@@ -4,7 +4,6 @@ databases:
     user: spottafy
     plan: free
     region: ohio
-    hostname: dpg-cg4dqsvdvk4n2c6id2i0-a
 
 services:
   - type: web
