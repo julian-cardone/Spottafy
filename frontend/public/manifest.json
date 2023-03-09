@@ -1,6 +1,13 @@
 {
-  "short_name": "React Template",
-  "name": "Create React App Template",
+  "short_name": "Spottafy",
+  "name": "A fullstack Spotify clone",
+  "icons": [
+    {
+      "src": "../media/Spottafy-logo-icon.jpg",
+      "sizes": "192x192",
+      "type": "image/jpg"
+    }
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
