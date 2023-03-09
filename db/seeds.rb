@@ -14,6 +14,7 @@ require 'open-uri'
     Song.destroy_all
     Artist.destroy_all
     User.destroy_all
+    Playlist.destroy_all
   
     puts "Resetting primary keys..."
     # For easy testing, so that after seeding, the first `User` has `id` of 1
