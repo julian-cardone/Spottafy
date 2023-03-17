@@ -25,6 +25,14 @@ const SongListItem = ({
   const [color, setColor] = useState("white");
   const path = document.getElementById("pathPlay");
 
+// const changeTime = () =>{
+//   if (Math.floor(currentSong.length % 60) < 10){
+//     setTime("0")
+//   } else {
+//     setTime("")
+//   }
+// }
+
   useEffect(() => {
     if (songInfo.songInfo[0] === songTitle) {
       setColor("#1DB954");
@@ -70,7 +78,6 @@ const SongListItem = ({
           </div>
 
           <div className="song-row-time-outer">
-            <div className="time-container-album-show">3:45</div>
           </div>
         </div>
       </div>

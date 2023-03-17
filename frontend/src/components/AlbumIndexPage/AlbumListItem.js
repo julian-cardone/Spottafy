@@ -16,6 +16,7 @@ function AlbumListItem({ album, sessionUser }) {
   const [artistName, setArtistName] = useState("");
 
   // const songPict = useContext(SongContext);
+  console.log(artistId)
 
   useEffect(() => {
     csrfFetch(`/api/artists/${artistId}`)

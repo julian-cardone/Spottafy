@@ -17,7 +17,7 @@ function AlbumIndexPage(sessionUser) {
 
   useEffect(() => {
     dispatch(fetchAlbums());
-  }, [dispatch, location, searchInfo]);
+  }, [dispatch, location]);
 
   if (location.pathname !== "/search") {
     searchInfo.searchInfo[1]("");

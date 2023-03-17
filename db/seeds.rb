@@ -146,77 +146,77 @@ require 'open-uri'
       artist_id: 1,
       song_title: "Sea and Sand",
       album_id: 1
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+Sea+And+Sand.mp3"), filename:"The+Who+-+Sea+And+Sand.mp3")
 
     Song.create!(
       id: 3,
       artist_id: 1,
       song_title: "Love, Reign O'er Me",
       album_id: 1
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+Love+reign+over+me.mp3"), filename:"The+Who+-+Love+reign+over+me.mp3")
 
     Song.create!(
       id: 4,
       artist_id: 2,
       song_title: "Superhero",
       album_id: 2
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Superhero+(Heroes+%26+Villains).mp3"), filename:"Superhero+(Heroes+%26+Villains).mp3")
 
     Song.create!(
       id: 5,
       artist_id: 2,
       song_title: "Raindrops (insane)",
       album_id: 2
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Raindrops+(Insane).mp3"), filename:"Raindrops+(Insane).mp3")
 
     Song.create!(
       id: 6,
       artist_id: 2,
       song_title: "Metro Spider",
       album_id: 2
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Metro+Spider.mp3"), filename:"Metro+Spider.mp3")
 
     Song.create!(
       id: 7,
       artist_id: 3,
       song_title: "Mr. Blue Sky",
       album_id: 3
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Mr.+Blue+Sky.mp3"), filename:"Mr.+Blue+Sky.mp3")
 
     Song.create!(
       id: 8,
       artist_id: 3,
       song_title: "Turn to Stone",
       album_id: 3
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Electric+Light+Orchestra+-+Turn+To+Stone+(Audio).mp3"), filename:"Electric+Light+Orchestra+-+Turn+To+Stone+(Audio).mp3")
 
     Song.create!(
       id: 9,
       artist_id: 3,
       song_title: "Strange Magic",
       album_id: 3
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Strange+Magic.mp3"), filename:"Strange+Magic.mp3")
 
     Song.create!(
       id: 10,
       artist_id: 4,
       song_title: "Why'd You Only Call Me When You're High",
       album_id: 4
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Why'd+you+only+call+me+when+you're+high+-+Arctic+Monkeys.mp3"), filename:"Why'd+you+only+call+me+when+you're+high+-+Arctic+Monkeys.mp3")
 
     Song.create!(
       id: 11,
       artist_id: 4,
       song_title: "Arabella",
       album_id: 4
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Arctic+Monkeys+-+Arabella+(Official+Audio).mp3"), filename:"Arctic+Monkeys+-+Arabella+(Official+Audio).mp3")
 
     Song.create!(
       id: 12,
       artist_id: 4,
       song_title: "Do I Wanna Know?",
       album_id: 4
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Do+I+Wanna+Know_.mp3"), filename:"Do+I+Wanna+Know_.mp3")
 
     # Song.create!(
     #   id: 14,
@@ -237,21 +237,21 @@ require 'open-uri'
       artist_id: 1,
       song_title: "Quadrophenia",
       album_id: 1
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Quadrophenia.mp3"), filename:"Quadrophenia.mp3")
 
     Song.create!(
       id: 17,
       artist_id: 1,
       song_title: "The Punk and the Godfather",
       album_id: 1
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/The+Who+-+The+Punk+And+The+Godfather.mp3"), filename:"The+Who+-+The+Punk+And+The+Godfather.mp3")
 
     Song.create!(
       id: 18,
       artist_id: 1,
       song_title: "Is It In My Head?",
       album_id: 1
-    )
+    ).song.attach(io: URI.open("https://spottafy-seeds.s3.amazonaws.com/Is+It+In+My+Head_.mp3"), filename:"Is+It+In+My+Head_.mp3")
     
     puts "Seeding complete!"
     
